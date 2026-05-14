@@ -46,4 +46,6 @@
 ### 📈 Current Mastery & Activity 📊
 
 ```text
-Architecture
+Architecture   ██████████████████▒ 90%
+Backend Logic  ██████████████▒░░░░ 75%
+UI/UX Design   ██████████▒░░░░░░░░ 55%
