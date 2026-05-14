@@ -10,7 +10,7 @@
 ---
 
 ### 👤 Professional Profile
-I am a **Software Architect** specialized in high-performance digital infrastructure. My focus is on transforming administrative complexity into seamless, automated systems. From **multi-site Intranets** to **Agentic IA** that interacts with the OS, I build the logic that drives efficiency.
+I am a **Software Architect** specialized in high-performance digital infrastructure. I focus on transforming administrative complexity into seamless, automated systems.
 
 - 🔭 **Current Milestone:** Integrating hybrid LLMs (Gemini/Ollama) for desktop automation.
 - ⚙️ **Focus:** System Hierarchy, Database Integrity & UI/UX for Intranets.
@@ -22,25 +22,22 @@ I am a **Software Architect** specialized in high-performance digital infrastruc
 
 | Category | Stack |
 | :--- | :--- |
-| **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+| **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) |
 | **Frontend** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white) |
-| **AI & Backend** | LLMs (Gemini/Llama3), Speech-to-Action Agents, SQL Architecture, API Design |
-| **Workflow** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Terminal](https://img.shields.io/badge/Terminal-4D4D4D?style=for-the-badge&logo=gnumetadata&logoColor=white) |
+| **Infrastructure** | SQL Architecture, API Design, OS Automation, Hybrid LLMs |
 
 ---
 
-### 📊 GitHub Ecosystem (Dynamic Data)
-
-<p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=mfdevelopersupport-spec&show_icons=true&theme=tokyonight&count_private=true" alt="Sturnz Stats" height="180" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mfdevelopersupport-spec&layout=compact&theme=tokyonight&hide=html,css" alt="Top Languages" height="180" />
+### 📊 Language Distribution (Activity)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mfdevelopersupport-spec&layout=donut&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Top Languages" width="400" />
 </p>
 
 ---
 
 ### 🚀 High-Impact Projects
 * **Administrative Ecosystem (Colegio Genes):** Architected a robust multi-branch system for financial and academic data management.
-* **Sturn IA:** A voice-activated desktop agent utilizing hybrid cloud/local processing to execute system commands via NLP.
+* **Sturn IA:** A voice-activated desktop agent utilizing hybrid cloud/local processing to execute system commands.
 
 ---
 
