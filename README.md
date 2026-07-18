@@ -17,7 +17,6 @@
 
 - 🏗️ **Core Focus:** Multi-site Intranets & System Hierarchy.
 - 🤖 **Innovation:** Agentic IA (Hybrid Cloud/Local LLMs).
-- 🎓 **Roadmap:** Software Engineering Student @ **UPC / UTEC**.
 
 ---
 
