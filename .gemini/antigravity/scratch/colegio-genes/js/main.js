@@ -188,14 +188,14 @@ const primaryChannelsData = {
         titulo: "2do de Primaria",
         descripcion: "El canal virtual de 2do. Grado de Primaria no se encuentra disponible por el momento.",
         link: "javascript:void(0);",
-        imagen: "https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/2do_prim.jpg",
+        imagen: "assets/images/canales/1ro_prim.jpg",
         disponible: false
     },
     grado3: {
         titulo: "3ro de Primaria",
         descripcion: "El canal virtual de 3er. Grado de Primaria no se encuentra disponible por el momento.",
         link: "javascript:void(0);",
-        imagen: "https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/3ero_prim.jpg",
+        imagen: "assets/images/canales/1ro_prim.jpg",
         disponible: false
     },
     grado4: {
@@ -214,10 +214,10 @@ const primaryChannelsData = {
     },
     grado6: {
         titulo: "6to de Primaria",
-        descripcion: "Canal virtual oficial de 6to. Grado de Primaria. Consolidación de la etapa primaria.",
-        link: "https://www.youtube.com/@genesclasevirtual6to.prima169",
-        imagen: "https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/6to_prim.jpg",
-        disponible: true
+        descripcion: "El canal virtual de 6to. Grado de Primaria no se encuentra disponible por el momento.",
+        link: "javascript:void(0);",
+        imagen: "assets/images/canales/5to_prim.jpg",
+        disponible: false
     }
 };
 
