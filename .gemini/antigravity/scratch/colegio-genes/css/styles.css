@@ -243,7 +243,8 @@ nav {
 .hero-slider-wrapper {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 165px);
+    min-height: 480px;
+    height: clamp(480px, 70vh, 620px);
     overflow: hidden;
     background: #070B18;
 }
@@ -264,7 +265,6 @@ nav {
 }
 
 .hero-slide.active {
-    position: relative;
     opacity: 1;
     visibility: visible;
     transform: scale(1);
