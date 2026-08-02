@@ -243,8 +243,8 @@ nav {
 .hero-slider-wrapper {
     position: relative;
     width: 100%;
-    min-height: 480px;
-    height: clamp(480px, 70vh, 620px);
+    min-height: calc(100vh - 86px);
+    height: calc(100vh - 86px);
     overflow: hidden;
     background: #070B18;
 }
