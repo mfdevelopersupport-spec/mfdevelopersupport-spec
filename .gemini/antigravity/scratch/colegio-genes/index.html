@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Colegio Genes - Exigencia y alto desempeño para asegurar tu ingreso a la universidad. Conoce nuestro sistema educativo, niveles de primaria y secundaria, y sedes.">
+    <meta name="keywords" content="Colegio Genes, educación, colegio, primaria, secundaria, ingreso a la universidad, preuniversitario, Lima, colegios preuniversitarios">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Colegio Genes | Sistema Educativo 2026">
+    <meta property="og:description" content="Exigencia y alto desempeño para asegurar tu ingreso a la universidad. Conoce nuestro proceso de admisión 2026.">
+    <meta property="og:image" content="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/logo.svg">
+    <meta property="og:type" content="website">
+    <title>Colegio Genes | Sistema Educativo 2026</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css?v=20260802_RESPONSIVE_V1">
+</head>
+
+<body>
+
+    <!-- NAV BAR STICKY CON LOGO MÁS GRANDE Y ESPACIADO (HEADER ÚNICO PRINCIPAL) -->
+    <div id="site-nav">
+        <nav>
+            <button class="mobile-menu-btn" type="button" id="mobile-menu-btn" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo-container" onclick="showSection('inicio')">
+                <img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/logo.svg" class="logo-img" alt="Logo Colegio Genes">
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('inicio')" id="link-inicio" class="active">Inicio</a></li>
+                <li><a onclick="showSection('primaria')" id="link-sistema">Sistema de Trabajo</a></li>
+                <li><a onclick="showSection('sedes')" id="link-sedes">Sedes</a></li>
+                <li><a onclick="showSection('vacaciones')" id="link-vacaciones">Vacaciones Útiles</a></li>
+                <li><a onclick="showSection('ingresantes')" id="link-ingresantes">Ingresantes</a></li>
+                <li class="dropdown" id="dropdown-videos">
+                    <a onclick="toggleVideosDropdown(event)" id="link-videos">
+                        Videos Educativos <i class="fas fa-angle-down" style="font-size: 0.8rem;"></i>
+                    </a>
+                    <ul class="dropdown-menu" id="dropdown-menu-videos">
+                        <li><a onclick="showSection('videos-primaria')">Nivel Primaria</a></li>
+                        <li><a onclick="showSection('videos-secundaria')">Nivel Secundaria</a></li>
+                    </ul>
+                </li>
+                <li><a onclick="showSection('contacto')" id="link-contacto">Contacto</a></li>
+                <li><a onclick="showSection('admision')" class="btn-admision">ADMISIÓN 2026</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="main-container">
+        
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio" class="active">
+
+            <!-- HERO BANNER FULL WIDTH -->
+            <div id="inicio-hero-wrapper" class="hero-wrapper" style="background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;">
+                <div class="hero-inner">
+                    <div class="hero-text-side">
+                        <h1 class="hero-h1">FORMACIÓN DE <span class="highlight">ALTO DESEMPEÑO</span> PARA EL ÉXITO DE TUS HIJOS</h1>
+                        <p class="hero-lead">
+                            Nuestro sistema preuniversitario combina excelencia académica y valores para asegurar su ingreso a la universidad.
+                        </p>
+                        <div class="hero-cta-buttons">
+                            <button type="button" class="btn-hero-postular" onclick="showSection('admision')">
+                                POSTULAR A ADMISIÓN 2026 <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button type="button" class="btn-hero-conoce" onclick="showSection('primaria')">
+                                <i class="far fa-question-circle"></i> Conoce Nuestro Sistema
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STRIP DE ESTADÍSTICAS REALES BAJO EL HERO BANNER -->
+            <div class="stats-strip-wrapper">
+                <div class="stats-strip-container">
+                    <div class="stat-col-item">
+                        <div class="stat-icon-wrap">
+                            <i class="far fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-text-wrap">
+                            <strong>21 AÑOS</strong>
+                            <span>DE TRAYECTORIA</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col-item">
+                        <div class="stat-icon-wrap">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-text-wrap">
+                            <strong>+80 INGRESANTES</strong>
+                            <span>CADA AÑO</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col-item">
+                        <div class="stat-icon-wrap">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="stat-text-wrap">
+                            <strong>8 SEDES</strong>
+                            <span>EN LIMA METROPOLITANA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <!-- TARJETA DE INVITACIÓN AL SISTEMA (OCULTA) -->
+                <div class="card animate-fade-up" style="display: none !important;">
+                    <div class="pilares-header">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Sistema Educativo Genes</span>
+                        <h2 class="titulo-pilares" style="font-size: 1.8rem; margin-top: 5px;">Exigencia, acompañamiento y alto desempeño</h2>
+                        <div class="linea-pilares"></div>
+                        <p style="color: #64748B; max-width: 900px; margin: 15px auto 20px; line-height: 1.7;">
+                            Genes forma estudiantes con disciplina, constancia y una preparación progresiva que fortalece sus bases académicas, impulsa su confianza y los proyecta hacia metas universitarias cada vez más altas.
+                        </p>
+                    </div>
+
+                    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;">
+                        <span style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 10px 18px; border-radius: 10px; font-weight: 700; color: var(--bg-dark-navy);">Docentes especialistas</span>
+                        <span style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 10px 18px; border-radius: 10px; font-weight: 700; color: var(--bg-dark-navy);">Tutoría cercana</span>
+                        <span style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 10px 18px; border-radius: 10px; font-weight: 700; color: var(--bg-dark-navy);">Práctica constante</span>
+                        <span style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 10px 18px; border-radius: 10px; font-weight: 700; color: var(--bg-dark-navy);">Preparación preuniversitaria</span>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIOS Y DEJA HUELLA (INTEGRADO AL ENTORNO CLARO) -->
+                <div class="card" id="testimonio-hero-card">
+                    <div class="pilares-header">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px;"><i class="fas fa-star" style="color: #EAB308;"></i> Historias de Éxito</span>
+                        <h2 class="titulo-pilares" style="font-size: 2rem; margin-top: 6px;">Genes deja huella en cada ingreso</h2>
+                        <div class="linea-pilares"></div>
+                        <p style="color: #64748B; max-width: 700px; margin: 0 auto;">Conoce la experiencia real de nuestros exalumnos e ingresantes a carreras altamente competitivas gracias a nuestro sistema de trabajo.</p>
+                    </div>
+
+                    <!-- CONTAINER DEL TESTIMONIO DESTACADO -->
+                    <div class="testimonio-stage-box" id="testimonio-stage-box">
+                        <div class="testimonio-left-profile">
+                            <div class="testimonio-avatar-ring">
+                                <img id="testimonio-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=250&auto=format&fit=crop" alt="Valeria Torres">
+                                <span class="testimonio-verify-check"><i class="fas fa-check"></i></span>
+                            </div>
+                            <h4 id="testimonio-nombre">Valeria Torres</h4>
+                            <div class="testimonio-carrera-badge" id="testimonio-carrera">Medicina Humana</div>
+                            <span class="testimonio-uni-tag" id="testimonio-uni">UNMSM - San Marcos</span>
+                        </div>
+
+                        <div class="testimonio-right-body">
+                            <div class="testimonio-quote-header">
+                                <div class="testimonio-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span>(Experiencia Genes 100% Verificada)</span>
+                                </div>
+                                <i class="fas fa-quote-right quote-giant-icon"></i>
+                            </div>
+
+                            <p id="testimonio-comentario" class="testimonio-quote-text">
+                                "El sistema de Genes me dio la disciplina, el seguimiento constante y una base preuniversitaria inquebrantable. Sentí que cada simulacro semanal y cada tutoría personalizada me acercaban de verdad a mi ingreso."
+                            </p>
+
+                            <div class="testimonio-puesto-pill" id="testimonio-puesto">
+                                <i class="fas fa-trophy" style="color: #D97706;"></i> 1er. Puesto Cómputo General
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTROLES Y PAGINACIÓN -->
+                    <div class="testimonio-controls-row">
+                        <button class="testimonio-arrow-btn" onclick="prevTestimonio()" type="button" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
+                        
+                        <div class="testimonio-dots-wrapper" id="testimonio-dots-wrapper">
+                            <button class="testimonio-dot active" type="button" onclick="showTestimonio(0)"></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(1)"></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(2)"></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(3)"></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(4)"></button>
+                        </div>
+
+                        <button class="testimonio-arrow-btn" onclick="nextTestimonio()" type="button" aria-label="Siguiente testimonio"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO DE CONSULTA EN INICIO -->
+                <div class="card">
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <h2 style="color: var(--bg-dark-navy); font-weight: 800; font-size: 1.8rem; margin-bottom: 5px; text-transform: uppercase;">¿Tiene una pregunta?<br>Escríbanos</h2>
+                        <p style="color: #64748B; font-size: 0.95rem;">Llena el formulario y te responderemos lo más pronto posible.</p>
+                    </div>
+
+                    <form id="form-admision" class="formulario" action="https://formsubmit.co/mathiasfernandezesquivel@gmail.com" method="POST" style="text-align: left;">
+                        <div class="admision-grid-2">
+                            <div class="input-group">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" name="nombres" id="nombre" placeholder="Nombre y Apellidos *" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" name="correo" id="correo" placeholder="Correo electrónico *" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-phone-alt input-icon"></i>
+                            <input type="tel" name="telefono" id="celular" placeholder="Teléfono *" required>
+                        </div>
+
+                        <div class="input-group textarea-group">
+                            <i class="fas fa-comment-dots input-icon"></i>
+                            <textarea name="mensaje" id="mensaje-texto" placeholder="Mensaje *" required></textarea>
+                        </div>
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde la web de Colegio Genes">
+
+                        <button type="submit" style="padding:14px; font-size:1rem; border-radius:10px; font-weight: 800;">
+                            <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SISTEMA DE TRABAJO (REESTRUCTURADA CON SELECCIÓN DE DOS CUADROS) -->
+        <section id="primaria">
+            <div class="content-wrapper">
+
+                <!-- 1. VISTA PRINCIPAL: DOS CUADROS NIVELES (PRIMARIA Y SECUNDARIA) -->
+                <div id="sistema-level-selection" class="card animate-fade-up">
+                    <div class="pilares-header">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px;">Modelo Pedagógico Genes</span>
+                        <h2 class="titulo-pilares" style="font-size: 2.2rem; margin-top: 5px;">Sistema de Trabajo</h2>
+                        <div class="linea-pilares"></div>
+                        <p style="color: #64748B; max-width: 800px; margin: 15px auto 0; line-height: 1.65; font-size: 1.05rem;">
+                            Selecciona el nivel educativo para explorar nuestra propuesta académica basada en <strong>Exigencia y Alto Desempeño</strong>.
+                        </p>
+                    </div>
+
+                    <div class="sistema-levels-grid">
+                        <!-- CUADRO NIVEL PRIMARIA -->
+                        <div class="level-select-card primaria" onclick="showSistemaSubSection('primaria-detail')">
+                            <div>
+                                <span class="level-badge primaria-badge"><i class="fas fa-child"></i> 1.° a 6.° de Primaria</span>
+                                <div class="level-icon-wrapper">
+                                    <i class="fas fa-shapes"></i>
+                                </div>
+                                <h3>Nivel Primaria</h3>
+                                <p>
+                                    Formación integral, disciplina positiva, tutora monitora y docentes especialistas por curso para construir bases académicas e intelectuales sólidas desde los primeros años.
+                                </p>
+                            </div>
+                            <button type="button" class="btn-level-action">
+                                Explorar Nivel Primaria <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- CUADRO NIVEL SECUNDARIA -->
+                        <div class="level-select-card secundaria" onclick="showSistemaSubSection('secundaria-detail')">
+                            <div>
+                                <span class="level-badge"><i class="fas fa-graduation-cap"></i> 1.° a 5.° de Secundaria</span>
+                                <div class="level-icon-wrapper">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h3>Nivel Secundaria</h3>
+                                <p>
+                                    Sistema preuniversitario de alta exigencia, preparación intensiva, simulacros semanales tipo admisión a San Marcos/UNI/PUCP y desarrollo de alto rendimiento estudiantil.
+                                </p>
+                            </div>
+                            <button type="button" class="btn-level-action">
+                                Explorar Nivel Secundaria <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. SUBSECCIÓN INDEPENDIENTE: DETALLE NIVEL PRIMARIA -->
+                <div id="subseccion-primaria-detail" class="sistema-detail-subsection" style="display: none;">
+                    <button type="button" class="btn-volver-sistema" onclick="showSistemaSubSection('selection-main')">
+                        <i class="fas fa-arrow-left"></i> Volver a Selección de Nivel
+                    </button>
+
+                    <div class="card animate-fade-up">
+                        <div class="pilares-header">
+                            <span class="level-badge primaria-badge"><i class="fas fa-child"></i> 1.° a 6.° de Primaria</span>
+                            <h2 class="titulo-pilares" style="margin-top: 5px;">Propuesta Pedagógica de Primaria</h2>
+                            <div class="linea-pilares"></div>
+                        </div>
+
+                        <div class="pilares-grid">
+                            <article class="pilar-card pilar-1">
+                                <div class="pilar-numero">1</div>
+                                <div class="pilar-icono"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <h3>Plana Docente</h3>
+                                <p>Docentes dinámicas y especialistas en cada curso.</p>
+                            </article>
+
+                            <article class="pilar-card pilar-2">
+                                <div class="pilar-numero">2</div>
+                                <div class="pilar-icono"><i class="fas fa-user-friends"></i></div>
+                                <h3>Profesora Tutora y Monitora</h3>
+                                <p>Acompañamiento cercano y seguimiento permanente del alumno.</p>
+                            </article>
+
+                            <article class="pilar-card pilar-3">
+                                <div class="pilar-numero">3</div>
+                                <div class="pilar-icono"><i class="fas fa-layer-group"></i></div>
+                                <h3>Sistema de Trabajo Genes</h3>
+                                <p>Organización, disciplina y enfoque centrado en el estudiante.</p>
+                            </article>
+
+                            <article class="pilar-card pilar-4">
+                                <div class="pilar-numero">4</div>
+                                <div class="pilar-icono"><i class="fas fa-heart"></i></div>
+                                <h3>Formación en Valores</h3>
+                                <p>Educamos con respeto, responsabilidad y compromiso.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="card animate-fade-up">
+                        <div class="canales-primaria-box">
+                            <div class="pilares-header">
+                                <h2 class="titulo-pilares">Canales por Grado - Primaria</h2>
+                                <div class="linea-pilares"></div>
+                                <p style="color: #64748B; margin-top: 5px;">Selecciona un grado para ingresar a su canal de clases virtuales.</p>
+                            </div>
+
+                            <div class="canales-primaria-tabs">
+                                <button class="canal-primaria-tab active" type="button" onclick="showPrimaryChannel('grado1', this)">1&deg;</button>
+                                <button class="canal-primaria-tab" type="button" onclick="showPrimaryChannel('grado2', this)">2&deg;</button>
+                                <button class="canal-primaria-tab" type="button" onclick="showPrimaryChannel('grado3', this)">3&deg;</button>
+                                <button class="canal-primaria-tab" type="button" onclick="showPrimaryChannel('grado4', this)">4&deg;</button>
+                                <button class="canal-primaria-tab" type="button" onclick="showPrimaryChannel('grado5', this)">5&deg;</button>
+                                <button class="canal-primaria-tab" type="button" onclick="showPrimaryChannel('grado6', this)">6&deg;</button>
+                            </div>
+
+                            <article class="canal-primaria-card" id="primary-channel-card">
+                                <div class="canal-primaria-media">
+                                    <div class="canal-primaria-img-wrap">
+                                        <img id="primary-channel-image" src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/1ero_prim.jpg" alt="1ro de primaria">
+                                    </div>
+                                </div>
+
+                                <div class="canal-primaria-copy">
+                                    <span class="canal-primaria-badge">Canal del grado</span>
+                                    <h3 id="primary-channel-title">1ro de Primaria</h3>
+                                    <p id="primary-channel-description">
+                                        Accede al canal virtual oficial del grado para reforzar las clases y revisar el contenido académico.
+                                    </p>
+                                    <a id="primary-channel-link" class="canal-primaria-link" href="https://www.youtube.com/@genesclasevirtual1ro.prima508" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-youtube"></i> Ingresar al canal
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. SUBSECCIÓN INDEPENDIENTE: DETALLE NIVEL SECUNDARIA -->
+                <div id="subseccion-secundaria-detail" class="sistema-detail-subsection" style="display: none;">
+                    <button type="button" class="btn-volver-sistema" onclick="showSistemaSubSection('selection-main')">
+                        <i class="fas fa-arrow-left"></i> Volver a Selección de Nivel
+                    </button>
+
+                    <div class="card animate-fade-up">
+                        <div class="pilares-header">
+                            <span class="level-badge"><i class="fas fa-graduation-cap"></i> 1.° a 5.° de Secundaria</span>
+                            <h2 class="titulo-pilares" style="margin-top: 5px;">Propuesta Preuniversitaria de Secundaria</h2>
+                            <div class="linea-pilares"></div>
+                        </div>
+
+                        <div class="pilares-grid">
+                            <article class="pilar-card pilar-1">
+                                <div class="pilar-numero">1</div>
+                                <div class="pilar-icono"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <h3>Plana Docente Preuniversitaria</h3>
+                                <p>Docentes especialistas en nivel universitario San Marcos/UNI/PUCP.</p>
+                            </article>
+
+                            <article class="pilar-card pilar-2">
+                                <div class="pilar-numero">2</div>
+                                <div class="pilar-icono"><i class="fas fa-user-graduate"></i></div>
+                                <h3>Simulacros Continuos</h3>
+                                <p>Evaluaciones semanales tipo admisión con ranking de resultados.</p>
+                            </article>
+
+                            <article class="pilar-card pilar-3">
+                                <div class="pilar-numero">3</div>
+                                <div class="pilar-icono"><i class="fas fa-layer-group"></i></div>
+                                <h3>Exigencia Académica</h3>
+                                <p>Horarios estructurados, ritmo exigente y material especializado.</p>
+                            </article>
+
+                            <article class="pilar-card pilar-4">
+                                <div class="pilar-numero">4</div>
+                                <div class="pilar-icono"><i class="fas fa-compass"></i></div>
+                                <h3>Orientación Vocacional</h3>
+                                <p>Tutoría cercana y preparación enfocada a metas universitarias reales.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="card animate-fade-up">
+                        <div class="canales-secundaria-box">
+                            <div class="pilares-header">
+                                <h2 class="titulo-pilares">Canales por Grado - Secundaria</h2>
+                                <div class="linea-pilares"></div>
+                                <p style="color: #64748B; margin-top: 5px;">Selecciona un grado para ingresar a su canal de clases virtuales.</p>
+                            </div>
+
+                            <div class="canales-secundaria-tabs">
+                                <button class="canal-secundaria-tab active" type="button" onclick="showSecundariaChannel('grado1', this)">1&deg;</button>
+                                <button class="canal-secundaria-tab" type="button" onclick="showSecundariaChannel('grado2', this)">2&deg;</button>
+                                <button class="canal-secundaria-tab" type="button" onclick="showSecundariaChannel('grado3', this)">3&deg;</button>
+                                <button class="canal-secundaria-tab" type="button" onclick="showSecundariaChannel('grado4', this)">4&deg;</button>
+                                <button class="canal-secundaria-tab" type="button" onclick="showSecundariaChannel('grado5', this)">5&deg;</button>
+                            </div>
+
+                            <article class="canal-secundaria-card" id="secondary-channel-card">
+                                <div class="canal-secundaria-media">
+                                    <div class="canal-secundaria-img-wrap">
+                                        <img id="secondary-channel-image" src="assets/images/canales/1ro_sec.jpg" alt="1ro de Secundaria">
+                                    </div>
+                                </div>
+
+                                <div class="canal-secundaria-copy">
+                                    <span class="canal-secundaria-badge">Canal del grado</span>
+                                    <h3 id="secondary-channel-title">1ro de Secundaria</h3>
+                                    <p id="secondary-channel-description">
+                                        Canal virtual oficial de 1er. Año de Secundaria. Clases de ciencias exactas y letras.
+                                    </p>
+                                    <a id="secondary-channel-link" class="canal-secundaria-link" href="https://www.youtube.com/@genesclasevirtual1rosecund681" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-youtube"></i> Ingresar al canal
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                          <!-- SECCIÓN SEDES -->              </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SEDES -->
+        <section id="sedes">
+            <div class="content-wrapper">
+                <div class="card animate-fade-up">
+                    <div class="pilares-header">
+                        <h2 class="titulo-pilares">Nuestras Sedes</h2>
+                        <div class="linea-pilares"></div>
+                        <p style="color: #64748B; margin-top: 5px;">Conoce nuestras 8 sedes y encuentra la ubicación más cercana para tu familia.</p>
+                    </div>
+
+                    <div class="sedes-grid">
+                        <article class="sede-card" onclick="openSedeModal('alborada')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_alborada.png" alt="Genes Alborada"></div>
+                            <span class="sede-distrito">Comas</span>
+                            <h3>Genes Alborada</h3>
+                            <p class="sede-resumen">Primaria y secundaria con acceso rápido desde Av. Universitaria.</p>
+                            <div class="sede-meta"><span>Primaria - Secundaria</span><span>Av. Universitaria 9880</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('genes2')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_ii.png" alt="Genes II"></div>
+                            <span class="sede-distrito">Comas</span>
+                            <h3>Genes II</h3>
+                            <p class="sede-resumen">Sede con enfoque en secundaria y acompañamiento académico constante.</p>
+                            <div class="sede-meta"><span>Secundaria</span><span>Av. Universitaria 8257</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('losolivos')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_los_olivos.png" alt="Genes Los Olivos"></div>
+                            <span class="sede-distrito">Los Olivos</span>
+                            <h3>Genes Los Olivos</h3>
+                            <p class="sede-resumen">Alternativa cercana para familias de Los Olivos con doble nivel.</p>
+                            <div class="sede-meta"><span>Primaria - Secundaria</span><span>Av. Universitaria 5306</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('primavera')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_primavera.png" alt="Genes Primavera"></div>
+                            <span class="sede-distrito">Comas</span>
+                            <h3>Genes Primavera</h3>
+                            <p class="sede-resumen">Espacio pensado para primaria con atención cercana a las familias.</p>
+                            <div class="sede-meta"><span>Primaria</span><span>Coop. Primavera</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('smp')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_de_smp.png" alt="Genes de S.M.P."></div>
+                            <span class="sede-distrito">San Martín de Porres</span>
+                            <h3>Genes de S.M.P.</h3>
+                            <p class="sede-resumen">Sede integral para familias de SMP con fácil conexión vial.</p>
+                            <div class="sede-meta"><span>Primaria - Secundaria</span><span>Alt. Carlos Izaguirre 19</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('norte')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_del_norte.png" alt="Genes del Norte"></div>
+                            <span class="sede-distrito">Puente Piedra</span>
+                            <h3>Genes del Norte</h3>
+                            <p class="sede-resumen">Cobertura para la zona norte con propuesta académica completa.</p>
+                            <div class="sede-meta"><span>Primaria - Secundaria</span><span>Leoncio Prado</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('gamarra')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_gamarra.jpg" alt="Genes Gamarra"></div>
+                            <span class="sede-distrito">San Martín de Porres</span>
+                            <h3>Genes Gamarra</h3>
+                            <p class="sede-resumen">Sede urbana con acceso cómodo y acompañamiento por etapas.</p>
+                            <div class="sede-meta"><span>Primaria - Secundaria</span><span>Urb. Antares</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+
+                        <article class="sede-card" onclick="openSedeModal('pinar')">
+                            <div class="sede-img"><img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/photos/sedes/genes_del_pinar.jpg" alt="Genes del Pinar"></div>
+                            <span class="sede-distrito">Comas</span>
+                            <h3>Genes del Pinar</h3>
+                            <p class="sede-resumen">Sede para familias de Comas que buscan exigencia y cercanía.</p>
+                            <div class="sede-meta"><span>Primaria - Secundaria</span><span>Urb. El Pinar</span></div>
+                            <button class="sede-btn" type="button">Ver sede</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN VACACIONES ÚTILES DETALLADA EN TODAS SUS SUBSECCIONES Y CON REQUISITOS -->
+        <section id="vacaciones">
+            <div class="content-wrapper">
+                <div class="card animate-fade-up">
+                    <div class="pilares-header">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Programa de Verano 2026</span>
+                        <h2 class="titulo-pilares">Vacaciones Útiles</h2>
+                        <div class="linea-pilares"></div>
+                        <p style="color: #64748B; margin-top: 5px;">Un programa diseñado para reforzar el aprendizaje, desarrollar habilidades y aprovechar las vacaciones con propósito.</p>
+                    </div>
+
+                    <div class="canales-primaria-tabs" style="margin-bottom: 25px;">
+                        <button class="canal-primaria-tab active" type="button" onclick="showVacacionesPanel('vacaciones-primaria-menor', this)">1.&ordm; a 3.&ordm; Primaria</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVacacionesPanel('vacaciones-primaria-mayor', this)">4.&ordm; a 6.&ordm; Primaria</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVacacionesPanel('vacaciones-sec-menor', this)">1.&ordm; a 2.&ordm; Secundaria</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVacacionesPanel('vacaciones-sec-mayor', this)">3.&ordm; a 5.&ordm; Secundaria</button>
+                    </div>
+
+                    <!-- SUBSECCIÓN 1: 1° A 3° PRIMARIA -->
+                    <div id="vacaciones-primaria-menor" class="vacaciones-panel active">
+                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (1.° a 3.° Primaria)</h3>
+                        
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
+                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        </div>
+
+                        <div class="vacaciones-talleres-grid">
+                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
+                                <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
+                                <p style="font-size: 0.9rem; color: #334155;">Matemática, Razonamiento Matemático, Comunicación y Taller de Lectura.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
+                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px;">Talleres complementarios</h4>
+                                <p style="font-size: 0.9rem; color: #334155;">Oratoria, xilófono y danza-festejo.</p>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 25px;">
+                            <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Horarios y Distribución</h4>
+                            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="background: var(--bg-dark-navy); color: var(--gold-gold); padding: 6px 16px; border-radius: 999px; font-weight: 800; font-size: 0.85rem;">Lun - Mié - Vie</span>
+                                <span style="background: #F8FAFC; border: 1px solid #CBD5E1; color: var(--bg-dark-navy); padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">Mar - Jue - Sáb</span>
+                            </div>
+                            <img class="zoomable-img" src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/taller-pri-1.png" alt="Horario 1 a 3 primaria" style="max-width: 100%; border-radius: 12px;">
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Requisitos del Estudiante</h4>
+                        <div class="vacaciones-requisitos-grid">
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Puntualidad</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Estar listo y organizado desde antes del inicio de clases.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Disciplina</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Participación activa, respeto por el horario y compromiso constante.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Valores</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Respeto, responsabilidad y muchas ganas de aprender.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Materiales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Cuadernos, útiles básicos y disposición para trabajar en cada taller.</p>
+                            </div>
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 15px;">Beneficios del Programa</h4>
+                        <div class="vacaciones-beneficios-grid">
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-users" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Profesores dinámicos</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Docentes comprometidos con el avance y motivación del alumno.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-video" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Videos tutoriales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Refuerzo adicional para seguir practicando fuera de clase.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-book" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Material académico</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Contenido teórico y práctico para cada sesión de aprendizaje.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-chart-column" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Informe de rendimiento</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Seguimiento del progreso académico y formativo del estudiante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECCIÓN 2: 4° A 6° PRIMARIA -->
+                    <div id="vacaciones-primaria-mayor" class="vacaciones-panel">
+                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (4.° a 6.° Primaria)</h3>
+                        
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
+                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        </div>
+
+                        <div class="vacaciones-talleres-grid">
+                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
+                                <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
+                                <p style="font-size: 0.9rem; color: #334155;">Aritmética, Álgebra, Geometría, Raz. Matemático, Castellano, Taller de lectura.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
+                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px;">Talleres complementarios</h4>
+                                <p style="font-size: 0.9rem; color: #334155;">Oratoria, cajón y danza-festejo.</p>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 25px;">
+                            <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Horarios y Distribución</h4>
+                            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="background: var(--bg-dark-navy); color: var(--gold-gold); padding: 6px 16px; border-radius: 999px; font-weight: 800; font-size: 0.85rem;">Lun - Mié - Vie</span>
+                                <span style="background: #F8FAFC; border: 1px solid #CBD5E1; color: var(--bg-dark-navy); padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">Mar - Jue - Sáb</span>
+                            </div>
+                            <img class="zoomable-img" src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/taller-pri-2.png" alt="Horario 4 a 6 primaria" style="max-width: 100%; border-radius: 12px;">
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Requisitos del Estudiante</h4>
+                        <div class="vacaciones-requisitos-grid">
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Puntualidad</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Estar listo y organizado desde antes del inicio de clases.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Disciplina</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Participación activa, respeto por el horario y compromiso constante.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Valores</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Respeto, responsabilidad y muchas ganas de aprender.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Materiales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Cuadernos, útiles básicos y disposición para trabajar en cada taller.</p>
+                            </div>
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 15px;">Beneficios del Programa</h4>
+                        <div class="vacaciones-beneficios-grid">
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-users" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Profesores dinámicos</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Docentes comprometidos con el avance y motivación del alumno.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-video" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Videos tutoriales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Refuerzo adicional para seguir practicando fuera de clase.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-book" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Material académico</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Contenido teórico y práctico para cada sesión de aprendizaje.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-chart-column" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Informe de rendimiento</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Seguimiento del progreso académico y formativo del estudiante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECCIÓN 3: 1° A 2° SECUNDARIA -->
+                    <div id="vacaciones-sec-menor" class="vacaciones-panel">
+                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (1.° a 2.° Secundaria)</h3>
+                        
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
+                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        </div>
+
+                        <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px;">
+                            <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
+                            <p style="font-size: 0.92rem; color: #334155;">Aritmética, Álgebra, Geometría, Trigonometría, Física, Química, Biología, Raz. Matemático, Raz. Verbal, Castellano.</p>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 25px;">
+                            <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Horarios de Clase</h4>
+                            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="background: var(--bg-dark-navy); color: var(--gold-gold); padding: 6px 16px; border-radius: 999px; font-weight: 800; font-size: 0.85rem;">Lun - Mié - Vie</span>
+                                <span style="background: #F8FAFC; border: 1px solid #CBD5E1; color: var(--bg-dark-navy); padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">Mar - Jue - Sáb</span>
+                            </div>
+                            <img class="zoomable-img" src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/taller-sec-1.png" alt="Horario 1 a 2 secundaria" style="max-width: 100%; border-radius: 12px;">
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Requisitos del Estudiante</h4>
+                        <div class="vacaciones-requisitos-grid">
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Puntualidad</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Estar listo y organizado desde antes del inicio de clases.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Disciplina</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Participación activa, respeto por el horario y compromiso constante.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Valores</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Respeto, responsabilidad y muchas ganas de aprender.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Materiales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Cuadernos, útiles básicos y disposición para trabajar en cada taller.</p>
+                            </div>
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 15px;">Beneficios del Programa</h4>
+                        <div class="vacaciones-beneficios-grid">
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-users" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Profesores dinámicos</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Docentes comprometidos con el avance y motivación del alumno.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-video" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Videos tutoriales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Refuerzo adicional para seguir practicando fuera de clase.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-book" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Material académico</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Contenido teórico y práctico para cada sesión de aprendizaje.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-chart-column" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Informe de rendimiento</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Seguimiento del progreso académico y formativo del estudiante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECCIÓN 4: 3° A 5° SECUNDARIA -->
+                    <div id="vacaciones-sec-mayor" class="vacaciones-panel">
+                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (3.° a 5.° Secundaria)</h3>
+                        
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
+                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
+                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        </div>
+
+                        <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px;">
+                            <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
+                            <p style="font-size: 0.92rem; color: #334155;">Aritmética, Álgebra, Geometría, Trigonometría, Física, Química, Biología, Raz. Matemático, Raz. Verbal, Castellano.</p>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 25px;">
+                            <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Horarios de Clase</h4>
+                            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                                <span style="background: var(--bg-dark-navy); color: var(--gold-gold); padding: 6px 16px; border-radius: 999px; font-weight: 800; font-size: 0.85rem;">Lun - Mié - Vie</span>
+                                <span style="background: #F8FAFC; border: 1px solid #CBD5E1; color: var(--bg-dark-navy); padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">Mar - Jue - Sáb</span>
+                            </div>
+                            <img class="zoomable-img" src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/taller-sec-1.png" alt="Horario 3 a 5 secundaria" style="max-width: 100%; border-radius: 12px;">
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 12px;">Requisitos del Estudiante</h4>
+                        <div class="vacaciones-requisitos-grid">
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Puntualidad</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Estar listo y organizado desde antes del inicio de clases.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Disciplina</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Participación activa, respeto por el horario y compromiso constante.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Valores</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Respeto, responsabilidad y muchas ganas de aprender.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <h5 style="color: var(--crimson-red); margin-bottom: 4px;">Materiales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Cuadernos, útiles básicos y disposición para trabajar en cada taller.</p>
+                            </div>
+                        </div>
+
+                        <h4 style="color: var(--bg-dark-navy); margin-bottom: 15px;">Beneficios del Programa</h4>
+                        <div class="vacaciones-beneficios-grid">
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-users" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Profesores dinámicos</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Docentes comprometidos con el avance y motivación del alumno.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-video" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Videos tutoriales</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Refuerzo adicional para seguir practicando fuera de clase.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-book" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Material académico</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Contenido teórico y práctico para cada sesión de aprendizaje.</p>
+                            </div>
+                            <div style="background: #F8FAFC; padding: 18px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                                <i class="fas fa-chart-column" style="color: var(--crimson-red); font-size: 1.6rem; margin-bottom: 8px;"></i>
+                                <h5 style="color: var(--bg-dark-navy); margin-bottom: 4px;">Informe de rendimiento</h5>
+                                <p style="font-size: 0.82rem; color: #64748B;">Seguimiento del progreso académico y formativo del estudiante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN VIDEOS PRIMARIA -->
+        <section id="videos-primaria">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="pilares-header">
+                        <h2 class="titulo-pilares">Videos Primaria</h2>
+                        <div class="linea-pilares"></div>
+                    </div>
+
+                    <div class="canales-primaria-tabs">
+                        <button class="canal-primaria-tab active" type="button" onclick="showVideosPrimaria('primaria1', this)">1&deg;</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVideosPrimaria('primaria2', this)">2&deg;</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVideosPrimaria('primaria3', this)">3&deg;</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVideosPrimaria('primaria4', this)">4&deg;</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVideosPrimaria('primaria5', this)">5&deg;</button>
+                        <button class="canal-primaria-tab" type="button" onclick="showVideosPrimaria('primaria6', this)">6&deg;</button>
+                    </div>
+
+                    <div class="videos-edu-grid" id="videos-edu-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 15px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN VIDEOS SECUNDARIA -->
+        <section id="videos-secundaria">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="pilares-header">
+                        <h2 class="titulo-pilares">Videos Secundaria</h2>
+                        <div class="linea-pilares"></div>
+                    </div>
+
+                    <div class="canales-secundaria-tabs">
+                        <button class="canal-secundaria-tab active" type="button" onclick="showVideosSecundaria('secundaria1', this)">1&deg;</button>
+                        <button class="canal-secundaria-tab" type="button" onclick="showVideosSecundaria('secundaria2', this)">2&deg;</button>
+                        <button class="canal-secundaria-tab" type="button" onclick="showVideosSecundaria('secundaria3', this)">3&deg;</button>
+                        <button class="canal-secundaria-tab" type="button" onclick="showVideosSecundaria('secundaria4', this)">4&deg;</button>
+                        <button class="canal-secundaria-tab" type="button" onclick="showVideosSecundaria('secundaria5', this)">5&deg;</button>
+                    </div>
+
+                    <div class="videos-edu-grid" id="videos-sec-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 15px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INGRESANTES -->
+        <section id="ingresantes">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="pilares-header">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px;">Orgullo Genes</span>
+                        <h2 class="titulo-pilares">Nuestros Ingresantes</h2>
+                        <p style="color: #64748B; max-width: 750px; margin: 10px auto 0; font-weight: 500;">Alumnos que alcanzaron los primeros puestos en las universidades más prestigiosas del país (San Marcos, UNI, Callao y PUCP).</p>
+                        <div class="linea-pilares"></div>
+                    </div>
+
+                    <!-- PESTAÑAS DE UNIVERSIDADES -->
+                    <div class="ingresantes-tabs">
+                        <button class="ingresante-tab active" type="button" onclick="filterIngresantes('todos', this)">TODOS</button>
+                        <button class="ingresante-tab" type="button" onclick="filterIngresantes('sanmarcos', this)">SAN MARCOS</button>
+                        <button class="ingresante-tab" type="button" onclick="filterIngresantes('uni', this)">UNI</button>
+                        <button class="ingresante-tab" type="button" onclick="filterIngresantes('callao', this)">CALLAO</button>
+                        <button class="ingresante-tab" type="button" onclick="filterIngresantes('pucp', this)">PUCP</button>
+                    </div>
+
+                    <!-- GRID DE PUBLICACIONES DE INGRESANTES -->
+                    <div class="ingresantes-grid">
+                        
+                        <!-- CARD SAN MARCOS -->
+                        <div class="ingresante-card" data-uni="sanmarcos" onclick="openIngresanteModal('assets/images/ingresantes_sanmarcos.png', 'Universidad Nacional Mayor de San Marcos')">
+                            <div class="ingresante-img-wrapper">
+                                <span class="ingresante-badge-uni badge-sanmarcos">UNMSM - San Marcos</span>
+                                <img src="assets/images/ingresantes_sanmarcos.png" alt="Ingresantes Universidad Nacional Mayor de San Marcos">
+                                <div class="ingresante-overlay-zoom">
+                                    <i class="fas fa-search-plus"></i> Ampliar Afiche
+                                </div>
+                            </div>
+                            <div class="ingresante-info">
+                                <h3>U. SAN MARCOS (Admisión 2026-I)</h3>
+                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> 3er, 5to, 7mo y 8vo Puesto General</p>
+                                <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD UNI -->
+                        <div class="ingresante-card" data-uni="uni" onclick="openIngresanteModal('assets/images/ingresantes_uni.png', 'Universidad Nacional de Ingeniería')">
+                            <div class="ingresante-img-wrapper">
+                                <span class="ingresante-badge-uni badge-uni">UNI - Ingeniería</span>
+                                <img src="assets/images/ingresantes_uni.png" alt="Ingresantes Universidad Nacional de Ingeniería">
+                                <div class="ingresante-overlay-zoom">
+                                    <i class="fas fa-search-plus"></i> Ampliar Afiche
+                                </div>
+                            </div>
+                            <div class="ingresante-info">
+                                <h3>UNI (Admisión 2025-I)</h3>
+                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> 1er Puesto Ing. Industrial / 2do Puesto Mecatrónica</p>
+                                <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD CALLAO -->
+                        <div class="ingresante-card" data-uni="callao" onclick="openIngresanteModal('assets/images/ingresantes_callao.png', 'Universidad Nacional del Callao')">
+                            <div class="ingresante-img-wrapper">
+                                <span class="ingresante-badge-uni badge-callao">UNAC - U. Callao</span>
+                                <img src="assets/images/ingresantes_callao.png" alt="Ingresantes Universidad Nacional del Callao">
+                                <div class="ingresante-overlay-zoom">
+                                    <i class="fas fa-search-plus"></i> Ampliar Afiche
+                                </div>
+                            </div>
+                            <div class="ingresante-info">
+                                <h3>U. CALLAO (Admisión 2025)</h3>
+                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> Ingreso Masivo (1er, 3er y 4to Puesto)</p>
+                                <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD PUCP -->
+                        <div class="ingresante-card" data-uni="pucp" onclick="openIngresanteModal('assets/images/ingresantes_pucp.png', 'Pontificia Universidad Católica del Perú')">
+                            <div class="ingresante-img-wrapper">
+                                <span class="ingresante-badge-uni badge-pucp">PUCP - U. Católica</span>
+                                <img src="assets/images/ingresantes_pucp.png" alt="Ingresantes Pontificia Universidad Católica del Perú">
+                                <div class="ingresante-overlay-zoom">
+                                    <i class="fas fa-search-plus"></i> Ampliar Afiche
+                                </div>
+                            </div>
+                            <div class="ingresante-info">
+                                <h3>PUCP (1era. Opción)</h3>
+                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> Ingresantes Ing. Industrial y R. Internacionales</p>
+                                <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto">
+            <div class="content-wrapper">
+                <div class="contacto-layout animate-fade-up">
+                    <div class="contacto-info-panel">
+                        <span style="color: var(--gold-gold); font-weight: 800; font-size: 0.75rem; text-transform: uppercase;">Atención Directa</span>
+                        <h3 style="font-size: 1.5rem; margin-top: 4px;">Información de Contacto</h3>
+                        <p style="color: #CBD5E1; font-size: 0.9rem; margin-bottom: 20px;">Estamos listos para orientarte sobre admisión, niveles y sedes.</p>
+
+                        <div class="contacto-dato">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <small style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase;">Teléfono</small>
+                                <br><span style="font-weight: 700;">01 521 8596</span>
+                            </div>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <small style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase;">WhatsApp</small>
+                                <br><a href="https://wa.me/51933840074" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; font-weight: 700;">933 840 074</a>
+                            </div>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <i class="far fa-envelope"></i>
+                            <div>
+                                <small style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase;">Correo Institucional</small>
+                                <br><a href="mailto:informes@colegiogenes.edu.pe" style="color: #FFFFFF; font-weight: 700;">informes@colegiogenes.edu.pe</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 0;">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.75rem; text-transform: uppercase;">Formulario Web</span>
+                        <h3 style="color: var(--bg-dark-navy); font-size: 1.6rem; font-weight: 800; margin: 4px 0 10px;">¿Tiene una pregunta?<br>Escríbanos</h3>
+
+                        <form class="formulario" action="https://formsubmit.co/mathiasfernandezesquivel@gmail.com" method="POST">
+                            <div class="input-group">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" name="nombres" placeholder="Nombre y Apellidos *" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" name="correo" placeholder="Correo electrónico *" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-phone-alt input-icon"></i>
+                                <input type="tel" name="telefono" placeholder="Teléfono *" required>
+                            </div>
+                            <div class="input-group textarea-group">
+                                <i class="fas fa-comment-dots input-icon"></i>
+                                <textarea name="mensaje" placeholder="Mensaje *" required></textarea>
+                            </div>
+
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="Nuevo mensaje desde la sección Contacto">
+
+                            <button type="submit"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ADMISIÓN 2026 CON DETALLES COMPLETOS DE LA PÁGINA ORIGINAL -->
+        <section id="admision">
+            <div class="content-wrapper">
+                <div class="card animate-fade-up">
+                    <div class="pilares-header">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Proceso y Requisitos</span>
+                        <h2 class="titulo-pilares">Admisión 2026</h2>
+                        <div class="linea-pilares"></div>
+                        <p style="color: #64748B; margin-top: 5px;">Conoce el proceso de admisión y matrícula, los requisitos principales y la información económica para el periodo 2026.</p>
+                    </div>
+
+                    <div class="admision-proceso">
+                        <article class="admision-paso">
+                            <div class="admision-paso-numero">1</div>
+                            <h3 style="color: var(--bg-dark-navy); font-weight: 800; margin-bottom: 6px;">Test Psicológico</h3>
+                            <p style="font-size: 0.88rem; color: #334155; margin-bottom: 8px;">Es referencial y gratuito. Permite conocer el estado emocional, atención, concentración y conducta del alumno.</p>
+                            <p style="font-size: 0.88rem; color: #334155; margin-bottom: 10px;">Con esta información, la tutora orienta al docente y se coordina con el padre de familia.</p>
+                            <div style="background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border: 1px solid #E2E8F0; font-size: 0.85rem; color: var(--bg-dark-navy);">
+                                <strong>Requisitos:</strong> Fotocopia de libreta de notas, DNI del alumno y DNI del apoderado.
+                            </div>
+                        </article>
+
+                        <article class="admision-paso">
+                            <div class="admision-paso-numero">2</div>
+                            <h3 style="color: var(--bg-dark-navy); font-weight: 800; margin-bottom: 6px;">Separación de Vacante</h3>
+                            <p style="font-size: 0.88rem; color: #334155; margin-bottom: 10px;">Luego del test psicológico, se procede a la separación de vacante presentando el voucher de matrícula.</p>
+                            <div style="background: #F8FAFC; padding: 12px; border-radius: 10px; border: 1px solid #E2E8F0; font-size: 0.85rem;">
+                                <p style="margin-bottom: 4px;"><strong>BCP:</strong> 1918748557060</p>
+                                <p><strong>CCI:</strong> 00219100874855706057</p>
+                            </div>
+                        </article>
+
+                        <article class="admision-paso">
+                            <div class="admision-paso-numero">3</div>
+                            <h3 style="color: var(--bg-dark-navy); font-weight: 800; margin-bottom: 6px;">Regularización de Matrícula</h3>
+                            <p style="font-size: 0.88rem; color: #334155; margin-bottom: 10px;">El apoderado presenta la documentación requerida para completar el proceso:</p>
+                            <ul style="padding-left: 20px; font-size: 0.85rem; color: #334155; line-height: 1.6;">
+                                <li>Copia de DNI del alumno, padre y madre.</li>
+                                <li>Libreta de notas.</li>
+                                <li>Certificado de estudios.</li>
+                                <li>Ficha de matrícula emitida por SIAGIE.</li>
+                                <li>Una mica.</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="admision-split-layout">
+                        <div>
+                            <span style="color: var(--crimson-red); font-size: 0.78rem; font-weight: 800; text-transform: uppercase;">Información Económica</span>
+                            <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin: 4px 0 8px;">Aspecto Económico</h3>
+                            <p style="color: #64748B; font-size: 0.9rem; margin-bottom: 15px;">Consulta el cuadro informativo de costos y condiciones económicas para el proceso de matrícula del año 2026.</p>
+                            <img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/aspecto-economico-2024-e1697813609445.png" alt="Aspecto económico Colegio Genes" style="width: 100%; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        </div>
+
+                        <div style="background: #F8FAFC; padding: 25px; border-radius: 16px; border: 1px solid #E2E8F0;">
+                            <h3 style="font-size: 1.4rem; color: var(--crimson-red); font-weight: 800; margin-bottom: 6px;">Solicita Información</h3>
+                            <p style="color: #64748B; font-size: 0.9rem; margin-bottom: 20px;">Llena el formulario y te responderemos lo más pronto posible para continuar tu proceso.</p>
+
+                            <form class="formulario" action="https://formsubmit.co/mathiasfernandezesquivel@gmail.com" method="POST">
+                                <div class="admision-grid-2">
+                                    <div class="input-group">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input type="text" name="nombres" placeholder="Nombre y Apellidos *" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <i class="fas fa-envelope input-icon"></i>
+                                        <input type="email" name="correo" placeholder="Correo electrónico *" required>
+                                    </div>
+                                </div>
+                                <div class="admision-grid-2">
+                                    <div class="input-group">
+                                        <i class="fas fa-phone-alt input-icon"></i>
+                                        <input type="tel" name="telefono" placeholder="Teléfono *" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <i class="fas fa-map-marker-alt input-icon"></i>
+                                        <select name="sede" required>
+                                            <option value="" disabled selected>Sede *</option>
+                                            <option value="Genes Alborada">Genes Alborada</option>
+                                            <option value="Genes II">Genes II</option>
+                                            <option value="Genes Los Olivos">Genes Los Olivos</option>
+                                            <option value="Genes Primavera">Genes Primavera</option>
+                                            <option value="Genes de S.M.P.">Genes de S.M.P.</option>
+                                            <option value="Genes del Norte">Genes del Norte</option>
+                                            <option value="Genes Gamarra">Genes Gamarra</option>
+                                            <option value="Genes del Pinar">Genes del Pinar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="admision-grid-2">
+                                    <div class="input-group">
+                                        <i class="fas fa-graduation-cap input-icon"></i>
+                                        <select name="nivel" required>
+                                            <option value="" disabled selected>Nivel *</option>
+                                            <option value="Nivel Primaria">Nivel Primaria</option>
+                                            <option value="Nivel Secundaria">Nivel Secundaria</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <i class="fas fa-layer-group input-icon"></i>
+                                        <select name="grado" required>
+                                            <option value="" disabled selected>Grado *</option>
+                                            <option value="1er. Grado">1er. Grado</option>
+                                            <option value="2do. Grado">2do. Grado</option>
+                                            <option value="3er. Grado">3er. Grado</option>
+                                            <option value="4to. Grado">4to. Grado</option>
+                                            <option value="5to. Grado">5to. Grado</option>
+                                            <option value="6to. Grado">6to. Grado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group textarea-group">
+                                    <i class="fas fa-comment-dots input-icon"></i>
+                                    <textarea name="mensaje" placeholder="Escribe tu consulta aquí (opcional)"></textarea>
+                                </div>
+
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_subject" value="Nuevo mensaje desde Admisión 2026">
+
+                                <button type="submit"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Enviar solicitud</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- MODAL POPUP DE SEDE -->
+    <div id="sede-modal" class="sede-modal-overlay">
+        <div class="sede-modal-box">
+            <button class="sede-modal-close" onclick="closeSedeModal()">&times;</button>
+            <div class="pilares-header" style="margin-bottom: 15px;">
+                <h2 id="sede-modal-titulo" style="color: var(--bg-dark-navy); font-size: 1.6rem; font-weight: 800;">Nombre Sede</h2>
+                <div class="linea-pilares"></div>
+            </div>
+
+            <div class="sede-modal-grid">
+                <div class="sede-modal-info">
+                    <div class="sede-modal-dato">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <small>Distrito</small>
+                            <span id="sede-modal-distrito">Distrito</span>
+                        </div>
+                    </div>
+
+                    <div class="sede-modal-dato">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <small>Nivel</small>
+                            <span id="sede-modal-nivel">Nivel</span>
+                        </div>
+                    </div>
+
+                    <div class="sede-modal-dato">
+                        <i class="fas fa-compass"></i>
+                        <div>
+                            <small>Dirección</small>
+                            <span id="sede-modal-direccion">Dirección</span>
+                        </div>
+                    </div>
+
+                    <div class="sede-contactos">
+                        <a id="sede-modal-fijo" href="#"><i class="fas fa-phone-alt"></i> <span>Fijo</span></a>
+                        <a id="sede-modal-celular" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
+                        <a id="sede-modal-correo" href="#"><i class="far fa-envelope"></i> <span>Correo</span></a>
+                    </div>
+                </div>
+
+                <div class="sede-mapa-wrap">
+                    <iframe id="sede-modal-mapa" src="" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/logo.svg" alt="Colegio Genes" class="footer-logo">
+                    <p style="color: #CBD5E1; font-size: 0.9rem; margin-bottom: 15px;">
+                        Exigencia académica, acompañamiento cercano y alto desempeño para potenciar el futuro universitario de cada estudiante.
+                    </p>
+                    <button class="footer-cta" type="button" onclick="showSection('admision')">
+                        Quiero información
+                    </button>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <a class="footer-contact-item" href="tel:015218596">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>01 521 8596</span>
+                    </a>
+                    <a class="footer-contact-item" href="https://wa.me/51933840074" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>933 840 074</span>
+                    </a>
+                    <a class="footer-contact-item" href="mailto:informes@colegiogenes.edu.pe">
+                        <i class="far fa-envelope"></i>
+                        <span>informes@colegiogenes.edu.pe</span>
+                    </a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Redes Sociales</h3>
+                    <a class="footer-contact-item" href="https://www.facebook.com/ColegioGenes/?locale=es_LA" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a class="footer-contact-item" href="https://www.tiktok.com/@colegiosgenes" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                    <a class="footer-contact-item" href="https://wa.me/51933840074" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;">
+                <a href="#" aria-label="Libro de Reclamaciones">
+                    <img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/ui/libro-reclamaciones.jpg" alt="Libro de Reclamaciones" style="height: 46px; background: white; padding: 4px 8px; border-radius: 6px;">
+                </a>
+                <p style="margin: 0; font-size: 0.82rem; color: #94A3B8;">
+                    <strong>RUC: 20123456789</strong> - I.E.P. Colegios Genes &copy; 2026. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    <!-- MODAL LIGHTBOX DE INGRESANTES -->
+    <div class="modal-backdrop" id="ingresante-modal" onclick="closeIngresanteModal(event)">
+        <div class="modal-box modal-ingresante-box">
+            <button class="modal-close-btn" onclick="closeIngresanteModal()" type="button">&times;</button>
+            <h3 id="ingresante-modal-title" style="color: var(--bg-dark-navy); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; font-size: 1.1rem;">Publicación Oficial de Ingresantes</h3>
+            <div style="width: 100%; max-height: 78vh; overflow-y: auto; text-align: center; border-radius: 12px; background: #070B19; padding: 12px; box-shadow: inset 0 0 20px rgba(0,0,0,0.6);">
+                <img id="ingresante-modal-img" src="" alt="Publicación Ingresante Colegio Genes" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: inline-block;">
+            </div>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOTANTE INTERACTIVO -->
+    <div class="whatsapp-widget-wrapper">
+        <div class="whatsapp-bubble-msg">
+            <span class="ws-online-dot"></span>
+            ¿Consultas? <strong style="color: #25D366;">¡Escríbenos por WhatsApp!</strong>
+        </div>
+        <a class="whatsapp-float" href="https://wa.me/51933840074" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp al colegio">
+            <span class="whatsapp-notification-badge">1</span>
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="js/main.js?v=20260802_RESPONSIVE_V1"></script>
+</body>
+
+</html>
