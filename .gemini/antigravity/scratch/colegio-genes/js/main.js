@@ -742,7 +742,86 @@ document.addEventListener('click', (e) => {
     }
 });
 
+/* --------------------------------------------------------------------------
+   HERO BANNER SLIDER AUTOMÁTICO (CAMBIO CADA 5 SEGUNDOS)
+   -------------------------------------------------------------------------- */
+let currentHeroSlide = 0;
+let heroSlideTimer = null;
+const HERO_SLIDE_INTERVAL = 5000;
+
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (!slides || slides.length === 0) return;
+
+    startHeroSlideTimer();
+
+    const sliderWrapper = document.getElementById('hero-slider-wrapper');
+    if (sliderWrapper) {
+        sliderWrapper.addEventListener('mouseenter', pauseHeroSlideTimer);
+        sliderWrapper.addEventListener('mouseleave', startHeroSlideTimer);
+    }
+}
+
+function renderHeroSlide(index) {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+
+    if (!slides || slides.length === 0) return;
+
+    currentHeroSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentHeroSlide);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentHeroSlide);
+        const progressSpan = dot.querySelector('.hero-dot-progress');
+        if (progressSpan) {
+            if (i === currentHeroSlide) {
+                progressSpan.style.transition = 'none';
+                progressSpan.style.width = '0%';
+                setTimeout(() => {
+                    progressSpan.style.transition = `width ${HERO_SLIDE_INTERVAL}ms linear`;
+                    progressSpan.style.width = '100%';
+                }, 20);
+            } else {
+                progressSpan.style.transition = 'none';
+                progressSpan.style.width = '0%';
+            }
+        }
+    });
+}
+
+function changeHeroSlide(direction) {
+    pauseHeroSlideTimer();
+    renderHeroSlide(currentHeroSlide + direction);
+    startHeroSlideTimer();
+}
+
+function setHeroSlide(index) {
+    pauseHeroSlideTimer();
+    renderHeroSlide(index);
+    startHeroSlideTimer();
+}
+
+function startHeroSlideTimer() {
+    pauseHeroSlideTimer();
+    renderHeroSlide(currentHeroSlide);
+    heroSlideTimer = setInterval(() => {
+        renderHeroSlide(currentHeroSlide + 1);
+    }, HERO_SLIDE_INTERVAL);
+}
+
+function pauseHeroSlideTimer() {
+    if (heroSlideTimer) {
+        clearInterval(heroSlideTimer);
+        heroSlideTimer = null;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initHeroSlider();
     startTestimonioAuto();
     renderVideosPrimaria('primaria1');
     renderVideosSecundaria('secundaria1');

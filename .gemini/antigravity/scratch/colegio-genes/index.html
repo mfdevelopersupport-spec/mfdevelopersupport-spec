@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260802_FORCE_RESET_V4">
+    <link rel="stylesheet" href="css/styles.css?v=20260802_FORCE_RESET_HERO_V5">
 </head>
 
 <body>
@@ -69,23 +69,84 @@
         <!-- SECCIÓN INICIO -->
         <section id="inicio" class="active">
 
-            <!-- HERO BANNER FULL WIDTH -->
-            <div id="inicio-hero-wrapper" class="hero-wrapper" style="background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;">
-                <div class="hero-inner">
-                    <div class="hero-text-side">
-                        <h1 class="hero-h1">FORMACIÓN DE <span class="highlight">ALTO DESEMPEÑO</span> PARA EL ÉXITO DE TUS HIJOS</h1>
-                        <p class="hero-lead">
-                            Nuestro sistema preuniversitario combina excelencia académica y valores para asegurar su ingreso a la universidad.
-                        </p>
-                        <div class="hero-cta-buttons">
-                            <button type="button" class="btn-hero-postular" onclick="showSection('admision')">
-                                POSTULAR A ADMISIÓN 2026 <i class="fas fa-arrow-right"></i>
-                            </button>
-                            <button type="button" class="btn-hero-conoce" onclick="showSection('primaria')">
-                                <i class="far fa-question-circle"></i> Conoce Nuestro Sistema
-                            </button>
+            <!-- HERO BANNER CAROUSEL (3 DIAPOSITIVAS CADA 5 SEGUNDOS) -->
+            <div id="hero-slider-wrapper" class="hero-slider-wrapper">
+                <!-- DIAPOSITIVA 1: EXCELENCIA PREUNIVERSITARIA -->
+                <div class="hero-slide active" style="background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;">
+                    <div class="hero-inner">
+                        <div class="hero-text-side">
+                            <div class="hero-badge-pill">
+                                <i class="fas fa-trophy"></i> Admisión 2026 Abierta
+                            </div>
+                            <h1 class="hero-h1">FORMACIÓN DE <span class="highlight">ALTO DESEMPEÑO</span> PARA EL ÉXITO DE TUS HIJOS</h1>
+                            <p class="hero-lead">
+                                Nuestro sistema preuniversitario combina excelencia académica y valores para asegurar su ingreso a la universidad.
+                            </p>
+                            <div class="hero-cta-buttons">
+                                <button type="button" class="btn-hero-postular" onclick="showSection('admision')">
+                                    POSTULAR A ADMISIÓN 2026 <i class="fas fa-arrow-right"></i>
+                                </button>
+                                <button type="button" class="btn-hero-conoce" onclick="showSection('primaria')">
+                                    <i class="far fa-question-circle"></i> Conoce Nuestro Sistema
+                                </button>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- DIAPOSITIVA 2: TECNOLOGÍA Y CANALES VIRTUALES -->
+                <div class="hero-slide" style="background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('assets/images/hero_chalkboard.png') center/cover no-repeat !important;">
+                    <div class="hero-inner">
+                        <div class="hero-text-side">
+                            <div class="hero-badge-pill" style="border-color: #38BDF8; background: rgba(56, 189, 248, 0.2); color: #7DD3FC;">
+                                <i class="fas fa-laptop-code"></i> Tecnología & Refuerzo Virtual
+                            </div>
+                            <h1 class="hero-h1">APRENDIZAJE SIN LÍMITES <span class="highlight-blue">MÁS ALLÁ DEL AULA</span></h1>
+                            <p class="hero-lead">
+                                Canales virtuales exclusivos por cada grado para que tus hijos repasen lecciones, solucionarios y compendios a su propio ritmo.
+                            </p>
+                            <div class="hero-cta-buttons">
+                                <button type="button" class="btn-hero-postular" style="background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);" onclick="showSection('primaria')">
+                                    VER CANALES VIRTUALES <i class="fab fa-youtube"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DIAPOSITIVA 3: INGRESANTES Y HISTORIAS DE ÉXITO -->
+                <div class="hero-slide" style="background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('assets/images/hero_students.png') center/cover no-repeat !important;">
+                    <div class="hero-inner">
+                        <div class="hero-text-side">
+                            <div class="hero-badge-pill" style="border-color: #FACC15; background: rgba(250, 204, 21, 0.2); color: #FDE047;">
+                                <i class="fas fa-medal"></i> Primeros Puestos de Admisión
+                            </div>
+                            <h1 class="hero-h1">HISTORIAS DE ÉXITO EN <span class="highlight-gold">LAS MEJORES UNIVERSIDADES</span></h1>
+                            <p class="hero-lead">
+                                La constancia y exigencia de nuestros alumnos se traducen en masivos ingresos a San Marcos, UNI, PUCP y Callao.
+                            </p>
+                            <div class="hero-cta-buttons">
+                                <button type="button" class="btn-hero-postular" style="background: linear-gradient(135deg, #D4AF37 0%, #B5952F 100%); color: #0F172A; box-shadow: 0 8px 24px rgba(212, 175, 55, 0.5);" onclick="showSection('ingresantes')">
+                                    VER INGRESANTES Y AFICHES <i class="fas fa-user-graduate"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTROLES FLECHAS (DESKTOP) -->
+                <button type="button" class="hero-slider-arrow prev" onclick="changeHeroSlide(-1)" aria-label="Diapositiva anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button type="button" class="hero-slider-arrow next" onclick="changeHeroSlide(1)" aria-label="Siguiente diapositiva">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- INDICADORES (DOTS CON BARRA DE PROGRESO DE 5 SEGUNDOS) -->
+                <div class="hero-slider-dots">
+                    <button type="button" class="hero-dot active" onclick="setHeroSlide(0)" aria-label="Ir a diapositiva 1"><span class="hero-dot-progress"></span></button>
+                    <button type="button" class="hero-dot" onclick="setHeroSlide(1)" aria-label="Ir a diapositiva 2"><span class="hero-dot-progress"></span></button>
+                    <button type="button" class="hero-dot" onclick="setHeroSlide(2)" aria-label="Ir a diapositiva 3"><span class="hero-dot-progress"></span></button>
                 </div>
             </div>
 
@@ -1316,7 +1377,7 @@
         </a>
     </div>
 
-    <script src="js/main.js?v=20260802_FORCE_RESET_V4"></script>
+    <script src="js/main.js?v=20260802_FORCE_RESET_HERO_V5"></script>
 </body>
 
 </html>

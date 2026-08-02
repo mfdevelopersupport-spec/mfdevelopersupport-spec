@@ -238,19 +238,127 @@ nav {
 }
 
 /* --------------------------------------------------------------------------
-   HERO BANNER PRINCIPAL DE INICIO (OCUPA TODA LA PANTALLA CON IMAGEN ATRÁS)
+   HERO BANNER PRINCIPAL DE INICIO (SLIDER CAROUSEL 3 DIAPOSITIVAS)
    -------------------------------------------------------------------------- */
+.hero-slider-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 165px);
+    overflow: hidden;
+    background: #070B18;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px 5% 60px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.03);
+    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.highlight-blue {
+    color: #38BDF8;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.highlight-gold {
+    color: #FACC15;
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+}
+
+/* CONTROLES DE NAVEGACIÓN (FLECHAS) */
+.hero-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-slider-arrow.prev { left: 24px; }
+.hero-slider-arrow.next { right: 24px; }
+
+.hero-slider-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #FFFFFF;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* INDICADORES (DOTS CON PROGRESO DE 5 SEGUNDOS) */
+.hero-slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hero-dot {
+    width: 38px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease, width 0.3s ease;
+    padding: 0;
+}
+
+.hero-dot-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #FFFFFF;
+    border-radius: 999px;
+}
+
+.hero-dot.active {
+    width: 56px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
 .hero-wrapper {
     width: 100%;
     min-height: calc(100vh - 165px);
     display: flex;
     align-items: center;
-    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%),
-                url('../assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;
     color: var(--text-white);
     padding: 40px 5% 32px;
     position: relative;
-    box-shadow: inset 0 -10px 30px rgba(0,0,0,0.5);
 }
 
 .hero-inner {
@@ -1822,7 +1930,19 @@ section.active {
         border-bottom-color: var(--gold-light) !important;
     }
 
-    /* Hero */
+    /* Hero Slider */
+    .hero-slider-wrapper {
+        min-height: auto;
+    }
+
+    .hero-slide {
+        padding: 40px 6% 55px;
+    }
+
+    .hero-slider-arrow {
+        display: none;
+    }
+
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
