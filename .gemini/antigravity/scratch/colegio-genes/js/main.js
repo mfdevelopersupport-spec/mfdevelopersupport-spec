@@ -787,12 +787,6 @@ function initHeroSlider() {
     if (!slides || slides.length === 0) return;
 
     startHeroSlideTimer();
-
-    const sliderWrapper = document.getElementById('hero-slider-wrapper');
-    if (sliderWrapper) {
-        sliderWrapper.addEventListener('mouseenter', pauseHeroSlideTimer);
-        sliderWrapper.addEventListener('mouseleave', startHeroSlideTimer);
-    }
 }
 
 function renderHeroSlide(index) {
