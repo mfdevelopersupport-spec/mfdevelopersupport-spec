@@ -1881,6 +1881,123 @@ section.active {
 }
 
 /* --------------------------------------------------------------------------
+   ESTILOS PARA DETALLES DEL SISTEMA EDUCATIVO (PRIMARIA Y SECUNDARIA)
+   -------------------------------------------------------------------------- */
+.sistema-info-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.sistema-info-split.reverse {
+    direction: rtl;
+}
+.sistema-info-split.reverse > * {
+    direction: ltr;
+}
+
+.sistema-img-box {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #E2E8F0;
+    position: relative;
+}
+
+.sistema-img-box img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.sistema-img-box:hover img {
+    transform: scale(1.04);
+}
+
+.sistema-info-content h3 {
+    font-size: 1.45rem;
+    color: var(--bg-dark-navy);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.sistema-info-content p {
+    color: #475569;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.sistema-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.sistema-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.93rem;
+    color: #1E293B;
+    font-weight: 600;
+}
+
+.sistema-feature-list li i {
+    color: var(--crimson-red);
+    margin-top: 3px;
+}
+
+.sistema-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.sistema-highlight-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sistema-highlight-card:hover {
+    background: #FFFFFF;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: #CBD5E1;
+    transform: translateY(-3px);
+}
+
+.sistema-highlight-card i {
+    font-size: 1.8rem;
+    color: var(--crimson-red);
+    margin-bottom: 12px;
+}
+
+.sistema-highlight-card h4 {
+    font-size: 1.05rem;
+    color: var(--bg-dark-navy);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.sistema-highlight-card p {
+    font-size: 0.88rem;
+    color: #64748B;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
    RESPONSIVE DESIGN OVERRIDES
    -------------------------------------------------------------------------- */
 
