@@ -29,7 +29,20 @@ function showSistemaSubSection(subId) {
     }
 }
 
-function showSection(id) {
+const sectionSeoTitles = {
+    'inicio': 'Colegio Genes | Sistema Educativo Preuniversitario 2026',
+    'primaria': 'Sistema Educativo - Primaria y Secundaria | Colegio Genes',
+    'secundaria': 'Sistema Educativo - Secundaria | Colegio Genes',
+    'sedes': 'Nuestras Sedes en Lima Metropolitana | Colegio Genes',
+    'vacaciones': 'Programa de Vacaciones Útiles 2026 | Colegio Genes',
+    'ingresantes': 'Historias de Éxito e Ingresantes Destacados | Colegio Genes',
+    'videos-primaria': 'Videos Educativos Nivel Primaria | Colegio Genes',
+    'videos-secundaria': 'Videos Educativos Nivel Secundaria | Colegio Genes',
+    'contacto': 'Contacto y Atención a Padres | Colegio Genes',
+    'admision': 'Proceso de Admisión 2026 | Colegio Genes'
+};
+
+function showSection(id, updateHash = true) {
     document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
     const target = document.getElementById(id);
     if (target) {
@@ -50,10 +63,30 @@ function showSection(id) {
         showSistemaSubSection('selection-main');
     }
 
+    // Actualización dinámica de SEO Document Title y URL Hash
+    if (sectionSeoTitles[id]) {
+        document.title = sectionSeoTitles[id];
+    }
+
+    if (updateHash && window.location.hash !== '#' + id) {
+        history.pushState(null, '', '#' + id);
+    }
+
     closeDropdowns();
     closeMobileMenu();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Navegación por Hash / Deep Linking para Motores de Búsqueda (SEO)
+function handleHashRouting() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+        showSection(hash, false);
+    }
+}
+
+window.addEventListener('popstate', handleHashRouting);
+window.addEventListener('hashchange', handleHashRouting);
 
 let testimonialIndex = 0;
 let testimonialTimer = null;
@@ -825,6 +858,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startTestimonioAuto();
     renderVideosPrimaria('primaria1');
     renderVideosSecundaria('secundaria1');
+    handleHashRouting();
 });
 
 /* --------------------------------------------------------------------------
