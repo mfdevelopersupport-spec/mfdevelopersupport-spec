@@ -463,22 +463,51 @@ const videosPrimariaData = {
     }
 };
 
+/* --------------------------------------------------------------------------
+   VIDEOS EDUCATIVOS - ASIGNACIÓN DE COLORES HARMONIOSOS POR ÁREA DE CURSO
+   -------------------------------------------------------------------------- */
+function getCourseTheme(nombre) {
+    const n = nombre.toLowerCase();
+    
+    // MATEMÁTICAS (Azul Imperial / Navy)
+    if (n.includes('mate') || n.includes('álgebra') || n.includes('geometría') || n.includes('trigono') || n.includes('aritmética') || n.includes('razonamiento mat')) {
+        return { bg: 'rgba(32, 38, 130, 0.08)', border: 'rgba(32, 38, 130, 0.2)', color: '#202682', topBorder: '#202682' };
+    }
+    // CIENCIAS Y TECNOLOGÍA (Teal / Esmeralda)
+    if (n.includes('física') || n.includes('química') || n.includes('biología') || n.includes('ciencia') || n.includes('ambiente')) {
+        return { bg: 'rgba(13, 148, 136, 0.08)', border: 'rgba(13, 148, 136, 0.2)', color: '#0D9488', topBorder: '#0D9488' };
+    }
+    // HISTORIA Y SOCIALES (Ámbar Cálido / Bronce)
+    if (n.includes('historia') || n.includes('geografía') || n.includes('cívica') || n.includes('economía') || n.includes('filosofía') || n.includes('personal social')) {
+        return { bg: 'rgba(217, 119, 6, 0.08)', border: 'rgba(217, 119, 6, 0.2)', color: '#D97706', topBorder: '#D97706' };
+    }
+    // IDIOMAS, ARTE Y PSICOLOGÍA (Violeta / Índigo)
+    if (n.includes('inglés') || n.includes('arte') || n.includes('psicología')) {
+        return { bg: 'rgba(124, 58, 237, 0.08)', border: 'rgba(124, 58, 237, 0.2)', color: '#7C3AED', topBorder: '#7C3AED' };
+    }
+    // COMUNICACIÓN, LENGUAJE, LECTURA, LITERATURA, ORTOGRAFÍA (Carmesí Elegante)
+    return { bg: 'rgba(185, 28, 28, 0.08)', border: 'rgba(185, 28, 28, 0.2)', color: '#B91C1C', topBorder: '#B91C1C' };
+}
+
 function renderVideosPrimaria(key) {
     const bloque = videosPrimariaData[key] || videosPrimariaData['primaria1'];
     const grid = document.getElementById("videos-edu-grid");
     if (!grid) return;
-    grid.innerHTML = bloque.cursos.map(curso => `
-        <article class="video-curso-card" style="background: white; padding: 22px; border-radius: 16px; border: 1px solid #E2E8F0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.25s ease;">
-            <div style="font-size: 2.2rem; color: var(--crimson-red); margin-bottom: 12px;">
-                <i class="${curso.icono}"></i>
-            </div>
-            <h4 style="color: var(--bg-dark-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">${curso.nombre}</h4>
-            <p style="font-size: 0.88rem; color: #64748B; margin-bottom: 16px;">Accede al contenido oficial del curso en YouTube.</p>
-            <a href="${curso.link}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: #FF0000; color: white; padding: 9px 18px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
-                <i class="fab fa-youtube"></i> Ver video
-            </a>
-        </article>
-    `).join("");
+    grid.innerHTML = bloque.cursos.map(curso => {
+        const theme = getCourseTheme(curso.nombre);
+        return `
+            <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
+                <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
+                    <i class="${curso.icono}"></i>
+                </div>
+                <h4>${curso.nombre}</h4>
+                <p>Accede al contenido oficial del curso en YouTube.</p>
+                <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
+                    <i class="fab fa-youtube"></i> Ver video
+                </a>
+            </article>
+        `;
+    }).join("");
 }
 
 function showVideosPrimaria(key, button) {
@@ -487,126 +516,25 @@ function showVideosPrimaria(key, button) {
     renderVideosPrimaria(key);
 }
 
-const videosSecundariaData = {
-    secundaria1: {
-        cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/YuhJnUJ9QtY", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-superscript" },
-            { nombre: "Geometría", link: "https://youtu.be/m8h4bRivpRQ", icono: "fas fa-draw-polygon" },
-            { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-book-open" },
-            { nombre: "Literatura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-feather-alt" },
-            { nombre: "Castellano", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-spell-check" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Historia Universal", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-europe" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" }
-        ]
-    },
-    secundaria2: {
-        cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/YuhJnUJ9QtY", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-superscript" },
-            { nombre: "Geometría", link: "https://youtu.be/m8h4bRivpRQ", icono: "fas fa-draw-polygon" },
-            { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-book-open" },
-            { nombre: "Literatura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-feather-alt" },
-            { nombre: "Castellano", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-spell-check" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Historia Universal", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-europe" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Cívica", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-balance-scale" }
-        ]
-    },
-    secundaria3: {
-        cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/YuhJnUJ9QtY", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-superscript" },
-            { nombre: "Geometría", link: "https://youtu.be/m8h4bRivpRQ", icono: "fas fa-draw-polygon" },
-            { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-book-open" },
-            { nombre: "Literatura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-feather-alt" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Historia Universal", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-europe" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Economía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-coins" },
-            { nombre: "Cívica", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-balance-scale" }
-        ]
-    },
-    secundaria4: {
-        cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/YuhJnUJ9QtY", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-superscript" },
-            { nombre: "Geometría", link: "https://youtu.be/m8h4bRivpRQ", icono: "fas fa-draw-polygon" },
-            { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-book-open" },
-            { nombre: "Literatura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-feather-alt" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Historia Universal", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-europe" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Economía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-coins" },
-            { nombre: "Psicología", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-user-astronaut" }
-        ]
-    },
-    secundaria5: {
-        cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/YuhJnUJ9QtY", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-superscript" },
-            { nombre: "Geometría", link: "https://youtu.be/m8h4bRivpRQ", icono: "fas fa-draw-polygon" },
-            { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-book-open" },
-            { nombre: "Literatura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-feather-alt" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Historia Universal", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-europe" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Economía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-coins" },
-            { nombre: "Cívica", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-balance-scale" },
-            { nombre: "Psicología", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-user-astronaut" },
-            { nombre: "Filosofía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-scroll" }
-        ]
-    }
-};
-
 function renderVideosSecundaria(key) {
     const bloque = videosSecundariaData[key] || videosSecundariaData['secundaria1'];
     const grid = document.getElementById("videos-sec-grid");
     if (!grid) return;
-    grid.innerHTML = bloque.cursos.map(curso => `
-        <article class="video-curso-card" style="background: white; padding: 22px; border-radius: 16px; border: 1px solid #E2E8F0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.25s ease;">
-            <div style="font-size: 2.2rem; color: var(--crimson-red); margin-bottom: 12px;">
-                <i class="${curso.icono}"></i>
-            </div>
-            <h4 style="color: var(--bg-dark-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">${curso.nombre}</h4>
-            <p style="font-size: 0.88rem; color: #64748B; margin-bottom: 16px;">Accede al contenido oficial del curso en YouTube.</p>
-            <a href="${curso.link}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: #FF0000; color: white; padding: 9px 18px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.88rem; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
-                <i class="fab fa-youtube"></i> Ver video
-            </a>
-        </article>
-    `).join("");
+    grid.innerHTML = bloque.cursos.map(curso => {
+        const theme = getCourseTheme(curso.nombre);
+        return `
+            <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
+                <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
+                    <i class="${curso.icono}"></i>
+                </div>
+                <h4>${curso.nombre}</h4>
+                <p>Accede al contenido oficial del curso en YouTube.</p>
+                <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
+                    <i class="fab fa-youtube"></i> Ver video
+                </a>
+            </article>
+        `;
+    }).join("");
 }
 
 function showVideosSecundaria(key, button) {

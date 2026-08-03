@@ -1201,6 +1201,92 @@ section.active {
 }
 
 /* --------------------------------------------------------------------------
+   VIDEOS EDUCATIVOS TARJETAS E ICONOS CON PALETA DE COLORES HARMONIOSA
+   -------------------------------------------------------------------------- */
+.videos-edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.video-curso-card {
+    background: #FFFFFF;
+    padding: 26px 20px;
+    border-radius: 18px;
+    border: 1px solid #E2E8F0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.video-curso-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+    border-color: #CBD5E1;
+}
+
+.video-curso-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.85rem;
+    margin-bottom: 14px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.video-curso-card:hover .video-curso-icon-box {
+    transform: scale(1.12) rotate(3deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.video-curso-card h4 {
+    color: var(--bg-dark-navy);
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.video-curso-card p {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin-bottom: 18px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.btn-ver-video-yt {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FF0000;
+    color: #FFFFFF;
+    padding: 9px 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 0.88rem;
+    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
+    transition: all 0.25s ease;
+    margin-top: auto;
+}
+
+.btn-ver-video-yt:hover {
+    background: #CC0000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.45);
+}
+
+/* --------------------------------------------------------------------------
    CANALES POR GRADO TABS & CARDS MEJORADOS
    -------------------------------------------------------------------------- */
 .canales-primaria-box, .canales-secundaria-box {
