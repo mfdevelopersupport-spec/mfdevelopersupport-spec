@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_SISTEMA_V13">
+    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_INGRESANTES_V14">
 </head>
 
 <body>
@@ -1173,12 +1173,41 @@
         <!-- SECCIÓN INGRESANTES -->
         <section id="ingresantes">
             <div class="content-wrapper">
-                <div class="card">
+                <div class="card animate-fade-up">
                     <div class="pilares-header">
                         <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px;">Orgullo Genes</span>
-                        <h2 class="titulo-pilares">Nuestros Ingresantes</h2>
-                        <p style="color: #64748B; max-width: 750px; margin: 10px auto 0; font-weight: 500;">Alumnos que alcanzaron los primeros puestos en las universidades más prestigiosas del país (San Marcos, UNI, Callao y PUCP).</p>
+                        <h2 class="titulo-pilares">Resultados de Admisión</h2>
+                        <p style="color: #64748B; max-width: 800px; margin: 10px auto 0; font-weight: 500; line-height: 1.6;">
+                            Nuestros exalumnos logran vacantes y destacadas posiciones en las principales universidades públicas y privadas del Perú (San Marcos, UNI, Callao y PUCP).
+                        </p>
                         <div class="linea-pilares"></div>
+                    </div>
+
+                    <!-- BARRA DE DESTACADOS Y VERIFICACIÓN -->
+                    <div class="ingresantes-highlights-bar">
+                        <div class="ingresante-stat-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <strong>Principales Universidades</strong>
+                                <span>UNMSM, UNI, UNAC, PUCP</span>
+                            </div>
+                        </div>
+                        <div class="ingresante-stat-divider"></div>
+                        <div class="ingresante-stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Primeros Puestos</strong>
+                                <span>Ingenierías y Ciencias</span>
+                            </div>
+                        </div>
+                        <div class="ingresante-stat-divider"></div>
+                        <div class="ingresante-stat-item">
+                            <i class="fas fa-file-certificate"></i>
+                            <div>
+                                <strong>Resultados Oficiales</strong>
+                                <span>Afiches de admisión verificados</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- PESTAÑAS DE UNIVERSIDADES -->
@@ -1190,7 +1219,7 @@
                         <button class="ingresante-tab" type="button" onclick="filterIngresantes('pucp', this)">PUCP</button>
                     </div>
 
-                    <!-- GRID DE PUBLICACIONES DE INGRESANTES -->
+                    <!-- GRID UNIFICADO DE 4 COLUMNAS -->
                     <div class="ingresantes-grid">
                         
                         <!-- CARD SAN MARCOS -->
@@ -1203,8 +1232,8 @@
                                 </div>
                             </div>
                             <div class="ingresante-info">
-                                <h3>U. SAN MARCOS (Admisión 2026-I)</h3>
-                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> 3er, 5to, 7mo y 8vo Puesto General</p>
+                                <h3>U. SAN MARCOS</h3>
+                                <p><i class="fas fa-medal" style="color: #D97706;"></i> 3er, 5to, 7mo y 8vo Puesto General</p>
                                 <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
                             </div>
                         </div>
@@ -1219,8 +1248,8 @@
                                 </div>
                             </div>
                             <div class="ingresante-info">
-                                <h3>UNI (Admisión 2025-I)</h3>
-                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> 1er Puesto Ing. Industrial / 2do Puesto Mecatrónica</p>
+                                <h3>U. UNI INGENIERÍA</h3>
+                                <p><i class="fas fa-medal" style="color: #D97706;"></i> 1er Puesto Ing. Industrial / 2do Puesto Mecatrónica</p>
                                 <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
                             </div>
                         </div>
@@ -1228,15 +1257,15 @@
                         <!-- CARD CALLAO -->
                         <div class="ingresante-card" data-uni="callao" onclick="openIngresanteModal('assets/images/ingresantes_callao.png', 'Universidad Nacional del Callao')">
                             <div class="ingresante-img-wrapper">
-                                <span class="ingresante-badge-uni badge-callao">UNAC - U. Callao</span>
+                                <span class="ingresante-badge-uni badge-callao">UNAC - Callao</span>
                                 <img src="assets/images/ingresantes_callao.png" alt="Ingresantes Universidad Nacional del Callao">
                                 <div class="ingresante-overlay-zoom">
                                     <i class="fas fa-search-plus"></i> Ampliar Afiche
                                 </div>
                             </div>
                             <div class="ingresante-info">
-                                <h3>U. CALLAO (Admisión 2025)</h3>
-                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> Ingreso Masivo (1er, 3er y 4to Puesto)</p>
+                                <h3>U. NACIONAL DEL CALLAO</h3>
+                                <p><i class="fas fa-users" style="color: #0284C7;"></i> Ingreso Masivo (1er, 3er y 4to Puesto)</p>
                                 <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
                             </div>
                         </div>
@@ -1244,7 +1273,7 @@
                         <!-- CARD PUCP -->
                         <div class="ingresante-card" data-uni="pucp" onclick="openIngresanteModal('assets/images/ingresantes_pucp.png', 'Pontificia Universidad Católica del Perú')">
                             <div class="ingresante-img-wrapper">
-                                <span class="ingresante-badge-uni badge-pucp">PUCP - U. Católica</span>
+                                <span class="ingresante-badge-uni badge-pucp">PUCP - Católica</span>
                                 <img src="assets/images/ingresantes_pucp.png" alt="Ingresantes Pontificia Universidad Católica del Perú">
                                 <div class="ingresante-overlay-zoom">
                                     <i class="fas fa-search-plus"></i> Ampliar Afiche
@@ -1252,7 +1281,7 @@
                             </div>
                             <div class="ingresante-info">
                                 <h3>PUCP (1era. Opción)</h3>
-                                <p><i class="fas fa-trophy" style="color: #D4AF37;"></i> Ingresantes Ing. Industrial y R. Internacionales</p>
+                                <p><i class="fas fa-graduation-cap" style="color: #475569;"></i> Ingresantes Ing. Industrial y R. Internacionales</p>
                                 <span class="btn-ver-afiche"><i class="fas fa-expand-alt"></i> Ver afiche oficial</span>
                             </div>
                         </div>
@@ -1585,7 +1614,7 @@
         </a>
     </div>
 
-    <script src="js/main.js?v=20260803_FORCE_RESET_SISTEMA_V13"></script>
+    <script src="js/main.js?v=20260803_FORCE_RESET_INGRESANTES_V14"></script>
 </body>
 
 </html>
