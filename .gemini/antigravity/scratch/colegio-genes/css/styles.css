@@ -183,37 +183,36 @@ nav {
     box-shadow: 0 8px 20px rgba(220, 38, 38, 0.5) !important;
 }
 
-/* DROPDOWN MENU (DISEÑO BLANCO ELEGANTE CON TEXTO NEGRO Y HOVER AZUL) */
+/* DROPDOWN MENU (DISEÑO BLANCO CUADRADO CON TEXTO NEGRO Y HOVER AZUL) */
 .dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
     background: #FFFFFF !important;
-    border: 1px solid #E2E8F0 !important;
+    border: 1px solid #CBD5E1 !important;
     border-top: 3.5px solid #202682 !important;
-    border-radius: 14px;
-    min-width: 220px;
+    border-radius: 0 !important;
+    min-width: 210px;
     list-style: none;
-    padding: 6px 0;
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12) !important;
+    padding: 4px 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
     display: none;
     z-index: 1010;
     animation: fadeIn 0.2s ease-out;
 }
 
 .dropdown-menu li a {
-    display: flex !important;
-    align-items: center;
-    gap: 10px;
+    display: block !important;
     padding: 11px 20px !important;
     color: #0F172A !important;
     font-size: 0.88rem !important;
     font-weight: 700 !important;
-    border-radius: 0;
+    border-radius: 0 !important;
     transition: all 0.2s ease !important;
     border-left: 3.5px solid transparent !important;
     border-bottom: none !important;
     background: transparent !important;
+    white-space: nowrap !important;
 }
 
 .dropdown-menu li a:hover {
