@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_INGRESANTES_V14">
+    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_ZOOM_V15">
 </head>
 
 <body>
@@ -1591,13 +1591,25 @@
                 </p>
             </div>
         </div>
-    <!-- MODAL LIGHTBOX DE INGRESANTES -->
+    <!-- MODAL LIGHTBOX DE INGRESANTES CON ZOOM 100% Y ACCIONES -->
     <div class="modal-backdrop" id="ingresante-modal" onclick="closeIngresanteModal(event)">
         <div class="modal-box modal-ingresante-box">
-            <button class="modal-close-btn" onclick="closeIngresanteModal()" type="button">&times;</button>
-            <h3 id="ingresante-modal-title" style="color: var(--bg-dark-navy); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; font-size: 1.1rem;">Publicación Oficial de Ingresantes</h3>
-            <div style="width: 100%; max-height: 78vh; overflow-y: auto; text-align: center; border-radius: 12px; background: #070B19; padding: 12px; box-shadow: inset 0 0 20px rgba(0,0,0,0.6);">
-                <img id="ingresante-modal-img" src="" alt="Publicación Ingresante Colegio Genes" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: inline-block;">
+            <button class="modal-close-btn" onclick="closeIngresanteModal()" type="button" aria-label="Cerrar modal">&times;</button>
+            
+            <div class="modal-ingresante-header">
+                <h3 id="ingresante-modal-title">Publicación Oficial de Ingresantes</h3>
+                <div class="modal-ingresante-actions">
+                    <button type="button" class="btn-modal-action" onclick="toggleZoomModalImg()">
+                        <i class="fas fa-search-plus"></i> <span id="zoom-toggle-text">Ampliar al 100%</span>
+                    </button>
+                    <a id="btn-open-original-img" class="btn-modal-action" href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> Pestaña nueva
+                    </a>
+                </div>
+            </div>
+
+            <div class="modal-ingresante-canvas" onclick="toggleZoomModalImg()" title="Haz clic para ampliar o reducir el afiche">
+                <img id="ingresante-modal-img" src="" alt="Publicación Ingresante Colegio Genes">
             </div>
         </div>
     </div>
@@ -1614,7 +1626,7 @@
         </a>
     </div>
 
-    <script src="js/main.js?v=20260803_FORCE_RESET_INGRESANTES_V14"></script>
+    <script src="js/main.js?v=20260803_FORCE_RESET_ZOOM_V15"></script>
 </body>
 
 </html>

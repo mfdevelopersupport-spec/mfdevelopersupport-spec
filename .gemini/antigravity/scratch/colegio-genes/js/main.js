@@ -856,8 +856,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   SECCIÓN INGRESANTES & LIGHTBOX MODAL DE AFICHES
+   SECCIÓN INGRESANTES & LIGHTBOX MODAL DE AFICHES CON ZOOM Y TAMAÑO REAL
    -------------------------------------------------------------------------- */
+let isModalImgZoomed = false;
+
 function filterIngresantes(uniKey, button) {
     document.querySelectorAll('.ingresantes-tabs .ingresante-tab').forEach(btn => btn.classList.remove('active'));
     if (button) button.classList.add('active');
@@ -877,11 +879,32 @@ function openIngresanteModal(imgSrc, uniTitle) {
     const modal = document.getElementById('ingresante-modal');
     const modalImg = document.getElementById('ingresante-modal-img');
     const modalTitle = document.getElementById('ingresante-modal-title');
+    const btnOriginal = document.getElementById('btn-open-original-img');
+    const zoomText = document.getElementById('zoom-toggle-text');
 
     if (modal && modalImg) {
         modalImg.src = imgSrc;
+        modalImg.classList.remove('zoomed-100');
+        isModalImgZoomed = false;
+        if (zoomText) zoomText.textContent = "Ampliar al 100%";
+        if (btnOriginal) btnOriginal.href = imgSrc;
         if (modalTitle && uniTitle) modalTitle.textContent = 'Publicación Oficial: ' + uniTitle;
         modal.classList.add('active');
+    }
+}
+
+function toggleZoomModalImg() {
+    const modalImg = document.getElementById('ingresante-modal-img');
+    const zoomText = document.getElementById('zoom-toggle-text');
+    if (!modalImg) return;
+
+    isModalImgZoomed = !isModalImgZoomed;
+    if (isModalImgZoomed) {
+        modalImg.classList.add('zoomed-100');
+        if (zoomText) zoomText.textContent = "Ajustar a pantalla";
+    } else {
+        modalImg.classList.remove('zoomed-100');
+        if (zoomText) zoomText.textContent = "Ampliar al 100%";
     }
 }
 
