@@ -880,11 +880,3 @@ function closeIngresanteModal(event) {
     const modal = document.getElementById('ingresante-modal');
     if (modal) modal.classList.remove('active');
 }
-
-function openAdmisionModal() {
-    showSection('admision');
-    const targetSection = document.getElementById('admision');
-    if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-}

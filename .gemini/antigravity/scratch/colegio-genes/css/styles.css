@@ -2553,64 +2553,6 @@ section.active {
     .footer-logo {
         width: 130px;
     }
-
-    /* BARRA FLOTANTE MÓVIL DE ACCIONES RÁPIDAS */
-    .mobile-quick-actions-bar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        background: rgba(15, 23, 42, 0.94);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    .mobile-action-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-        color: #94A3B8;
-        text-decoration: none;
-        font-size: 0.68rem;
-        font-weight: 700;
-        transition: all 0.2s ease;
-        padding: 4px 8px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    .mobile-action-item i {
-        font-size: 1.15rem;
-    }
-
-    .mobile-action-item:hover, .mobile-action-item:active {
-        color: #FFFFFF;
-    }
-
-    .mobile-action-item.admision-btn-item {
-        background: linear-gradient(135deg, #B91C1C, #EF4444);
-        color: #FFFFFF;
-        padding: 6px 14px;
-        border-radius: 999px;
-        box-shadow: 0 4px 12px rgba(185, 28, 28, 0.4);
-    }
-
-    .mobile-action-item.admision-btn-item i {
-        font-size: 0.95rem;
-    }
-
-    body {
-        padding-bottom: 65px;
-    }
 }
 
 .level-select-card {
