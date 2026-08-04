@@ -226,10 +226,10 @@ const primaryChannelsData = {
     },
     grado3: {
         titulo: "3ro de Primaria",
-        descripcion: "Canal virtual oficial de 3er. Grado de Primaria. Refuerzo académico y compendios.",
-        link: "https://www.youtube.com/@genesclasevirtual3ro.primaria",
+        descripcion: "El canal virtual de 3er. Grado de Primaria no se encuentra disponible por el momento.",
+        link: "javascript:void(0);",
         imagen: "assets/images/canales/1ro_prim.jpg",
-        disponible: true
+        disponible: false
     },
     grado4: {
         titulo: "4to de Primaria",
