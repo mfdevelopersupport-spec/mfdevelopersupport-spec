@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_CLEAN_HERO_V22">
+    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_CANALES_V23">
 </head>
 
 <body>
@@ -114,8 +114,8 @@
                         Videos Educativos <i class="fas fa-angle-down" style="font-size: 0.8rem;"></i>
                     </a>
                     <ul class="dropdown-menu" id="dropdown-menu-videos">
-                        <li><a onclick="showSection('videos-primaria')">Nivel Primaria</a></li>
-                        <li><a onclick="showSection('videos-secundaria')">Nivel Secundaria</a></li>
+                        <li><a onclick="showSection('canales-virtuales'); switchCanalesLevel('primaria');">Canales Primaria</a></li>
+                        <li><a onclick="showSection('canales-virtuales'); switchCanalesLevel('secundaria');">Canales Secundaria</a></li>
                     </ul>
                 </li>
                 <li><a onclick="showSection('contacto')" id="link-contacto">Contacto</a></li>
@@ -169,7 +169,7 @@
                                 Canales virtuales exclusivos por cada grado para que tus hijos repasen lecciones, solucionarios y compendios a su propio ritmo.
                             </p>
                             <div class="hero-cta-buttons">
-                                <button type="button" class="btn-hero-postular" style="background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);" onclick="showSection('primaria')">
+                                <button type="button" class="btn-hero-postular" style="background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);" onclick="showSection('canales-virtuales')">
                                     VER CANALES VIRTUALES <i class="fab fa-youtube"></i>
                                 </button>
                             </div>
@@ -1170,6 +1170,274 @@
             </div>
         </section>
 
+        <!-- SECCIÓN CANALES VIRTUALES DE YOUTUBE -->
+        <section id="canales-virtuales">
+            <div class="content-wrapper">
+                <div class="card animate-fade-up">
+                    <div class="pilares-header" style="text-align: center; margin-bottom: 25px;">
+                        <span style="color: var(--crimson-red); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px;">
+                            <i class="fab fa-youtube" style="font-size: 1.1rem; color: #FF0000;"></i> Plataforma Virtual Genes
+                        </span>
+                        <h2 class="titulo-pilares" style="margin-top: 6px;">Canales Virtuales Oficiales de YouTube</h2>
+                        <p style="color: #64748B; max-width: 750px; margin: 8px auto 0; font-size: 0.95rem; font-weight: 500;">
+                            Accede directamente al canal oficial de YouTube por cada grado de Primaria y Secundaria para repasar lecciones, solucionarios y compendios.
+                        </p>
+                        <div class="linea-pilares" style="margin: 15px auto 0;"></div>
+                    </div>
+
+                    <!-- SELECTOR DE NIVEL (PRIMARIA / SECUNDARIA) -->
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 30px;">
+                        <button type="button" class="canal-level-tab active" id="tab-btn-primaria" onclick="switchCanalesLevel('primaria', this)" style="padding: 12px 28px; border-radius: 14px; font-weight: 800; font-size: 0.92rem; border: none; cursor: pointer; background: var(--bg-dark-navy); color: #FFFFFF; transition: all 0.3s ease;">
+                            <i class="fas fa-child"></i> Nivel Primaria (1.° a 6.°)
+                        </button>
+                        <button type="button" class="canal-level-tab" id="tab-btn-secundaria" onclick="switchCanalesLevel('secundaria', this)" style="padding: 12px 28px; border-radius: 14px; font-weight: 800; font-size: 0.92rem; border: 1px solid #CBD5E1; cursor: pointer; background: #F8FAFC; color: #475569; transition: all 0.3s ease;">
+                            <i class="fas fa-user-graduate"></i> Nivel Secundaria (1.° a 5.°)
+                        </button>
+                    </div>
+
+                    <!-- GRID CANALES PRIMARIA -->
+                    <div id="canales-grid-primaria" class="canales-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <!-- 1RO PRIMARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">1.º de Primaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual1ro.prima508</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial con clases didácticas y reforzamiento académico para primer grado.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual1ro.prima508" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 2DO PRIMARIA (NUEVO ENLACE PROPORCIONADO POR EL USUARIO) -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 2px solid #FF0000; padding: 22px; box-shadow: 0 6px 20px rgba(255,0,0,0.08); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: 12px; right: 12px; background: #FF0000; color: #FFFFFF; font-size: 0.68rem; font-weight: 800; padding: 2px 8px; border-radius: 6px; text-transform: uppercase;">
+                                Disponible
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">2.º de Primaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual2do.prima19</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial con lecciones guiadas, solucionarios y actividades de segundo grado.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual2do.prima19" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 3RO PRIMARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">3.º de Primaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual3ro.primaria</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial con clases estructuradas y compendios académicos para tercer grado.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual3ro.primaria" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 4TO PRIMARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">4.º de Primaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual4to.prima398</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial con desarrollo paso a paso de temas para cuarto grado.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual4to.prima398" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 5TO PRIMARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">5.º de Primaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual5to.prima354</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial con preparación académica y reforzamiento para quinto grado.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual5to.prima354" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 6TO PRIMARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">6.º de Primaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual6to.primaria</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial de consolidación académica y transición a secundaria para sexto grado.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual6to.primaria" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- GRID CANALES SECUNDARIA -->
+                    <div id="canales-grid-secundaria" class="canales-cards-grid" style="display: none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <!-- 1RO SECUNDARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">1.º de Secundaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual1rosecund681</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial de 1er. Año de Secundaria. Clases de ciencias exactas y letras.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual1rosecund681" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 2DO SECUNDARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">2.º de Secundaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual2do.secun258</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial para 2do. Año de Secundaria. Explicaciones dinámicas y compendios.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual2do.secun258" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 3RO SECUNDARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">3.º de Secundaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual3ro.secun539</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial para 3er. Año de Secundaria. Preparación preuniversitaria intensiva.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual3ro.secun539" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 4TO SECUNDARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">4.º de Secundaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual4to.secun736</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial para 4to. Año de Secundaria. Exigencia académica y preguntas de admisión.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual4to.secun736" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+
+                        <!-- 5TO SECUNDARIA -->
+                        <div style="background: #FFFFFF; border-radius: 18px; border: 1px solid #E2E8F0; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 0, 0, 0.1); color: #FF0000; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800; margin: 0;">5.º de Secundaria</h4>
+                                        <span style="font-size: 0.75rem; color: #64748B; font-weight: 600;">@genesclasevirtual5to.secun175</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+                                    Canal virtual oficial de 5to. Año de Secundaria. Máximo nivel con resolución de ejercicios tipo examen.
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/@genesclasevirtual5to.secun175" target="_blank" rel="noopener noreferrer" style="background: #FF0000; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; text-align: center; display: block; box-shadow: 0 4px 12px rgba(255,0,0,0.3); transition: all 0.25s ease;">
+                                <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SECCIÓN INGRESANTES -->
         <section id="ingresantes">
             <div class="content-wrapper">
@@ -1626,7 +1894,7 @@
         </a>
     </div>
 
-    <script src="js/main.js?v=20260803_FORCE_RESET_CLEAN_HERO_V22"></script>
+    <script src="js/main.js?v=20260803_FORCE_RESET_CANALES_V23"></script>
 </body>
 
 </html>

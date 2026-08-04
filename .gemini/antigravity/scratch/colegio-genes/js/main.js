@@ -219,17 +219,17 @@ const primaryChannelsData = {
     },
     grado2: {
         titulo: "2do de Primaria",
-        descripcion: "El canal virtual de 2do. Grado de Primaria no se encuentra disponible por el momento.",
-        link: "javascript:void(0);",
+        descripcion: "Canal virtual oficial de 2do. Grado de Primaria para reforzamiento escolar y solucionarios.",
+        link: "https://www.youtube.com/@genesclasevirtual2do.prima19",
         imagen: "assets/images/canales/1ro_prim.jpg",
-        disponible: false
+        disponible: true
     },
     grado3: {
         titulo: "3ro de Primaria",
-        descripcion: "El canal virtual de 3er. Grado de Primaria no se encuentra disponible por el momento.",
-        link: "javascript:void(0);",
+        descripcion: "Canal virtual oficial de 3er. Grado de Primaria. Refuerzo académico y compendios.",
+        link: "https://www.youtube.com/@genesclasevirtual3ro.primaria",
         imagen: "assets/images/canales/1ro_prim.jpg",
-        disponible: false
+        disponible: true
     },
     grado4: {
         titulo: "4to de Primaria",
@@ -247,12 +247,49 @@ const primaryChannelsData = {
     },
     grado6: {
         titulo: "6to de Primaria",
-        descripcion: "El canal virtual de 6to. Grado de Primaria no se encuentra disponible por el momento.",
-        link: "javascript:void(0);",
+        descripcion: "Canal virtual oficial para 6to. Grado de Primaria. Preparación y consolidación de estudios.",
+        link: "https://www.youtube.com/@genesclasevirtual6to.primaria",
         imagen: "assets/images/canales/5to_prim.jpg",
-        disponible: false
+        disponible: true
     }
 };
+
+function switchCanalesLevel(level, button) {
+    const gridPrimaria = document.getElementById('canales-grid-primaria');
+    const gridSecundaria = document.getElementById('canales-grid-secundaria');
+    const tabPrimaria = document.getElementById('tab-btn-primaria');
+    const tabSecundaria = document.getElementById('tab-btn-secundaria');
+
+    if (level === 'primaria') {
+        if (gridPrimaria) gridPrimaria.style.display = 'grid';
+        if (gridSecundaria) gridSecundaria.style.display = 'none';
+
+        if (tabPrimaria) {
+            tabPrimaria.style.background = 'var(--bg-dark-navy)';
+            tabPrimaria.style.color = '#FFFFFF';
+            tabPrimaria.style.border = 'none';
+        }
+        if (tabSecundaria) {
+            tabSecundaria.style.background = '#F8FAFC';
+            tabSecundaria.style.color = '#475569';
+            tabSecundaria.style.border = '1px solid #CBD5E1';
+        }
+    } else {
+        if (gridPrimaria) gridPrimaria.style.display = 'none';
+        if (gridSecundaria) gridSecundaria.style.display = 'grid';
+
+        if (tabSecundaria) {
+            tabSecundaria.style.background = 'var(--bg-dark-navy)';
+            tabSecundaria.style.color = '#FFFFFF';
+            tabSecundaria.style.border = 'none';
+        }
+        if (tabPrimaria) {
+            tabPrimaria.style.background = '#F8FAFC';
+            tabPrimaria.style.color = '#475569';
+            tabPrimaria.style.border = '1px solid #CBD5E1';
+        }
+    }
+}
 
 function showPrimaryChannel(gradoKey, button) {
     const data = primaryChannelsData[gradoKey] || primaryChannelsData['grado1'];
