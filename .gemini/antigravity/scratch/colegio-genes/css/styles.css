@@ -277,6 +277,18 @@ nav {
     z-index: 2;
 }
 
+.hero-slide-1 {
+    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;
+}
+
+.hero-slide-2 {
+    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_virtual_learning.jpg?v=20260802_1') center/cover no-repeat !important;
+}
+
+.hero-slide-3 {
+    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_students.png') center/cover no-repeat !important;
+}
+
 .highlight-blue {
     color: #38BDF8;
     text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
@@ -2328,9 +2340,21 @@ section.active {
     }
 
     .hero-slide {
-        padding: 35px 5% 50px;
+        padding: 45px 6% 65px;
         position: relative;
-        min-height: 420px;
+        min-height: 520px;
+    }
+
+    .hero-slide-1 {
+        background: linear-gradient(180deg, rgba(7, 11, 24, 0.92) 0%, rgba(7, 11, 24, 0.78) 50%, rgba(7, 11, 24, 0.94) 100%), url('../assets/images/hero_mobile_slide1.jpg') center/cover no-repeat !important;
+    }
+
+    .hero-slide-2 {
+        background: linear-gradient(180deg, rgba(7, 11, 24, 0.92) 0%, rgba(7, 11, 24, 0.78) 50%, rgba(7, 11, 24, 0.94) 100%), url('../assets/images/hero_mobile_slide2.jpg') center/cover no-repeat !important;
+    }
+
+    .hero-slide-3 {
+        background: linear-gradient(180deg, rgba(7, 11, 24, 0.92) 0%, rgba(7, 11, 24, 0.78) 50%, rgba(7, 11, 24, 0.94) 100%), url('../assets/images/hero_mobile_slide3.jpg') center/cover no-repeat !important;
     }
 
     .hero-slider-arrow {
