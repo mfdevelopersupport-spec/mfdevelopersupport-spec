@@ -1977,37 +1977,26 @@ section.active {
 }
 
 /* --------------------------------------------------------------------------
-   FOOTER INSTITUCIONAL (PREMIUM REDESIGN)
+   FOOTER INSTITUCIONAL (AZUL GENES DE SANGRE)
    -------------------------------------------------------------------------- */
 .main-footer {
-    background: linear-gradient(180deg, #0F172A 0%, #0D1333 60%, #202682 100%);
+    background: #202682;
     color: #FFFFFF;
-    margin-top: 0;
-    border-top: none;
+    margin-top: 40px;
+    border-top: 4px solid var(--crimson-red);
     position: relative;
-    overflow: hidden;
-}
-
-.main-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #B91C1C, #D4AF37, #202682, #38BDF8);
 }
 
 .footer-inner {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 55px 5% 30px;
+    padding: 50px 5% 30px;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
 }
 
 .footer-brand {
@@ -2015,16 +2004,19 @@ section.active {
 }
 
 .footer-logo {
-    width: 175px;
-    margin-bottom: 18px;
-    filter: brightness(0) invert(1);
+    width: 180px;
+    margin-bottom: 16px;
+    background: #FFFFFF;
+    padding: 8px 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .footer-brand > p {
-    color: #94A3B8 !important;
+    color: #E2E8F0 !important;
     font-size: 0.9rem !important;
-    line-height: 1.65;
-    margin-bottom: 22px !important;
+    line-height: 1.6;
+    margin-bottom: 20px !important;
 }
 
 .footer-cta {
@@ -2073,19 +2065,19 @@ section.active {
     display: flex;
     align-items: center;
     gap: 14px;
-    color: #94A3B8;
+    color: #E2E8F0;
     text-decoration: none;
-    margin-bottom: 16px;
-    font-size: 0.9rem;
+    margin-bottom: 14px;
+    font-size: 0.92rem;
     transition: all 0.2s ease;
-    padding: 6px 0;
+    padding: 4px 0;
 }
 
 .footer-contact-item i {
-    width: 18px;
+    width: 20px;
     text-align: center;
-    font-size: 0.95rem;
-    color: #64748B;
+    font-size: 1rem;
+    color: #FFD700;
     transition: color 0.2s ease;
 }
 
@@ -2095,14 +2087,14 @@ section.active {
 }
 
 .footer-contact-item:hover i {
-    color: #38BDF8;
+    color: #FFFFFF;
 }
 
 /* Footer bottom bar */
 .footer-bottom-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 24px;
-    margin-top: 40px;
+    margin-top: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2112,8 +2104,8 @@ section.active {
 
 .footer-bottom-bar p {
     margin: 0;
-    font-size: 0.8rem;
-    color: #64748B;
+    font-size: 0.82rem;
+    color: #CBD5E1;
     letter-spacing: 0.3px;
 }
 
