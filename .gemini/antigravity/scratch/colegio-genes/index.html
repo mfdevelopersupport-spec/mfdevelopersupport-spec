@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_BLUE_FOOTER_V38">
+    <link rel="stylesheet" href="css/styles.css?v=20260803_FORCE_RESET_BLUE_FOOTER_V39">
 </head>
 
 <body>
@@ -1956,15 +1956,7 @@
                                             <option value="4to. Grado">4to. Grado</option>
                                             <option value="5to. Grado">5to. Grado</option>
                                             <option value="6to. Grado">6to. Grado</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="input-group textarea-group">
-                                    <i class="fas fa-comment-dots input-icon"></i>
-                                    <textarea name="mensaje" placeholder="Escribe tu consulta aquí (opcional)"></textarea>
-                                </div>
-
-                                <input type="hidden" name="_captcha" value="false">
+                                                              <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_subject" value="Nuevo mensaje desde Admisión 2026">
 
                                 <button type="submit"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Enviar solicitud</button>
@@ -2013,7 +2005,13 @@
                     </div>
 
                     <div class="sede-contactos">
-                           <div class="sede-mapa-wrap">
+                        <a id="sede-modal-fijo" href="#"><i class="fas fa-phone-alt"></i> <span>Fijo</span></a>
+                        <a id="sede-modal-celular" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
+                        <a id="sede-modal-correo" href="#"><i class="far fa-envelope"></i> <span>Correo</span></a>
+                    </div>
+                </div>
+
+                <div class="sede-mapa-wrap">
                     <iframe id="sede-modal-mapa" src="" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -2113,7 +2111,7 @@
         </a>
     </div>
 
-    <script src="js/main.js?v=20260803_FORCE_RESET_BLUE_FOOTER_V38"></script>
+    <script src="js/main.js?v=20260803_FORCE_RESET_BLUE_FOOTER_V39"></script>
 </body>
 
 </html>
