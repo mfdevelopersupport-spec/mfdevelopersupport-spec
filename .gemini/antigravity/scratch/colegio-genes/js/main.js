@@ -400,29 +400,23 @@ const videosPrimariaData = {
     primaria1: {
         cursos: [
             { nombre: "Matemática", link: "https://youtu.be/9teroVL1Txg", icono: "fas fa-calculator" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
             { nombre: "Comunicación", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-book-open" },
             { nombre: "Ortografía", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-pen-nib" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Taller de Lectura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
-            { nombre: "Ciencia y Tecnología", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-flask" },
-            { nombre: "Personal Social", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-users" },
-            { nombre: "Arte", link: "https://youtu.be/slice9@3x.png", icono: "fas fa-palette" },
-            { nombre: "Inglés", link: "https://youtu.be/slice10@3x.png", icono: "fas fa-language" }
+            { nombre: "Raz. Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
+            { nombre: "Plan Lector", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
+            { nombre: "Personal Social", link: "https://youtu.be/zBjY51gl3GA", icono: "fas fa-users" },
+            { nombre: "Ciencia y Tecnología", link: "https://youtu.be/UuxO4DgOkzE", icono: "fas fa-flask" },
+            { nombre: "Computación", link: "https://youtu.be/7A3iMx2SRiU", icono: "fas fa-laptop" },
+            { nombre: "Inglés", link: "https://youtu.be/wuqljG-5srk", icono: "fas fa-language" },
+            { nombre: "Religión", link: "https://youtu.be/yfijolzXuis", icono: "fas fa-church" }
         ]
     },
     primaria2: {
         cursos: [
-            { nombre: "Matemática", link: "https://youtu.be/DFvta53hE8Q", icono: "fas fa-calculator" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
             { nombre: "Comunicación", link: "https://youtu.be/TrDPKqGbwYE", icono: "fas fa-book-open" },
             { nombre: "Ortografía", link: "https://youtu.be/6EF_gx39xd0", icono: "fas fa-pen-nib" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Taller de Lectura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
-            { nombre: "Ciencia y Tecnología", link: "https://youtu.be/X0OzTIUla04", icono: "fas fa-flask" },
-            { nombre: "Personal Social", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-users" },
-            { nombre: "Arte", link: "https://youtu.be/slice9@3x.png", icono: "fas fa-palette" },
-            { nombre: "Inglés", link: "https://youtu.be/slice10@3x.png", icono: "fas fa-language" }
+            { nombre: "Matemática", link: "https://youtu.be/DFvta53hE8Q", icono: "fas fa-calculator" }
         ]
     },
     primaria3: {
@@ -430,72 +424,126 @@ const videosPrimariaData = {
             { nombre: "Aritmética", link: "https://youtu.be/dOdc8ij6kh0", icono: "fas fa-calculator" },
             { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-square-root-alt" },
             { nombre: "Geometría", link: "https://youtu.be/g1tWczbKadE", icono: "fas fa-draw-polygon" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Lenguaje", link: "https://youtu.be/TrDPKqGbwYE", icono: "fas fa-book-open" },
-            { nombre: "Ortografía", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-pen-nib" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Taller de Lectura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
-            { nombre: "Ciencia y Ambiente", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Personal Social", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-users" },
-            { nombre: "Inglés", link: "https://youtu.be/slice10@3x.png", icono: "fas fa-language" }
+            { nombre: "Raz. Matemático", link: "https://youtu.be/Ul5i1RD5yYI", icono: "fas fa-brain" },
+            { nombre: "Personal Social", link: "https://youtu.be/LK-8iXxqAHw", icono: "fas fa-users" },
+            { nombre: "Ciencia y Tecnología", link: "https://youtu.be/_vCv2SnLzoE", icono: "fas fa-flask" },
+            { nombre: "Inglés", link: "https://youtu.be/YxoNPEEHqdM", icono: "fas fa-language" },
+            { nombre: "Comunicación", link: "https://youtu.be/6y1F3BrcC20", icono: "fas fa-book-open" },
+            { nombre: "Raz. Verbal", link: "https://youtu.be/VBoveOlYbvo", icono: "fas fa-comments" }
         ]
     },
     primaria4: {
         cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/dOdc8ij6kh0", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-square-root-alt" },
-            { nombre: "Geometría", link: "https://youtu.be/g1tWczbKadE", icono: "fas fa-draw-polygon" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/TrDPKqGbwYE", icono: "fas fa-book-open" },
-            { nombre: "Castellano", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-spell-check" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Taller de Lectura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Inglés", link: "https://youtu.be/slice10@3x.png", icono: "fas fa-language" }
+            { nombre: "Aritmética", link: "https://youtu.be/Xm55s-Ntnao", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/Xm55s-Ntnao", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/1P-5LGUOUYk", icono: "fas fa-draw-polygon" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/ZcsxmVYIqQY", icono: "fas fa-brain" },
+            { nombre: "Física", link: "https://youtu.be/P85iyTl4jZg", icono: "fas fa-atom" },
+            { nombre: "Castellano", link: "https://youtu.be/hoqTe2RYZlI", icono: "fas fa-book-open" },
+            { nombre: "Ortografía", link: "https://youtu.be/S2_tpWutdRU", icono: "fas fa-pen-nib" },
+            { nombre: "Geografía", link: "https://youtu.be/N0PqN0z1EMQ", icono: "fas fa-globe-americas" },
+            { nombre: "Biología", link: "https://youtu.be/zMCDIuCE8Lk", icono: "fas fa-dna" }
         ]
     },
     primaria5: {
         cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/dOdc8ij6kh0", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-square-root-alt" },
-            { nombre: "Geometría", link: "https://youtu.be/g1tWczbKadE", icono: "fas fa-draw-polygon" },
-            { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
-            { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
-            { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/TrDPKqGbwYE", icono: "fas fa-book-open" },
-            { nombre: "Castellano", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-spell-check" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Taller de Lectura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Inglés", link: "https://youtu.be/slice10@3x.png", icono: "fas fa-language" }
+            { nombre: "Aritmética", link: "https://youtu.be/7i9--8Ymn98", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/7_sCQAoUxik", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/EI1klCxRFXY", icono: "fas fa-draw-polygon" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/ZcsxmVYIqQY", icono: "fas fa-brain" },
+            { nombre: "Física", link: "https://youtu.be/3DrWTdQNJaw", icono: "fas fa-atom" },
+            { nombre: "Castellano", link: "https://youtu.be/HZu38xe-kAo", icono: "fas fa-book-open" },
+            { nombre: "Historia", link: "https://youtu.be/TrJ85FRRxno", icono: "fas fa-landmark" },
+            { nombre: "Geografía", link: "https://youtu.be/7Q7E3MBxQOY", icono: "fas fa-globe-americas" },
+            { nombre: "Religión", link: "https://youtu.be/355PZDq58Nk", icono: "fas fa-church" }
         ]
     },
     primaria6: {
         cursos: [
-            { nombre: "Aritmética", link: "https://youtu.be/dOdc8ij6kh0", icono: "fas fa-calculator" },
-            { nombre: "Álgebra", link: "https://youtu.be/AWscpVMkWuc", icono: "fas fa-square-root-alt" },
-            { nombre: "Geometría", link: "https://youtu.be/g1tWczbKadE", icono: "fas fa-draw-polygon" },
+            { nombre: "Aritmética", link: "https://youtu.be/j7noyIQBgdw", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/mlJcuwu_OZI", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/2-kqVHAsqCk", icono: "fas fa-draw-polygon" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/8vhfj1c04NQ", icono: "fas fa-brain" },
+            { nombre: "Física", link: "https://youtu.be/P85iyTl4jZg", icono: "fas fa-atom" },
+            { nombre: "Ortografía", link: "https://youtu.be/S2_tpWutdRU", icono: "fas fa-pen-nib" },
+            { nombre: "Castellano", link: "https://youtu.be/1b7kxMaZCqc", icono: "fas fa-book-open" },
+            { nombre: "Historia", link: "https://youtu.be/VEGMHA7vt5Q", icono: "fas fa-landmark" },
+            { nombre: "Biología", link: "https://youtu.be/JiGde8UlDEw", icono: "fas fa-dna" }
+        ]
+    }
+};
+
+const videosSecundariaData = {
+    secundaria1: {
+        cursos: [
+            { nombre: "Aritmética", link: "https://youtu.be/YuhJnUJ9QtY", icono: "fas fa-calculator" },
+            { nombre: "Geometría", link: "https://youtu.be/m8h4bRivpRQ", icono: "fas fa-draw-polygon" },
             { nombre: "Trigonometría", link: "https://youtu.be/nTpoHPz6JRw", icono: "fas fa-ruler-combined" },
-            { nombre: "Razonamiento Matemático", link: "https://youtu.be/Ppxgmqum0y8", icono: "fas fa-brain" },
             { nombre: "Física", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-atom" },
             { nombre: "Química", link: "https://youtu.be/eYLTONYvzrU", icono: "fas fa-flask" },
-            { nombre: "Biología", link: "https://youtu.be/9ht-HF0A_04", icono: "fas fa-dna" },
-            { nombre: "Lenguaje", link: "https://youtu.be/TrDPKqGbwYE", icono: "fas fa-book-open" },
-            { nombre: "Castellano", link: "https://youtu.be/1bHUwUf1ey8", icono: "fas fa-spell-check" },
-            { nombre: "Razonamiento Verbal", link: "https://youtu.be/RyBfavmiKFY", icono: "fas fa-comments" },
-            { nombre: "Taller de Lectura", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-book" },
-            { nombre: "Historia del Perú", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-landmark" },
-            { nombre: "Historia Universal", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-europe" },
-            { nombre: "Geografía", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-globe-americas" },
-            { nombre: "Cívica", link: "https://youtu.be/tPtPIr-TpHs", icono: "fas fa-balance-scale" },
-            { nombre: "Inglés", link: "https://youtu.be/slice10@3x.png", icono: "fas fa-language" }
+            { nombre: "Raz. Matemático", link: "https://youtu.be/AJ9aImWArL0", icono: "fas fa-brain" },
+            { nombre: "Castellano", link: "https://youtu.be/Ojxu790n7N4", icono: "fas fa-book-open" },
+            { nombre: "Raz. Verbal", link: "https://youtu.be/tbbaq-7LpWs", icono: "fas fa-comments" },
+            { nombre: "Literatura", link: "https://youtu.be/CEBwTjyszrg", icono: "fas fa-book" },
+            { nombre: "Historia del Perú", link: "https://youtu.be/d9HEU8bR_Ec", icono: "fas fa-landmark" }
+        ]
+    },
+    secundaria2: {
+        cursos: [
+            { nombre: "Aritmética", link: "https://youtu.be/CkTHe9tdZho", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/1fCkLBKfbSw", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/2gSCjy150UA", icono: "fas fa-draw-polygon" },
+            { nombre: "Trigonometría", link: "https://youtu.be/QE6m2lqLjWE", icono: "fas fa-ruler-combined" },
+            { nombre: "Física", link: "https://youtu.be/wpdWMDE2vec", icono: "fas fa-atom" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/886B6a7ILys", icono: "fas fa-brain" },
+            { nombre: "Literatura", link: "https://youtu.be/QsEeHvR9QIQ", icono: "fas fa-book" },
+            { nombre: "Castellano", link: "https://youtu.be/qjMwNeZHKyc", icono: "fas fa-book-open" },
+            { nombre: "Historia del Perú", link: "https://youtu.be/18qpqBMpnS0", icono: "fas fa-landmark" },
+            { nombre: "Historia Universal", link: "https://youtu.be/qnr7ES6YVXw", icono: "fas fa-globe-europe" },
+            { nombre: "Biología", link: "https://youtu.be/-JqaLvmNWiE", icono: "fas fa-dna" }
+        ]
+    },
+    secundaria3: {
+        cursos: [
+            { nombre: "Aritmética", link: "https://youtu.be/L9l6JTgP_zE", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/2xefkjRNenk", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/EpAgant7-GU", icono: "fas fa-draw-polygon" },
+            { nombre: "Trigonometría", link: "https://youtu.be/6UwFSicqPsM", icono: "fas fa-ruler-combined" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/zVuCR85pWZE", icono: "fas fa-brain" },
+            { nombre: "Física", link: "https://youtu.be/no4AVrjqm7c", icono: "fas fa-atom" },
+            { nombre: "Química", link: "https://youtu.be/-9QWQdr5qg0", icono: "fas fa-flask" },
+            { nombre: "Historia del Perú", link: "https://youtu.be/n5WLELhewPU", icono: "fas fa-landmark" },
+            { nombre: "Raz. Verbal", link: "https://youtu.be/otZfmrIrVq0", icono: "fas fa-comments" },
+            { nombre: "Geografía", link: "https://youtu.be/Q4jZW9liiJg", icono: "fas fa-globe-americas" },
+            { nombre: "Biología", link: "https://youtu.be/oHEfWMJzMZk", icono: "fas fa-dna" }
+        ]
+    },
+    secundaria4: {
+        cursos: [
+            { nombre: "Aritmética", link: "https://youtu.be/Q_dG6eBjTq4", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/bJizDKcD9IE", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/h0FQ-9SmKiE", icono: "fas fa-draw-polygon" },
+            { nombre: "Trigonometría", link: "https://youtu.be/0NB0VOvF67Q", icono: "fas fa-ruler-combined" },
+            { nombre: "Raz. Matemático", link: "https://youtu.be/4XcqNE6rmDk", icono: "fas fa-brain" },
+            { nombre: "Física", link: "https://youtu.be/rk43txa9nq8", icono: "fas fa-atom" },
+            { nombre: "Química", link: "https://youtu.be/gyv-K5sb3lo", icono: "fas fa-flask" },
+            { nombre: "Raz. Verbal", link: "https://youtu.be/REpmWwFM_9k", icono: "fas fa-comments" },
+            { nombre: "Historia Universal", link: "https://youtu.be/V_K9zIpgYys", icono: "fas fa-globe-europe" },
+            { nombre: "Literatura", link: "https://youtu.be/ZuXoidxFZvY", icono: "fas fa-book" },
+            { nombre: "Psicología - Filosofía", link: "https://youtu.be/FRB78oNlOFU", icono: "fas fa-brain" }
+        ]
+    },
+    secundaria5: {
+        cursos: [
+            { nombre: "Aritmética", link: "https://youtu.be/Axf0AW-h0JU", icono: "fas fa-calculator" },
+            { nombre: "Álgebra", link: "https://youtu.be/1o3xYm5a-N0", icono: "fas fa-square-root-alt" },
+            { nombre: "Geometría", link: "https://youtu.be/JLrQZ31CcAY", icono: "fas fa-draw-polygon" },
+            { nombre: "Trigonometría", link: "https://youtu.be/tOzTWQJxgPc", icono: "fas fa-ruler-combined" },
+            { nombre: "Física", link: "https://youtu.be/73pjE53j2oo", icono: "fas fa-atom" },
+            { nombre: "Química", link: "https://youtu.be/2jprOuTKHek", icono: "fas fa-flask" },
+            { nombre: "Geografía", link: "https://youtu.be/kcXMUcuSrag", icono: "fas fa-globe-americas" },
+            { nombre: "Literatura", link: "https://youtu.be/c00cpAMOauU", icono: "fas fa-book" },
+            { nombre: "Historia del Perú", link: "https://youtu.be/CQEdk4sZU3c", icono: "fas fa-landmark" }
         ]
     }
 };
