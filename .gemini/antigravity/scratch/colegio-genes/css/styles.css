@@ -2306,7 +2306,7 @@ section.active {
    FOOTER INSTITUCIONAL (AZUL GENES DE SANGRE)
    -------------------------------------------------------------------------- */
 .main-footer {
-    background: #202682;
+    background: var(--bg-dark-navy);
     color: #FFFFFF;
     margin-top: 40px;
     border-top: 4px solid var(--crimson-red);
