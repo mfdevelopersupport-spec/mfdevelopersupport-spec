@@ -292,12 +292,12 @@ nav {
 
 .highlight-blue {
     color: #38BDF8;
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    text-shadow: none;
 }
 
 .highlight-gold {
     color: #FACC15;
-    text-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+    text-shadow: none;
 }
 
 /* CONTROLES DE NAVEGACIÓN (FLECHAS) */
@@ -428,7 +428,7 @@ nav {
 
 .hero-h1 span.highlight {
     color: var(--bright-red);
-    text-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+    text-shadow: none;
 }
 
 .hero-lead {
