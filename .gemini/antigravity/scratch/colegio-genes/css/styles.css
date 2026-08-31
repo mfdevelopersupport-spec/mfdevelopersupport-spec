@@ -290,14 +290,16 @@ nav {
     background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_students.png') center/cover no-repeat !important;
 }
 
+.hero-h1 span.highlight-blue,
 .highlight-blue {
     color: #38BDF8;
-    text-shadow: none;
+    text-shadow: none !important;
 }
 
+.hero-h1 span.highlight-gold,
 .highlight-gold {
     color: #FACC15;
-    text-shadow: none;
+    text-shadow: none !important;
 }
 
 /* CONTROLES DE NAVEGACIÓN (FLECHAS) */
@@ -428,7 +430,7 @@ nav {
 
 .hero-h1 span.highlight {
     color: var(--bright-red);
-    text-shadow: none;
+    text-shadow: none !important;
 }
 
 .hero-lead {
