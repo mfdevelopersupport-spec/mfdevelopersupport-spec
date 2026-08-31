@@ -1820,27 +1820,29 @@ section.active {
     border-right: 1px solid #E2E8F0;
 }
 
-/* ILUSTRACIÓN PNG ATENCIÓN AL CLIENTE / SECRETARÍA */
+/* ILUSTRACIÓN PNG ATENCIÓN AL CLIENTE / SECRETARÍA EN LA PARTE INFERIOR */
 .contacto-illustration-wrap {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
-    padding: 6px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .contacto-illustration-img {
-    max-width: 270px;
+    max-width: 260px;
     width: 100%;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 10px 24px rgba(32, 38, 130, 0.12));
-    transition: transform 0.3s ease;
+    background: transparent !important;
+    filter: drop-shadow(0 8px 20px rgba(32, 38, 130, 0.1));
+    transition: transform 0.35s ease;
 }
 
 .contacto-illustration-img:hover {
-    transform: scale(1.03);
+    transform: translateY(-4px) scale(1.02);
 }
 
 .contacto-title-main {
