@@ -732,26 +732,26 @@ section.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 290px;
-    margin: 28px 0 20px;
-    perspective: 1100px;
+    min-height: 310px;
+    margin: 32px 0 20px;
+    perspective: 1200px;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 24px 0;
 }
 
 .testimonio-card {
     position: absolute;
-    width: 82%;
-    max-width: 660px;
+    width: 76%;
+    max-width: 640px;
     background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
     border-radius: 24px;
     border: 1.5px solid #E2E8F0;
-    padding: 28px 30px;
+    padding: 26px 28px;
     box-shadow: 0 10px 30px rgba(32, 38, 130, 0.05);
     transition: all 0.55s cubic-bezier(0.25, 1, 0.5, 1);
     display: grid;
-    grid-template-columns: 210px 1fr;
-    gap: 26px;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
     align-items: center;
     user-select: none;
 }
@@ -767,11 +767,11 @@ section.active {
     pointer-events: auto;
 }
 
-/* CARD ANTERIOR A LA IZQUIERDA (NUBLADA/BORROSA EN ARCO INVERTIDO) */
+/* CARD ANTERIOR A LA IZQUIERDA (CON MAYOR SEPARACIÓN, NUBLADA/BORROSA EN ARCO) */
 .testimonio-card.card-prev {
-    transform: translateX(-48%) scale(0.82) rotateY(16deg);
-    opacity: 0.38;
-    filter: blur(4px);
+    transform: translateX(-58%) scale(0.80) rotateY(18deg);
+    opacity: 0.35;
+    filter: blur(4.5px);
     z-index: 1;
     cursor: pointer;
     pointer-events: auto;
@@ -780,14 +780,14 @@ section.active {
 .testimonio-card.card-prev:hover {
     opacity: 0.65;
     filter: blur(2px);
-    transform: translateX(-46%) scale(0.85) rotateY(12deg);
+    transform: translateX(-55%) scale(0.83) rotateY(14deg);
 }
 
-/* CARD SIGUIENTE A LA DERECHA (NUBLADA/BORROSA EN ARCO INVERTIDO) */
+/* CARD SIGUIENTE A LA DERECHA (CON MAYOR SEPARACIÓN, NUBLADA/BORROSA EN ARCO) */
 .testimonio-card.card-next {
-    transform: translateX(48%) scale(0.82) rotateY(-16deg);
-    opacity: 0.38;
-    filter: blur(4px);
+    transform: translateX(58%) scale(0.80) rotateY(-18deg);
+    opacity: 0.35;
+    filter: blur(4.5px);
     z-index: 1;
     cursor: pointer;
     pointer-events: auto;
@@ -796,7 +796,7 @@ section.active {
 .testimonio-card.card-next:hover {
     opacity: 0.65;
     filter: blur(2px);
-    transform: translateX(46%) scale(0.85) rotateY(-12deg);
+    transform: translateX(55%) scale(0.83) rotateY(-14deg);
 }
 
 .testimonio-left-profile {

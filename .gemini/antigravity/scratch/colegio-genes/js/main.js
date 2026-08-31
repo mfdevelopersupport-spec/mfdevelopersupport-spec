@@ -1020,3 +1020,9 @@ function closeIngresanteModal(event) {
     const modal = document.getElementById('ingresante-modal');
     if (modal) modal.classList.remove('active');
 }
+
+/* Inicialización al cargar la página */
+document.addEventListener('DOMContentLoaded', function() {
+    renderTestimonio(0);
+    startTestimonioAuto();
+});
