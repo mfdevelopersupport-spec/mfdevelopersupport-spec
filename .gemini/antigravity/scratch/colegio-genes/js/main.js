@@ -860,8 +860,71 @@ function pauseHeroSlideTimer() {
     }
 }
 
+/* --------------------------------------------------------------------------
+   EFECTO DE NÚMEROS ANIMADOS INCREMENTALES (COUNT-UP ANIMATION)
+   -------------------------------------------------------------------------- */
+function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    if (isNaN(target)) return;
+
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
+    const useComma = el.getAttribute('data-format') === 'comma';
+    const duration = 1800; // 1.8 segundos de animación progresiva
+    const startTime = performance.now();
+
+    function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing cuadrático para acelerar y frenar suavemente al llegar a la cifra final
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(easeOut * target);
+
+        let formattedValue = currentValue.toString();
+        if (useComma && currentValue >= 1000) {
+            formattedValue = currentValue.toLocaleString('en-US');
+        }
+
+        el.textContent = `${prefix}${formattedValue}${suffix}`;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            let finalValue = target.toString();
+            if (useComma && target >= 1000) {
+                finalValue = target.toLocaleString('en-US');
+            }
+            el.textContent = `${prefix}${finalValue}${suffix}`;
+        }
+    }
+
+    requestAnimationFrame(update);
+}
+
+function initCounters() {
+    const counterElements = document.querySelectorAll('.counter-num');
+    if (!counterElements || counterElements.length === 0) return;
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        counterElements.forEach(el => observer.observe(el));
+    } else {
+        counterElements.forEach(el => animateCounter(el));
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
+    initCounters();
     startTestimonioAuto();
     renderVideosPrimaria('primaria1');
     renderVideosSecundaria('secundaria1');
