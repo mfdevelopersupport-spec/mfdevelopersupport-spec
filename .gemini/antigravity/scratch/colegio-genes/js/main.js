@@ -864,12 +864,20 @@ function toggleVideosDropdown(event) {
 
 function toggleMobileMenu() {
     const nav = document.querySelector("nav");
-    if (nav) nav.classList.toggle("nav-open");
+    const overlay = document.getElementById("mobile-nav-overlay");
+    if (nav) {
+        const isOpen = nav.classList.toggle("nav-open");
+        if (overlay) overlay.classList.toggle("active", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+    }
 }
 
 function closeMobileMenu() {
     const nav = document.querySelector("nav");
+    const overlay = document.getElementById("mobile-nav-overlay");
     if (nav) nav.classList.remove("nav-open");
+    if (overlay) overlay.classList.remove("active");
+    document.body.style.overflow = "";
 }
 
 document.addEventListener('click', (e) => {
