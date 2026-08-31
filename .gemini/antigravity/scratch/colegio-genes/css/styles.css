@@ -726,23 +726,27 @@ section.active {
 
 /* --------------------------------------------------------------------------
    HISTORIAS DE ÉXITO & TESTIMONIOS (CARRUSEL 3D EN ARCO INVERTIDO)
-   -------------------------------------------------------------------------- */
+   -----------------------------------------------------------------------#testimonio-hero-card {
+    overflow: hidden;
+    position: relative;
+}
+
 .testimonio-3d-stage {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 310px;
-    margin: 32px 0 20px;
+    margin: 28px 0 20px;
     perspective: 1200px;
-    overflow: hidden;
-    padding: 24px 0;
+    overflow: visible;
+    padding: 20px 0;
 }
 
 .testimonio-card {
     position: absolute;
-    width: 76%;
-    max-width: 640px;
+    width: 72%;
+    max-width: 600px;
     background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
     border-radius: 24px;
     border: 1.5px solid #E2E8F0;
@@ -754,8 +758,8 @@ section.active {
                 box-shadow 0.45s ease-out,
                 border-color 0.3s ease;
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 24px;
+    grid-template-columns: 190px 1fr;
+    gap: 22px;
     align-items: center;
     user-select: none;
     will-change: transform, opacity, filter;
@@ -797,18 +801,18 @@ section.active {
         z-index: 3;
     }
     100% {
-        transform: translateX(-58%) scale(0.80) rotateY(18deg);
-        opacity: 0.35;
-        filter: blur(4.5px);
+        transform: translateX(-48%) scale(0.82) rotateY(16deg);
+        opacity: 0.45;
+        filter: blur(3.5px);
         z-index: 1;
     }
 }
 
 @keyframes slideNextToActive {
     0% {
-        transform: translateX(58%) scale(0.80) rotateY(-18deg);
-        opacity: 0.35;
-        filter: blur(4.5px);
+        transform: translateX(48%) scale(0.82) rotateY(-16deg);
+        opacity: 0.45;
+        filter: blur(3.5px);
         z-index: 1;
     }
     100% {
@@ -827,18 +831,18 @@ section.active {
         z-index: 3;
     }
     100% {
-        transform: translateX(58%) scale(0.80) rotateY(-18deg);
-        opacity: 0.35;
-        filter: blur(4.5px);
+        transform: translateX(48%) scale(0.82) rotateY(-16deg);
+        opacity: 0.45;
+        filter: blur(3.5px);
         z-index: 1;
     }
 }
 
 @keyframes slidePrevToActive {
     0% {
-        transform: translateX(-58%) scale(0.80) rotateY(18deg);
-        opacity: 0.35;
-        filter: blur(4.5px);
+        transform: translateX(-48%) scale(0.82) rotateY(16deg);
+        opacity: 0.45;
+        filter: blur(3.5px);
         z-index: 1;
     }
     100% {
@@ -865,36 +869,36 @@ section.active {
     animation: slidePrevToActive 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* CARD ANTERIOR A LA IZQUIERDA (CON MAYOR SEPARACIÓN, NUBLADA/BORROSA EN ARCO) */
+/* CARD ANTERIOR A LA IZQUIERDA (NUBLADA/BORROSA EN ARCO) */
 .testimonio-card.card-prev {
-    transform: translateX(-58%) scale(0.80) rotateY(18deg);
-    opacity: 0.35;
-    filter: blur(4.5px);
+    transform: translateX(-48%) scale(0.82) rotateY(16deg);
+    opacity: 0.45;
+    filter: blur(3.5px);
     z-index: 1;
     cursor: pointer;
     pointer-events: auto;
 }
 
 .testimonio-card.card-prev:hover {
-    opacity: 0.65;
-    filter: blur(2px);
-    transform: translateX(-55%) scale(0.83) rotateY(14deg);
+    opacity: 0.75;
+    filter: blur(1.5px);
+    transform: translateX(-45%) scale(0.85) rotateY(12deg);
 }
 
-/* CARD SIGUIENTE A LA DERECHA (CON MAYOR SEPARACIÓN, NUBLADA/BORROSA EN ARCO) */
+/* CARD SIGUIENTE A LA DERECHA (NUBLADA/BORROSA EN ARCO) */
 .testimonio-card.card-next {
-    transform: translateX(58%) scale(0.80) rotateY(-18deg);
-    opacity: 0.35;
-    filter: blur(4.5px);
+    transform: translateX(48%) scale(0.82) rotateY(-16deg);
+    opacity: 0.45;
+    filter: blur(3.5px);
     z-index: 1;
     cursor: pointer;
     pointer-events: auto;
 }
 
 .testimonio-card.card-next:hover {
-    opacity: 0.65;
-    filter: blur(2px);
-    transform: translateX(55%) scale(0.83) rotateY(-14deg);
+    opacity: 0.75;
+    filter: blur(1.5px);
+    transform: translateX(45%) scale(0.85) rotateY(-12deg);
 }
 
 .testimonio-left-profile {
