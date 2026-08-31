@@ -134,26 +134,55 @@ const testimoniosIngresantes = [
     }
 ];
 
+function renderSingleTestimonioCard(cardElement, data) {
+    if (!cardElement || !data) return;
+    cardElement.innerHTML = `
+        <div class="testimonio-left-profile">
+            <div class="testimonio-avatar-ring">
+                <img src="${data.avatar}" alt="${data.nombre}">
+                <span class="testimonio-verify-check"><i class="fas fa-check"></i></span>
+            </div>
+            <h4>${data.nombre}</h4>
+            <div class="testimonio-carrera-badge">${data.carrera}</div>
+            <span class="testimonio-uni-tag">${data.universidad}</span>
+        </div>
+
+        <div class="testimonio-right-body">
+            <div class="testimonio-quote-header">
+                <div class="testimonio-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span>(Experiencia Genes 100% Verificada)</span>
+                </div>
+                <i class="fas fa-quote-right quote-giant-icon"></i>
+            </div>
+
+            <p class="testimonio-quote-text">
+                "${data.comentario}"
+            </p>
+
+            <div class="testimonio-puesto-pill">
+                <i class="fas fa-trophy" style="color: #D97706;"></i> ${data.puesto}
+            </div>
+        </div>
+    `;
+}
+
 function renderTestimonio(index) {
-    const data = testimoniosIngresantes[index];
-    const avatar = document.getElementById('testimonio-avatar');
-    const nombre = document.getElementById('testimonio-nombre');
-    const carrera = document.getElementById('testimonio-carrera');
-    const uni = document.getElementById('testimonio-uni');
-    const puesto = document.getElementById('testimonio-puesto');
-    const comentario = document.getElementById('testimonio-comentario');
+    const len = testimoniosIngresantes.length;
+    if (len === 0) return;
+
+    const prevIndex = (index - 1 + len) % len;
+    const nextIndex = (index + 1) % len;
+
+    const cardPrev = document.getElementById('testimonio-card-prev');
+    const cardActive = document.getElementById('testimonio-card-active');
+    const cardNext = document.getElementById('testimonio-card-next');
+
+    renderSingleTestimonioCard(cardPrev, testimoniosIngresantes[prevIndex]);
+    renderSingleTestimonioCard(cardActive, testimoniosIngresantes[index]);
+    renderSingleTestimonioCard(cardNext, testimoniosIngresantes[nextIndex]);
+
     const dots = document.querySelectorAll('#testimonio-dots-wrapper .testimonio-dot');
-
-    if (!data || !avatar) return;
-
-    avatar.src = data.avatar;
-    avatar.alt = data.nombre;
-    if (nombre) nombre.textContent = data.nombre;
-    if (carrera) carrera.textContent = data.carrera;
-    if (uni) uni.textContent = data.universidad;
-    if (puesto) puesto.innerHTML = `<i class="fas fa-trophy" style="color: #FACC15;"></i> ${data.puesto}`;
-    if (comentario) comentario.textContent = `"${data.comentario}"`;
-
     dots.forEach((dot, dIdx) => {
         dot.classList.toggle('active', dIdx === index);
     });

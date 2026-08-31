@@ -725,20 +725,78 @@ section.active {
 }
 
 /* --------------------------------------------------------------------------
-   HISTORIAS DE ÉXITO & TESTIMONIOS SHOWCASE (DISEÑO CLARO HARMONIOSO)
+   HISTORIAS DE ÉXITO & TESTIMONIOS (CARRUSEL 3D EN ARCO INVERTIDO)
    -------------------------------------------------------------------------- */
-.testimonio-stage-box {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 30px;
+.testimonio-3d-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
-    border-radius: 20px;
-    padding: 32px 28px;
-    border: 1px solid #E2E8F0;
+    min-height: 290px;
     margin: 28px 0 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-    transition: all 0.35s ease;
+    perspective: 1100px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.testimonio-card {
+    position: absolute;
+    width: 82%;
+    max-width: 660px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+    border-radius: 24px;
+    border: 1.5px solid #E2E8F0;
+    padding: 28px 30px;
+    box-shadow: 0 10px 30px rgba(32, 38, 130, 0.05);
+    transition: all 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 26px;
+    align-items: center;
+    user-select: none;
+}
+
+/* CARD PRINCIPAL AL MEDIO (NÍTIDA, ENFOCADA Y DESTACADA) */
+.testimonio-card.card-active {
+    transform: translateX(0) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: blur(0px);
+    z-index: 3;
+    box-shadow: 0 20px 48px rgba(32, 38, 130, 0.12), 0 4px 14px rgba(0, 0, 0, 0.03);
+    border-color: #CBD5E1;
+    pointer-events: auto;
+}
+
+/* CARD ANTERIOR A LA IZQUIERDA (NUBLADA/BORROSA EN ARCO INVERTIDO) */
+.testimonio-card.card-prev {
+    transform: translateX(-48%) scale(0.82) rotateY(16deg);
+    opacity: 0.38;
+    filter: blur(4px);
+    z-index: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.testimonio-card.card-prev:hover {
+    opacity: 0.65;
+    filter: blur(2px);
+    transform: translateX(-46%) scale(0.85) rotateY(12deg);
+}
+
+/* CARD SIGUIENTE A LA DERECHA (NUBLADA/BORROSA EN ARCO INVERTIDO) */
+.testimonio-card.card-next {
+    transform: translateX(48%) scale(0.82) rotateY(-16deg);
+    opacity: 0.38;
+    filter: blur(4px);
+    z-index: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.testimonio-card.card-next:hover {
+    opacity: 0.65;
+    filter: blur(2px);
+    transform: translateX(46%) scale(0.85) rotateY(-12deg);
 }
 
 .testimonio-left-profile {

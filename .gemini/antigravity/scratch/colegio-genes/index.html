@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260830_REDUCED_TOPBAR_GAP_V47">
+    <link rel="stylesheet" href="css/styles.css?v=20260830_TESTIMONIALS_3D_ARC_V48">
 </head>
 
 <body>
@@ -268,35 +268,16 @@
                         <p style="color: #64748B; max-width: 700px; margin: 0 auto;">Conoce la experiencia real de nuestros exalumnos e ingresantes a carreras altamente competitivas gracias a nuestro sistema de trabajo.</p>
                     </div>
 
-                    <!-- CONTAINER DEL TESTIMONIO DESTACADO -->
-                    <div class="testimonio-stage-box" id="testimonio-stage-box">
-                        <div class="testimonio-left-profile">
-                            <div class="testimonio-avatar-ring">
-                                <img id="testimonio-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=250&auto=format&fit=crop" alt="Valeria Torres">
-                                <span class="testimonio-verify-check"><i class="fas fa-check"></i></span>
-                            </div>
-                            <h4 id="testimonio-nombre">Valeria Torres</h4>
-                            <div class="testimonio-carrera-badge" id="testimonio-carrera">Medicina Humana</div>
-                            <span class="testimonio-uni-tag" id="testimonio-uni">UNMSM - San Marcos</span>
-                        </div>
+                    <!-- CONTAINER DEL TESTIMONIO 3D EN ARCO INVERTIDO -->
+                    <div class="testimonio-3d-stage" id="testimonio-3d-stage">
+                        <!-- CARD ANTERIOR (IZQUIERDA - NUBLADA / BORROSA EN ARCO) -->
+                        <div class="testimonio-card card-prev" id="testimonio-card-prev" onclick="prevTestimonio()" title="Ver testimonio anterior"></div>
 
-                        <div class="testimonio-right-body">
-                            <div class="testimonio-quote-header">
-                                <div class="testimonio-stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                    <span>(Experiencia Genes 100% Verificada)</span>
-                                </div>
-                                <i class="fas fa-quote-right quote-giant-icon"></i>
-                            </div>
+                        <!-- CARD PRINCIPAL (CENTRO - NÍTIDA Y ENFOCADA) -->
+                        <div class="testimonio-card card-active" id="testimonio-card-active"></div>
 
-                            <p id="testimonio-comentario" class="testimonio-quote-text">
-                                "El sistema de Genes me dio la disciplina, el seguimiento constante y una base preuniversitaria inquebrantable. Sentí que cada simulacro semanal y cada tutoría personalizada me acercaban de verdad a mi ingreso."
-                            </p>
-
-                            <div class="testimonio-puesto-pill" id="testimonio-puesto">
-                                <i class="fas fa-trophy" style="color: #D97706;"></i> 1er. Puesto Cómputo General
-                            </div>
-                        </div>
+                        <!-- CARD SIGUIENTE (DERECHA - NUBLADA / BORROSA EN ARCO) -->
+                        <div class="testimonio-card card-next" id="testimonio-card-next" onclick="nextTestimonio()" title="Ver siguiente testimonio"></div>
                     </div>
 
                     <!-- CONTROLES Y PAGINACIÓN -->
