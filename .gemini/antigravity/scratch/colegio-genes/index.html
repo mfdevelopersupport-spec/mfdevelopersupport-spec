@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260831_CAROUSEL_VIEWPORT_TRACK_V60">
+    <link rel="stylesheet" href="css/styles.css?v=20260831_MOBILE_NAV_REDESIGN_V61">
 </head>
 
 <body>
@@ -104,22 +104,31 @@
                 <img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/logo.svg" class="logo-img" alt="Logo Colegio Genes">
             </div>
             <ul class="nav-links">
-                <li><a onclick="showSection('inicio')" id="link-inicio" class="active">Inicio</a></li>
-                <li><a onclick="showSection('primaria')" id="link-sistema">Sistema de Trabajo</a></li>
-                <li><a onclick="showSection('sedes')" id="link-sedes">Sedes</a></li>
-                <li><a onclick="showSection('vacaciones')" id="link-vacaciones">Vacaciones Útiles</a></li>
-                <li><a onclick="showSection('ingresantes')" id="link-ingresantes">Ingresantes</a></li>
+                <!-- HEADER DEL DRAWER: logo + botón X -->
+                <li class="mobile-drawer-header" style="padding:0;margin:0;list-style:none;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;height:72px;background:linear-gradient(135deg,#0F1940 0%,#1a2166 100%);border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:10;">
+                        <img src="https://prueba.clinicasrm.com.pe/recursos/imagenes/externas/logo.svg" alt="Logo Genes" style="height:40px;width:auto;filter:brightness(0) invert(1);opacity:0.92;">
+                        <button onclick="closeMobileMenu()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#94A3B8;font-size:1.1rem;" aria-label="Cerrar menú">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </li>
+                <li><a onclick="showSection('inicio')" id="link-inicio" class="active"><i class="fas fa-home" style="width:18px;opacity:0.6;"></i>Inicio</a></li>
+                <li><a onclick="showSection('primaria')" id="link-sistema"><i class="fas fa-graduation-cap" style="width:18px;opacity:0.6;"></i>Sistema de Trabajo</a></li>
+                <li><a onclick="showSection('sedes')" id="link-sedes"><i class="fas fa-map-marker-alt" style="width:18px;opacity:0.6;"></i>Sedes</a></li>
+                <li><a onclick="showSection('vacaciones')" id="link-vacaciones"><i class="fas fa-sun" style="width:18px;opacity:0.6;"></i>Vacaciones Útiles</a></li>
+                <li><a onclick="showSection('ingresantes')" id="link-ingresantes"><i class="fas fa-trophy" style="width:18px;opacity:0.6;"></i>Ingresantes</a></li>
                 <li class="dropdown" id="dropdown-videos">
                     <a onclick="toggleVideosDropdown(event)" id="link-videos">
-                        Videos Educativos <i class="fas fa-angle-down" style="font-size: 0.8rem;"></i>
+                        <i class="fas fa-play-circle" style="width:18px;opacity:0.6;"></i>Videos Educativos <i class="fas fa-angle-down" style="font-size:0.8rem;margin-left:auto;"></i>
                     </a>
                     <ul class="dropdown-menu" id="dropdown-menu-videos">
-                        <li><a onclick="showSection('videos-primaria');">Videos Primaria</a></li>
-                        <li><a onclick="showSection('videos-secundaria');">Videos Secundaria</a></li>
+                        <li><a onclick="showSection('videos-primaria');"><i class="fas fa-child" style="width:16px;opacity:0.5;"></i>Videos Primaria</a></li>
+                        <li><a onclick="showSection('videos-secundaria');"><i class="fas fa-user-graduate" style="width:16px;opacity:0.5;"></i>Videos Secundaria</a></li>
                     </ul>
                 </li>
-                <li><a onclick="showSection('contacto')" id="link-contacto">Contacto</a></li>
-                <li><a onclick="showSection('admision')" class="btn-admision">ADMISIÓN 2026</a></li>
+                <li><a onclick="showSection('contacto')" id="link-contacto"><i class="fas fa-envelope" style="width:18px;opacity:0.6;"></i>Contacto</a></li>
+                <li><a onclick="showSection('admision')" class="btn-admision"><i class="fas fa-star"></i>ADMISIÓN 2026</a></li>
             </ul>
         </nav>
     </div>
