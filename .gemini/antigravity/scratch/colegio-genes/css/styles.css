@@ -2954,10 +2954,20 @@ section.active {
         padding: 13px 20px;
     }
 
-    /* Stats Strip */
+    /* Stats Strip Mobile Layout & Centering */
     .stats-strip-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 16px;
+    }
+
+    .stat-col-item {
+        width: 100%;
+        max-width: 290px;
+        justify-content: flex-start;
+        margin: 0 auto;
     }
     
     .stat-divider {
