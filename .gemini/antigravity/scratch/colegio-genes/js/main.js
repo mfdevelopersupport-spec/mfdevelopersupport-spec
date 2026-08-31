@@ -183,6 +183,23 @@ function animateTestimonioDotProgress() {
     });
 }
 
+/* ─── CENTRAR EL TRACK SOBRE LA TARJETA ACTIVA (posición: tarjeta index=1) ─── */
+function centerTrack() {
+    const track = document.getElementById('testimonio-track');
+    const viewport = track ? track.parentElement : null;
+    const activeCard = document.getElementById('testimonio-card-active');
+    if (!track || !viewport || !activeCard) return;
+
+    const vpW = viewport.offsetWidth;
+    const cardW = activeCard.offsetWidth;
+    // Desplazamiento: queremos que el centro de la tarjeta activa (index=1 en el track)
+    // coincida con el centro del viewport.
+    // trackOffset = -(cardOffset_from_track_start) + (vpW - cardW)/2
+    const cardOffsetLeft = activeCard.offsetLeft;
+    const offset = -cardOffsetLeft + (vpW - cardW) / 2;
+    track.style.transform = `translateX(${offset}px)`;
+}
+
 function renderTestimonio(index) {
     const len = testimoniosIngresantes.length;
     if (len === 0) return;
@@ -198,14 +215,23 @@ function renderTestimonio(index) {
     renderSingleTestimonioCard(cardActive, testimoniosIngresantes[index]);
     renderSingleTestimonioCard(cardNext, testimoniosIngresantes[nextIndex]);
 
-    [cardPrev, cardActive, cardNext].forEach(card => {
-        if (card) {
-            card.classList.remove('testimonio-card-inner-swap');
-            void card.offsetWidth; // Reflow para reiniciar la animación CSS
-            card.classList.add('testimonio-card-inner-swap');
-        }
-    });
+    // Actualizar clases de estado (blur/opacidad via CSS)
+    if (cardPrev)   { cardPrev.className   = 'testimonio-card card-prev'; }
+    if (cardActive) { cardActive.className = 'testimonio-card card-active'; }
+    if (cardNext)   { cardNext.className   = 'testimonio-card card-next'; }
 
+    // Animar contenido interno solo de la tarjeta activa
+    if (cardActive) {
+        cardActive.classList.add('testimonio-card-inner-swap');
+        cardActive.addEventListener('animationend', () => {
+            cardActive.classList.remove('testimonio-card-inner-swap');
+        }, { once: true });
+    }
+
+    // Centrar el track sobre la tarjeta activa
+    requestAnimationFrame(() => centerTrack());
+
+    // Actualizar puntos de progreso
     const dots = document.querySelectorAll('#testimonio-dots-wrapper .testimonio-dot');
     dots.forEach((dot, dIdx) => {
         dot.classList.toggle('active', dIdx === index);
@@ -218,52 +244,26 @@ let isTestimonioAnimating = false;
 
 function showTestimonio(index) {
     if (index === testimonialIndex || isTestimonioAnimating) return;
-    if (index > testimonialIndex) {
-        testimonialIndex = (index - 1 + testimoniosIngresantes.length) % testimoniosIngresantes.length;
-        nextTestimonio();
-    } else {
-        testimonialIndex = (index + 1) % testimoniosIngresantes.length;
-        prevTestimonio();
-    }
+    testimonialIndex = index;
+    renderTestimonio(testimonialIndex);
+    startTestimonioAuto();
 }
 
 function prevTestimonio() {
     if (isTestimonioAnimating) return;
     isTestimonioAnimating = true;
-
-    const stage = document.getElementById('testimonio-3d-stage');
-    if (stage) {
-        stage.classList.remove('anim-next');
-        stage.classList.add('anim-prev');
-    }
-
-    setTimeout(() => {
-        testimonialIndex = (testimonialIndex - 1 + testimoniosIngresantes.length) % testimoniosIngresantes.length;
-        renderTestimonio(testimonialIndex);
-        if (stage) stage.classList.remove('anim-prev');
-        isTestimonioAnimating = false;
-    }, 450);
-
+    testimonialIndex = (testimonialIndex - 1 + testimoniosIngresantes.length) % testimoniosIngresantes.length;
+    renderTestimonio(testimonialIndex);
+    setTimeout(() => { isTestimonioAnimating = false; }, 550);
     startTestimonioAuto();
 }
 
 function nextTestimonio() {
     if (isTestimonioAnimating) return;
     isTestimonioAnimating = true;
-
-    const stage = document.getElementById('testimonio-3d-stage');
-    if (stage) {
-        stage.classList.remove('anim-prev');
-        stage.classList.add('anim-next');
-    }
-
-    setTimeout(() => {
-        testimonialIndex = (testimonialIndex + 1) % testimoniosIngresantes.length;
-        renderTestimonio(testimonialIndex);
-        if (stage) stage.classList.remove('anim-next');
-        isTestimonioAnimating = false;
-    }, 450);
-
+    testimonialIndex = (testimonialIndex + 1) % testimoniosIngresantes.length;
+    renderTestimonio(testimonialIndex);
+    setTimeout(() => { isTestimonioAnimating = false; }, 550);
     startTestimonioAuto();
 }
 
@@ -273,6 +273,7 @@ function startTestimonioAuto() {
         nextTestimonio();
     }, 6500);
 }
+
 
 /* --------------------------------------------------------------------------
    SUBPANELES DE PRIMARIA Y SECUNDARIA
@@ -1085,4 +1086,11 @@ function closeIngresanteModal(event) {
 document.addEventListener('DOMContentLoaded', function() {
     renderTestimonio(0);
     startTestimonioAuto();
+    // Centrar track después de que el DOM esté listo y con dimensiones reales
+    setTimeout(() => centerTrack(), 50);
+});
+
+// Re-centrar al cambiar el tamaño de ventana
+window.addEventListener('resize', function() {
+    centerTrack();
 });
