@@ -995,12 +995,15 @@ section.active {
 }
 
 .ingresantes-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .ingresante-card {
+    flex: 1 1 240px;
+    max-width: 290px;
     background: #FFFFFF;
     border-radius: 16px;
     border: 1px solid #E2E8F0;
@@ -1551,13 +1554,16 @@ section.active {
    SEDES GRID & MODAL POPUP
    -------------------------------------------------------------------------- */
 .sedes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 22px;
     margin-top: 20px;
 }
 
 .sede-card {
+    flex: 1 1 290px;
+    max-width: 360px;
     background: #FFFFFF;
     border-radius: 16px;
     overflow: hidden;
