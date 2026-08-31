@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260830_TESTIMONIALS_3D_SEPARATION_V50">
+    <link rel="stylesheet" href="css/styles.css?v=20260830_PROGRESS_DOTS_HOME_FORM_V51">
 </head>
 
 <body>
@@ -343,56 +343,73 @@
                         </div>
                     </div>
 
-                    <!-- CONTROLES Y PAGINACIÓN -->
+                    <!-- CONTROLES Y PAGINACIÓN CON CÁPSULAS Y BARRA DE PROGRESO -->
                     <div class="testimonio-controls-row">
                         <button class="testimonio-arrow-btn" onclick="prevTestimonio()" type="button" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
                         
                         <div class="testimonio-dots-wrapper" id="testimonio-dots-wrapper">
-                            <button class="testimonio-dot active" type="button" onclick="showTestimonio(0)"></button>
-                            <button class="testimonio-dot" type="button" onclick="showTestimonio(1)"></button>
-                            <button class="testimonio-dot" type="button" onclick="showTestimonio(2)"></button>
-                            <button class="testimonio-dot" type="button" onclick="showTestimonio(3)"></button>
-                            <button class="testimonio-dot" type="button" onclick="showTestimonio(4)"></button>
+                            <button class="testimonio-dot active" type="button" onclick="showTestimonio(0)" aria-label="Testimonio 1"><span class="testimonio-dot-progress"></span></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(1)" aria-label="Testimonio 2"><span class="testimonio-dot-progress"></span></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(2)" aria-label="Testimonio 3"><span class="testimonio-dot-progress"></span></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(3)" aria-label="Testimonio 4"><span class="testimonio-dot-progress"></span></button>
+                            <button class="testimonio-dot" type="button" onclick="showTestimonio(4)" aria-label="Testimonio 5"><span class="testimonio-dot-progress"></span></button>
                         </div>
 
                         <button class="testimonio-arrow-btn" onclick="nextTestimonio()" type="button" aria-label="Siguiente testimonio"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
 
-                <!-- FORMULARIO DE CONSULTA EN INICIO -->
-                <div class="card">
-                    <div style="text-align: center; margin-bottom: 25px;">
-                        <h2 style="color: var(--bg-dark-navy); font-weight: 800; font-size: 1.8rem; margin-bottom: 5px; text-transform: uppercase;">¿Tiene una pregunta?<br>Escríbanos</h2>
-                        <p style="color: #64748B; font-size: 0.95rem;">Llena el formulario y te responderemos lo más pronto posible.</p>
+                <!-- FORMULARIO DE CONSULTA EN INICIO (REDISEÑADO CON VIDA Y ESTILO PREMIUM) -->
+                <div class="card home-form-card animate-fade-up">
+                    <div class="home-form-header">
+                        <span class="home-form-badge">
+                            <i class="far fa-paper-plane"></i> Formulario de Atención
+                        </span>
+                        <h2 class="home-form-title">¿Tiene una pregunta? <span>Escríbanos</span></h2>
+                        <p class="home-form-subtitle">Déjenos sus datos y un asesor académico le responderá a la brevedad.</p>
                     </div>
 
-                    <form id="form-admision" class="formulario" action="https://formsubmit.co/mathiasfernandezesquivel@gmail.com" method="POST" style="text-align: left;">
-                        <div class="admision-grid-2">
-                            <div class="input-group">
-                                <i class="fas fa-user input-icon"></i>
-                                <input type="text" name="nombres" id="nombre" placeholder="Nombre y Apellidos *" required>
+                    <form id="form-admision" class="formulario-moderno" action="https://formsubmit.co/mathiasfernandezesquivel@gmail.com" method="POST">
+                        <div class="form-grid">
+                            <div class="input-field-group">
+                                <label for="nombre">Nombres y Apellidos <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" name="nombres" id="nombre" placeholder="Ej. Juan Pérez" required>
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <i class="fas fa-envelope input-icon"></i>
-                                <input type="email" name="correo" id="correo" placeholder="Correo electrónico *" required>
+
+                            <div class="input-field-group">
+                                <label for="correo">Correo Electrónico <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope input-icon"></i>
+                                    <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="input-group">
-                            <i class="fas fa-phone-alt input-icon"></i>
-                            <input type="tel" name="telefono" id="celular" placeholder="Teléfono *" required>
-                        </div>
+                            <div class="input-field-group">
+                                <label for="celular">Teléfono / WhatsApp <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone-alt input-icon"></i>
+                                    <input type="tel" name="telefono" id="celular" placeholder="987 654 321" required>
+                                </div>
+                            </div>
 
-                        <div class="input-group textarea-group">
-                            <i class="fas fa-comment-dots input-icon"></i>
-                            <textarea name="mensaje" id="mensaje-texto" placeholder="Mensaje *" required></textarea>
+                            <div class="input-field-group full-width">
+                                <label for="mensaje-texto">Mensaje o Consulta <span class="required">*</span></label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <i class="fas fa-comment-dots input-icon"></i>
+                                    <textarea name="mensaje" id="mensaje-texto" rows="4" placeholder="Escriba aquí su consulta sobre admisión, pensiones o requisitos..." required></textarea>
+                                </div>
+                            </div>
                         </div>
 
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_subject" value="Nuevo mensaje desde la web de Colegio Genes">
 
-                        <button type="submit" style="padding:14px; font-size:1rem; border-radius:10px; font-weight: 800;">
-                            <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Enviar mensaje
+                        <button type="submit" class="btn-submit-contacto">
+                            <span>Enviar mensaje</span>
+                            <i class="fas fa-arrow-right icon-arrow"></i>
                         </button>
                     </form>
                 </div>

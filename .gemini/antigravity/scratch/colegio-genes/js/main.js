@@ -167,6 +167,22 @@ function renderSingleTestimonioCard(cardElement, data) {
     `;
 }
 
+function animateTestimonioDotProgress() {
+    const dots = document.querySelectorAll('#testimonio-dots-wrapper .testimonio-dot');
+    dots.forEach((dot, dIdx) => {
+        const progress = dot.querySelector('.testimonio-dot-progress');
+        if (progress) {
+            progress.style.transition = 'none';
+            progress.style.width = '0%';
+            if (dIdx === testimonialIndex) {
+                void progress.offsetWidth;
+                progress.style.transition = 'width 6.5s linear';
+                progress.style.width = '100%';
+            }
+        }
+    });
+}
+
 function renderTestimonio(index) {
     const len = testimoniosIngresantes.length;
     if (len === 0) return;
@@ -186,6 +202,8 @@ function renderTestimonio(index) {
     dots.forEach((dot, dIdx) => {
         dot.classList.toggle('active', dIdx === index);
     });
+
+    animateTestimonioDotProgress();
 }
 
 function showTestimonio(index) {
