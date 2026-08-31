@@ -198,6 +198,14 @@ function renderTestimonio(index) {
     renderSingleTestimonioCard(cardActive, testimoniosIngresantes[index]);
     renderSingleTestimonioCard(cardNext, testimoniosIngresantes[nextIndex]);
 
+    [cardPrev, cardActive, cardNext].forEach(card => {
+        if (card) {
+            card.classList.remove('testimonio-card-inner-swap');
+            void card.offsetWidth; // Reflow para reiniciar la animación CSS
+            card.classList.add('testimonio-card-inner-swap');
+        }
+    });
+
     const dots = document.querySelectorAll('#testimonio-dots-wrapper .testimonio-dot');
     dots.forEach((dot, dIdx) => {
         dot.classList.toggle('active', dIdx === index);
