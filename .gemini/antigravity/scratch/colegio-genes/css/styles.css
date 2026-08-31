@@ -1820,100 +1820,35 @@ section.active {
     border-right: 1px solid #E2E8F0;
 }
 
-/* TARJETA DE PERFIL DE LA SECRETARÍA / ASESORA ACADÉMICA */
-.contacto-advisor-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: #FFFFFF;
-    padding: 16px 20px;
-    border-radius: 20px;
-    border: 1.5px solid #DBEAFE;
-    box-shadow: 0 8px 24px rgba(32, 38, 130, 0.06);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contacto-advisor-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(32, 38, 130, 0.12);
-    border-color: #BFDBFE;
-}
-
-.advisor-avatar-ring {
-    position: relative;
-    width: 62px;
-    height: 62px;
-    flex-shrink: 0;
-}
-
-.advisor-img {
+/* ILUSTRACIÓN PNG ATENCIÓN AL CLIENTE / SECRETARÍA */
+.contacto-illustration-wrap {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2.5px solid #202682;
-    box-shadow: 0 4px 12px rgba(32, 38, 130, 0.15);
-}
-
-.advisor-online-badge {
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    padding: 2px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.advisor-online-badge .online-dot {
-    width: 12px;
-    height: 12px;
-    background: #25D366;
-    border-radius: 50%;
-    display: block;
-    box-shadow: 0 0 6px #25D366;
-    animation: badgePulse 1.8s infinite;
-}
-
-.advisor-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.advisor-role-tag {
-    display: inline-flex;
     align-items: center;
-    gap: 5px;
-    background: #EFF6FF;
-    color: #1D4ED8;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 3px 10px;
-    border-radius: 999px;
-    border: 1px solid #BFDBFE;
-    margin-bottom: 4px;
-    width: fit-content;
+    margin-bottom: 16px;
+    padding: 6px;
 }
 
-.advisor-name {
-    font-size: 1.05rem;
+.contacto-illustration-img {
+    max-width: 270px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 24px rgba(32, 38, 130, 0.12));
+    transition: transform 0.3s ease;
+}
+
+.contacto-illustration-img:hover {
+    transform: scale(1.03);
+}
+
+.contacto-title-main {
+    font-size: 1.45rem;
     font-weight: 900;
-    color: #0F172A;
-    margin: 0 0 2px;
-    line-height: 1.2;
-}
-
-.advisor-subtitle {
-    font-size: 0.78rem;
-    color: #64748B;
-    font-weight: 600;
-    margin: 0;
+    color: #202682;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
 }
 
 .contacto-panel-desc {
