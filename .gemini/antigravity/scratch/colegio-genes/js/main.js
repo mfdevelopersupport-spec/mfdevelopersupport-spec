@@ -214,29 +214,63 @@ function renderTestimonio(index) {
     animateTestimonioDotProgress();
 }
 
+let isTestimonioAnimating = false;
+
 function showTestimonio(index) {
-    testimonialIndex = index;
-    renderTestimonio(testimonialIndex);
-    startTestimonioAuto();
+    if (index === testimonialIndex || isTestimonioAnimating) return;
+    if (index > testimonialIndex) {
+        testimonialIndex = (index - 1 + testimoniosIngresantes.length) % testimoniosIngresantes.length;
+        nextTestimonio();
+    } else {
+        testimonialIndex = (index + 1) % testimoniosIngresantes.length;
+        prevTestimonio();
+    }
 }
 
 function prevTestimonio() {
-    testimonialIndex = (testimonialIndex - 1 + testimoniosIngresantes.length) % testimoniosIngresantes.length;
-    renderTestimonio(testimonialIndex);
+    if (isTestimonioAnimating) return;
+    isTestimonioAnimating = true;
+
+    const stage = document.getElementById('testimonio-3d-stage');
+    if (stage) {
+        stage.classList.remove('anim-next');
+        stage.classList.add('anim-prev');
+    }
+
+    setTimeout(() => {
+        testimonialIndex = (testimonialIndex - 1 + testimoniosIngresantes.length) % testimoniosIngresantes.length;
+        renderTestimonio(testimonialIndex);
+        if (stage) stage.classList.remove('anim-prev');
+        isTestimonioAnimating = false;
+    }, 450);
+
     startTestimonioAuto();
 }
 
 function nextTestimonio() {
-    testimonialIndex = (testimonialIndex + 1) % testimoniosIngresantes.length;
-    renderTestimonio(testimonialIndex);
+    if (isTestimonioAnimating) return;
+    isTestimonioAnimating = true;
+
+    const stage = document.getElementById('testimonio-3d-stage');
+    if (stage) {
+        stage.classList.remove('anim-prev');
+        stage.classList.add('anim-next');
+    }
+
+    setTimeout(() => {
+        testimonialIndex = (testimonialIndex + 1) % testimoniosIngresantes.length;
+        renderTestimonio(testimonialIndex);
+        if (stage) stage.classList.remove('anim-next');
+        isTestimonioAnimating = false;
+    }, 450);
+
     startTestimonioAuto();
 }
 
 function startTestimonioAuto() {
     clearInterval(testimonialTimer);
     testimonialTimer = setInterval(function () {
-        testimonialIndex = (testimonialIndex + 1) % testimoniosIngresantes.length;
-        renderTestimonio(testimonialIndex);
+        nextTestimonio();
     }, 6500);
 }
 

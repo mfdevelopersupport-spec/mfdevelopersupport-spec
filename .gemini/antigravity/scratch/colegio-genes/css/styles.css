@@ -788,6 +788,83 @@ section.active {
     pointer-events: auto;
 }
 
+/* KEYFRAMES DE TRANSICIÓN 3D CONTINUA Y DESPLAZAMIENTO VISIBLE */
+@keyframes slideActiveToPrev {
+    0% {
+        transform: translateX(0) scale(1) rotateY(0deg);
+        opacity: 1;
+        filter: blur(0px);
+        z-index: 3;
+    }
+    100% {
+        transform: translateX(-58%) scale(0.80) rotateY(18deg);
+        opacity: 0.35;
+        filter: blur(4.5px);
+        z-index: 1;
+    }
+}
+
+@keyframes slideNextToActive {
+    0% {
+        transform: translateX(58%) scale(0.80) rotateY(-18deg);
+        opacity: 0.35;
+        filter: blur(4.5px);
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotateY(0deg);
+        opacity: 1;
+        filter: blur(0px);
+        z-index: 3;
+    }
+}
+
+@keyframes slideActiveToNext {
+    0% {
+        transform: translateX(0) scale(1) rotateY(0deg);
+        opacity: 1;
+        filter: blur(0px);
+        z-index: 3;
+    }
+    100% {
+        transform: translateX(58%) scale(0.80) rotateY(-18deg);
+        opacity: 0.35;
+        filter: blur(4.5px);
+        z-index: 1;
+    }
+}
+
+@keyframes slidePrevToActive {
+    0% {
+        transform: translateX(-58%) scale(0.80) rotateY(18deg);
+        opacity: 0.35;
+        filter: blur(4.5px);
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotateY(0deg);
+        opacity: 1;
+        filter: blur(0px);
+        z-index: 3;
+    }
+}
+
+.testimonio-3d-stage.anim-next #testimonio-card-active {
+    animation: slideActiveToPrev 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.testimonio-3d-stage.anim-next #testimonio-card-next {
+    animation: slideNextToActive 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.testimonio-3d-stage.anim-prev #testimonio-card-active {
+    animation: slideActiveToNext 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.testimonio-3d-stage.anim-prev #testimonio-card-prev {
+    animation: slidePrevToActive 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
 /* CARD ANTERIOR A LA IZQUIERDA (CON MAYOR SEPARACIÓN, NUBLADA/BORROSA EN ARCO) */
 .testimonio-card.card-prev {
     transform: translateX(-58%) scale(0.80) rotateY(18deg);
