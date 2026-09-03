@@ -3399,6 +3399,139 @@ section.active {
     #canales-virtuales div[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
     }
+
+    /* --------------------------------------------------------------------------
+       SISTEMA DE COMENTARIOS / TESTIMONIOS EXCLUSIVO PARA MOBILE RESPONSIVE
+       -------------------------------------------------------------------------- */
+    .testimonio-viewport {
+        overflow: hidden;
+        padding: 10px 0 16px;
+    }
+
+    .testimonio-track {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        transform: none !important;
+    }
+
+    /* Ocultar tarjetas de los costados en móvil para evitar sangrado y deformación */
+    .testimonio-card.card-prev,
+    .testimonio-card.card-next {
+        display: none !important;
+    }
+
+    /* Tarjeta activa en móvil: 1 sola columna vertical limpia sin solapamiento */
+    .testimonio-card.card-active {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px;
+        padding: 22px 18px;
+        border-radius: 20px;
+        background: #FFFFFF;
+        border: 1.5px solid #E2E8F0;
+        box-shadow: 0 10px 30px rgba(32, 38, 130, 0.08);
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
+    /* Header del testimonio en móvil: Avatar pequeño + Nombre + Estrellas */
+    .testimonio-left-profile {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 14px;
+        padding-bottom: 14px;
+        border-bottom: 1px dashed #E2E8F0;
+        width: 100%;
+    }
+
+    .testimonio-avatar-ring {
+        width: 64px !important;
+        height: 64px !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0;
+    }
+
+    .testimonio-verify-check {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 0.65rem !important;
+        bottom: 0 !important;
+        right: 0 !important;
+    }
+
+    .testimonio-left-profile h4 {
+        font-size: 1.05rem !important;
+        margin: 0 0 2px !important;
+    }
+
+    .testimonio-carrera-badge {
+        font-size: 0.82rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .testimonio-uni-tag {
+        font-size: 0.72rem !important;
+        padding: 3px 10px !important;
+        display: inline-block;
+    }
+
+    /* Cuerpo de cita en móvil: Texto completo nítido sin recortes */
+    .testimonio-right-body {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .testimonio-quote-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .testimonio-stars {
+        font-size: 0.85rem !important;
+    }
+
+    .testimonio-stars span {
+        display: none;
+    }
+
+    .quote-giant-icon {
+        font-size: 1.6rem !important;
+    }
+
+    .testimonio-quote-text {
+        font-size: 0.94rem !important;
+        line-height: 1.65 !important;
+        color: #334155 !important;
+        margin: 4px 0 !important;
+    }
+
+    .testimonio-puesto-pill {
+        font-size: 0.78rem !important;
+        padding: 6px 14px !important;
+        align-self: flex-start !important;
+    }
+
+    .testimonio-controls-row {
+        margin-top: 14px;
+        gap: 12px;
+    }
+
+    .testimonio-dot {
+        width: 20px;
+        height: 7px;
+    }
+
+    .testimonio-dot.active {
+        width: 40px;
+    }
 }
 
 @media (max-width: 576px) {
