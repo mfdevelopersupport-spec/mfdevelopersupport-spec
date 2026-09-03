@@ -304,15 +304,15 @@ li.mobile-drawer-header {
 }
 
 .hero-slide-1 {
-    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;
+    background: linear-gradient(90deg, rgba(7, 11, 24, 0.95) 0%, rgba(7, 11, 24, 0.82) 45%, rgba(7, 11, 24, 0.2) 75%, rgba(7, 11, 24, 0) 100%), url('../assets/images/hero_classroom_whiteboard.jpg?v=20260801_1') center/cover no-repeat !important;
 }
 
 .hero-slide-2 {
-    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_virtual_learning.jpg?v=20260802_1') center/cover no-repeat !important;
+    background: linear-gradient(90deg, rgba(7, 11, 24, 0.95) 0%, rgba(7, 11, 24, 0.82) 45%, rgba(7, 11, 24, 0.2) 75%, rgba(7, 11, 24, 0) 100%), url('../assets/images/hero_virtual_learning.jpg?v=20260802_1') center/cover no-repeat !important;
 }
 
 .hero-slide-3 {
-    background: linear-gradient(90deg, rgba(7, 11, 24, 0.96) 0%, rgba(7, 11, 24, 0.84) 48%, rgba(7, 11, 24, 0.12) 100%), url('../assets/images/hero_students.png') center/cover no-repeat !important;
+    background: linear-gradient(90deg, rgba(7, 11, 24, 0.95) 0%, rgba(7, 11, 24, 0.82) 45%, rgba(7, 11, 24, 0.2) 75%, rgba(7, 11, 24, 0) 100%), url('../assets/images/hero_students.png') center/cover no-repeat !important;
 }
 
 .hero-h1 span.highlight-blue,
@@ -412,17 +412,17 @@ li.mobile-drawer-header {
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hero-text-side {
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 680px;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .hero-badge-pill {
