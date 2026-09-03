@@ -2525,7 +2525,7 @@ section.active {
    FOOTER INSTITUCIONAL (AZUL GENES DE SANGRE)
    -------------------------------------------------------------------------- */
 .main-footer {
-    background: var(--bg-dark-navy);
+    background: linear-gradient(180deg, #0F172A 0%, #090D16 100%);
     color: #FFFFFF;
     margin-top: 40px;
     border-top: 4px solid var(--crimson-red);
@@ -2549,19 +2549,28 @@ section.active {
 }
 
 .footer-logo {
-    width: 180px;
-    margin-bottom: 16px;
+    width: 200px;
+    height: auto;
+    margin-bottom: 18px;
     background: #FFFFFF;
-    padding: 8px 14px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
 .footer-brand > p {
-    color: #E2E8F0 !important;
+    color: #94A3B8 !important;
     font-size: 0.9rem !important;
-    line-height: 1.6;
-    margin-bottom: 20px !important;
+    line-height: 1.65;
+    margin-bottom: 22px !important;
 }
 
 .footer-cta {
@@ -2610,7 +2619,7 @@ section.active {
     display: flex;
     align-items: center;
     gap: 14px;
-    color: #E2E8F0;
+    color: #CBD5E1;
     text-decoration: none;
     margin-bottom: 14px;
     font-size: 0.92rem;
@@ -2622,8 +2631,8 @@ section.active {
     width: 20px;
     text-align: center;
     font-size: 1rem;
-    color: #FFD700;
-    transition: color 0.2s ease;
+    color: #D4AF37;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-contact-item:hover {
@@ -2633,37 +2642,81 @@ section.active {
 
 .footer-contact-item:hover i {
     color: #FFFFFF;
+    transform: scale(1.15);
 }
 
 /* Footer bottom bar */
 .footer-bottom-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 24px;
-    margin-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 26px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     text-align: center;
+}
+
+/* Libro de reclamaciones insignia institucional */
+.libro-reclamaciones-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 10px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.libro-reclamaciones-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18);
+}
+
+.libro-reclamaciones-link img {
+    height: 38px;
+    width: auto;
+    border-radius: 8px;
+    background: #FFFFFF;
+    padding: 3px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+.libro-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.libro-title {
+    color: #FFFFFF;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.libro-sub {
+    color: #94A3B8;
+    font-size: 0.74rem;
+    font-weight: 500;
+    margin-top: 1px;
 }
 
 .footer-bottom-bar p {
     margin: 0;
     font-size: 0.82rem;
-    color: #CBD5E1;
+    color: #64748B;
     letter-spacing: 0.3px;
 }
 
-.footer-bottom-bar img {
-    height: 44px;
-    background: white;
-    padding: 4px 10px;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-}
-
-.footer-bottom-bar img:hover {
-    transform: scale(1.05);
+.footer-bottom-bar p strong {
+    color: #94A3B8;
 }
 
 @keyframes wsRing {
