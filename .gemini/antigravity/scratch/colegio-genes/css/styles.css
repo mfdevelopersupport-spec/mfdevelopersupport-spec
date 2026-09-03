@@ -128,8 +128,8 @@ nav {
     flex-shrink: 0 !important;
 }
 
-.mobile-drawer-header {
-    display: none;
+li.mobile-drawer-header {
+    display: none !important;
 }
 
 .nav-links a:not(.btn-admision) {
@@ -411,11 +411,18 @@ nav {
     max-width: 1320px;
     margin: 0 auto;
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero-text-side {
     max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-badge-pill {
@@ -2626,7 +2633,7 @@ section.active {
     position: fixed;
     right: 22px;
     bottom: 22px;
-    z-index: 2000;
+    z-index: 990;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -2918,6 +2925,36 @@ section.active {
 }
 
 @media (max-width: 768px) {
+    /* Tab bars horizontal touch-scroll in mobile & tablet */
+    .canales-primaria-tabs, 
+    .canales-secundaria-tabs,
+    .ingresantes-tabs {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        padding: 6px 12px 10px !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .canales-primaria-tabs::-webkit-scrollbar,
+    .canales-secundaria-tabs::-webkit-scrollbar,
+    .ingresantes-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ingresante-tab, .canal-primaria-tab, .canal-secundaria-tab {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 8px 16px !important;
+        font-size: 0.82rem !important;
+    }
+
     /* Navbar: hamburguesa izquierda, logo centrado */
     nav {
         position: relative;
@@ -2994,8 +3031,8 @@ section.active {
     }
 
     /* HEADER DEL DRAWER ya está en el HTML — ocultar en desktop */
-    .mobile-drawer-header {
-        display: block;
+    li.mobile-drawer-header {
+        display: block !important;
     }
 
     /* Primera li de nav items (no el header) recibe margen superior */
@@ -3076,8 +3113,9 @@ section.active {
     /* Separador visual antes del botón de admisión */
     .nav-links li:has(.btn-admision) {
         border-top: 1px solid rgba(255,255,255,0.08);
-        margin-top: 12px;
+        margin-top: auto;
         padding-top: 12px;
+        padding-bottom: 20px;
     }
 
     /* Mobile admision button */
@@ -3359,14 +3397,31 @@ section.active {
         margin: 0 12px;
     }
 
-    /* Ingresantes tabs */
+    /* Tab bars horizontal touch-scroll in mobile */
+    .canales-primaria-tabs, 
+    .canales-secundaria-tabs,
     .ingresantes-tabs {
-        gap: 6px;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        padding-bottom: 8px !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
-    .ingresante-tab {
-        padding: 8px 12px;
-        font-size: 0.78rem;
+    .canales-primaria-tabs::-webkit-scrollbar,
+    .canales-secundaria-tabs::-webkit-scrollbar,
+    .ingresantes-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ingresante-tab, .canal-primaria-tab, .canal-secundaria-tab {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 8px 14px;
+        font-size: 0.82rem;
     }
 
     /* Footer */
