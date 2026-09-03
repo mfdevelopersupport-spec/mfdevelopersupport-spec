@@ -2773,8 +2773,76 @@ section.active {
 .vacaciones-requisitos-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 16px;
     margin-bottom: 25px;
+}
+
+.requisito-card-item {
+    background: #FFFFFF;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1.5px solid #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.3s ease;
+}
+
+.requisito-card-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(32, 38, 130, 0.1);
+    border-color: #CBD5E1;
+}
+
+.requisito-icon-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.requisito-icon-badge.puntualidad {
+    background: rgba(220, 38, 38, 0.12);
+    color: #DC2626;
+    border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.requisito-icon-badge.disciplina {
+    background: rgba(32, 38, 130, 0.12);
+    color: #202682;
+    border: 1px solid rgba(32, 38, 130, 0.25);
+}
+
+.requisito-icon-badge.valores {
+    background: rgba(212, 175, 55, 0.15);
+    color: #B45309;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.requisito-icon-badge.materiales {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.requisito-card-item h5 {
+    color: #0F172A;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin: 0 0 3px 0;
+}
+
+.requisito-card-item p {
+    font-size: 0.81rem;
+    color: #64748B;
+    line-height: 1.45;
+    margin: 0;
+    font-weight: 500;
 }
 
 .vacaciones-beneficios-grid {

@@ -297,49 +297,70 @@ function showSecundariaPanel(panelId, button) {
 }
 
 /* --------------------------------------------------------------------------
-   CANALES POR GRADO
+   CANALES POR GRADO (INSIGNIA DINÁMICA OFICIAL)
    -------------------------------------------------------------------------- */
+function generateGenesBadgeSvg(numStr, suffix, levelLabel = "PRIMARIA") {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+      <defs>
+        <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#C51818"/>
+          <stop offset="100%" stop-color="#991B1B"/>
+        </linearGradient>
+      </defs>
+      <circle cx="120" cy="120" r="112" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="4"/>
+      <circle cx="120" cy="120" r="106" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+      <path d="M 18,105 A 103,103 0 0,1 222,105 Z" fill="url(#redGrad)"/>
+      <text x="120" y="52" fill="#FFFFFF" font-family="'Montserrat', Arial, sans-serif" font-weight="900" font-size="14" text-anchor="middle" letter-spacing="2">COLEGIO</text>
+      <text x="120" y="88" fill="#FFFFFF" font-family="'Montserrat', Arial, sans-serif" font-weight="900" font-size="34" text-anchor="middle" letter-spacing="-0.5">GENES</text>
+      <rect x="25" y="108" width="190" height="26" fill="#F1F5F9" rx="4"/>
+      <text x="120" y="126" fill="#64748B" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="13" text-anchor="middle" letter-spacing="3">${levelLabel}</text>
+      <text x="120" y="180" fill="#B91C1C" font-family="'Montserrat', Arial, sans-serif" font-weight="900" font-size="46" text-anchor="middle">${numStr}<tspan font-size="22" font-weight="800" fill="#B91C1C">${suffix}</tspan></text>
+      <text x="120" y="202" fill="#94A3B8" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="12" text-anchor="middle" letter-spacing="2">GRADO</text>
+    </svg>`;
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
 const primaryChannelsData = {
     grado1: {
         titulo: "1ro de Primaria",
         descripcion: "Accede al canal virtual oficial de 1er. Grado de Primaria para reforzar las clases y revisar el contenido académico.",
         link: "https://www.youtube.com/@genesclasevirtual1ro.prima508",
-        imagen: "assets/images/canales/1ro_prim.jpg",
+        imagen: generateGenesBadgeSvg("1", "er."),
         disponible: true
     },
     grado2: {
         titulo: "2do de Primaria",
         descripcion: "Canal virtual oficial de 2do. Grado de Primaria para reforzamiento escolar y solucionarios.",
         link: "https://www.youtube.com/@genesclasevirtual2do.prima19",
-        imagen: "assets/images/canales/1ro_prim.jpg",
+        imagen: generateGenesBadgeSvg("2", "do."),
         disponible: true
     },
     grado3: {
         titulo: "3ro de Primaria",
         descripcion: "El canal virtual de 3er. Grado de Primaria no se encuentra disponible por el momento.",
         link: "javascript:void(0);",
-        imagen: "assets/images/canales/1ro_prim.jpg",
+        imagen: generateGenesBadgeSvg("3", "er."),
         disponible: false
     },
     grado4: {
         titulo: "4to de Primaria",
         descripcion: "Canal virtual oficial para 4to. Grado de Primaria. Refuerzo académico progresivo.",
         link: "https://www.youtube.com/@genesclasevirtual4to.prima398",
-        imagen: "assets/images/canales/4to_prim.jpg",
+        imagen: generateGenesBadgeSvg("4", "to."),
         disponible: true
     },
     grado5: {
         titulo: "5to de Primaria",
         descripcion: "Canal virtual para 5to. Grado de Primaria. Preparación con exigencia académica.",
         link: "https://www.youtube.com/@genesclasevirtual5to.prima354",
-        imagen: "assets/images/canales/5to_prim.jpg",
+        imagen: generateGenesBadgeSvg("5", "to."),
         disponible: true
     },
     grado6: {
         titulo: "6to de Primaria",
         descripcion: "Canal virtual oficial para 6to. Grado de Primaria. Preparación y consolidación de estudios.",
         link: "https://www.youtube.com/@genesclasevirtual6to.primaria",
-        imagen: "assets/images/canales/5to_prim.jpg",
+        imagen: generateGenesBadgeSvg("6", "to."),
         disponible: true
     }
 };
