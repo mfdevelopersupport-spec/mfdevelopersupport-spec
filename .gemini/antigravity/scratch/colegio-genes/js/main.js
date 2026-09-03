@@ -359,7 +359,7 @@ const primaryChannelsData = {
     grado6: {
         titulo: "6to de Primaria",
         descripcion: "Canal virtual oficial para 6to. Grado de Primaria. Preparación y consolidación de estudios.",
-        link: "https://www.youtube.com/@genesclasevirtual6to.primaria",
+        link: "https://www.youtube.com/@genesclasevirtual6to.prima156",
         imagen: generateGenesBadgeSvg("6", "to."),
         disponible: true
     }
