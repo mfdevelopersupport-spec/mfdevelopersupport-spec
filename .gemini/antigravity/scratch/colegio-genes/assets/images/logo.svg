@@ -1,0 +1,38 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 110" width="450" height="110">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#202682"/>
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(10, 5)">
+    <path d="M 45 5 Q 75 5 80 32 Q 80 75 45 96 Q 10 75 10 32 Q 15 5 45 5 Z" fill="url(#goldGrad)"/>
+    <path d="M 45 9 Q 71 9 75 34 Q 75 71 45 90 Q 15 71 15 34 Q 19 9 45 9 Z" fill="url(#shieldGrad)"/>
+    <text x="45" y="24" font-family="'Montserrat', sans-serif" font-weight="900" font-size="8.5" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">COLEGIO</text>
+    <rect x="43" y="32" width="4" height="42" rx="2" fill="url(#goldGrad)"/>
+    <path d="M 45 27 C 49 32 47 37 45 40 C 43 37 41 32 45 27 Z" fill="#EF4444"/>
+    <path d="M 45 29 C 47 33 46 36 45 38 C 44 36 43 33 45 29 Z" fill="#FBBF24"/>
+    <path d="M 26 38 C 36 34 54 50 64 46 C 54 58 36 50 26 62 C 36 68 54 58 64 64" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 64 38 C 54 34 36 50 26 46 C 36 58 54 50 64 62 C 54 68 36 58 26 64" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="45" cy="80" r="4" fill="url(#goldGrad)"/>
+    <text x="45" y="87" font-family="'Montserrat', sans-serif" font-weight="900" font-size="6" fill="#FFFFFF" text-anchor="middle">GENES</text>
+  </g>
+
+  <g transform="translate(100, 10)">
+    <text x="0" y="24" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="19" fill="#B91C1C" letter-spacing="3">COLEGIOS</text>
+    <text x="0" y="68" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#B91C1C" filter="url(#shadow)" style="letter-spacing: -1px;">Genes</text>
+    <text x="2" y="87" font-family="'Montserrat', sans-serif" font-weight="700" font-size="12.5" fill="#DC2626" letter-spacing="0.5">Exigencia y alto desempeño</text>
+  </g>
+</svg>

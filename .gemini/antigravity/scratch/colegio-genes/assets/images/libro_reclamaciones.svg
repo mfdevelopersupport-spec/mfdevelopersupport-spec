@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <rect width="120" height="80" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <g transform="translate(15, 10)">
+    <!-- Book Icon -->
+    <path d="M 10 15 Q 45 5 45 25 Q 45 55 10 50 Z" fill="#0F172A"/>
+    <path d="M 80 15 Q 45 5 45 25 Q 45 55 80 50 Z" fill="#1E293B"/>
+    <path d="M 12 18 Q 44 9 44 26 L 44 51 Q 12 46 12 18 Z" fill="#F8FAFC"/>
+    <path d="M 78 18 Q 46 9 46 26 L 46 51 Q 78 46 78 18 Z" fill="#F1F5F9"/>
+    <!-- Bookmark Red -->
+    <path d="M 42 12 L 48 12 L 48 35 L 45 31 L 42 35 Z" fill="#B91C1C"/>
+    <!-- Gold Ribbon / Seal -->
+    <circle cx="45" cy="48" r="8" fill="#D4AF37"/>
+    <circle cx="45" cy="48" r="6" fill="#B5952F"/>
+  </g>
+  <text x="60" y="68" font-family="'Montserrat', sans-serif" font-weight="800" font-size="6.5" fill="#0F172A" text-anchor="middle">LIBRO DE</text>
+  <text x="60" y="74" font-family="'Montserrat', sans-serif" font-weight="800" font-size="5.5" fill="#B91C1C" text-anchor="middle">RECLAMACIONES</text>
+</svg>
