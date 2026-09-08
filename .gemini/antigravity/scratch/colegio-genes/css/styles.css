@@ -85,9 +85,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 3%;
+    padding: 10px 24px;
     min-height: 78px;
-    max-width: 1440px;
+    max-width: 1680px;
     margin: 0 auto;
     width: 100%;
 }
@@ -97,8 +97,8 @@ nav {
     align-items: center;
     gap: 12px;
     cursor: pointer;
-    padding: 4px 12px 4px 0;
-    margin-right: 10px;
+    padding: 4px 0;
+    margin-right: 20px;
     transition: transform 0.25s ease;
     flex-shrink: 0;
 }
@@ -116,7 +116,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 8px;
+    gap: 14px;
     align-items: center;
     margin: 0;
     padding: 0;
