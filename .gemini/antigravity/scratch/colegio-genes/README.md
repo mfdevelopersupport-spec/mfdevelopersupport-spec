@@ -57,7 +57,7 @@ colegio-genes/
 1. **Iniciar sesión en aaPanel**: Accede a tu panel de control de aaPanel.
 2. **Crear el Sitio Web**:
    - Ve a la sección **Website** > **Add site**.
-   - Ingresa el dominio registrado (ej. `colegiogenes.edu.pe`).
+   - Ingresa el dominio registrado: `prueba.clinicasrm.com.pe`.
    - Selecciona **Pure HTML** o deja **PHP** según preferencia.
 3. **Clonar el Repositorio desde aaPanel**:
    - Ve a **Website** > haz clic en la carpeta del sitio web (`/www/wwwroot/tu-dominio.com`).
