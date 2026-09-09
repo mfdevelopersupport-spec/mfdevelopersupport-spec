@@ -1659,81 +1659,311 @@ section.active {
    -------------------------------------------------------------------------- */
 .pilares-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
 }
 
 .pilar-card {
     background: #FFFFFF !important;
     border-radius: 20px;
-    padding: 32px 24px;
-    text-align: center;
-    border: 1px solid #E2E8F0;
-    border-top: 5px solid #202682;
-    box-shadow: 0 8px 24px rgba(32, 38, 130, 0.05);
+    padding: 28px 24px;
+    text-align: left;
+    border: 1.5px solid #E2E8F0;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.pilar-card.pilar-1 { border-top-color: #202682; }
-.pilar-card.pilar-2 { border-top-color: #B91C1C; }
-.pilar-card.pilar-3 { border-top-color: #38BDF8; }
-.pilar-card.pilar-4 { border-top-color: #D4AF37; }
+.pilar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #202682, #3B82F6);
+}
+
+.pilar-card.pilar-1::before { background: linear-gradient(90deg, #202682, #3B82F6); }
+.pilar-card.pilar-2::before { background: linear-gradient(90deg, #DC2626, #F87171); }
+.pilar-card.pilar-3::before { background: linear-gradient(90deg, #0284C7, #38BDF8); }
+.pilar-card.pilar-4::before { background: linear-gradient(90deg, #D97706, #FBBF24); }
 
 .pilar-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(32, 38, 130, 0.16);
+    box-shadow: 0 18px 40px rgba(32, 38, 130, 0.14);
     border-color: #CBD5E1;
 }
 
-.pilar-numero {
-    width: 46px;
-    height: 46px;
-    margin: 0 auto 16px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #202682 0%, #19206E 100%);
-    color: #FFFFFF;
+.pilar-card-top {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 1.15rem;
-    box-shadow: 0 6px 16px rgba(32, 38, 130, 0.35);
-    border: 2px solid #FFFFFF;
+    margin-bottom: 16px;
 }
 
 .pilar-icono {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 16px;
-    border-radius: 18px;
-    background: rgba(32, 38, 130, 0.06);
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: #EFF6FF;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     color: #202682;
     transition: all 0.35s ease;
+    box-shadow: 0 4px 12px rgba(32, 38, 130, 0.08);
+}
+
+.pilar-card.pilar-2 .pilar-icono {
+    background: #FEF2F2;
+    color: #DC2626;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.08);
+}
+
+.pilar-card.pilar-3 .pilar-icono {
+    background: #F0F9FF;
+    color: #0284C7;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+.pilar-card.pilar-4 .pilar-icono {
+    background: #FFFBEB;
+    color: #D97706;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08);
 }
 
 .pilar-card:hover .pilar-icono {
-    background: rgba(185, 28, 28, 0.1);
-    color: #B91C1C;
-    transform: scale(1.12) rotate(4deg);
+    transform: scale(1.1) rotate(4deg);
+}
+
+.pilar-numero {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #CBD5E1;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.pilar-card:hover .pilar-numero {
+    color: #94A3B8;
+}
+
+.pilar-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    width: fit-content;
+}
+
+.pilar-tag.azul {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border: 1px solid #DBEAFE;
+}
+
+.pilar-tag.rojo {
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid #FEE2E2;
+}
+
+.pilar-tag.verde {
+    background: #F0FDF4;
+    color: #15803D;
+    border: 1px solid #DCFCE7;
+}
+
+.pilar-tag.celeste {
+    background: #F0F9FF;
+    color: #0284C7;
+    border: 1px solid #E0F2FE;
+}
+
+.pilar-tag.ambar {
+    background: #FFFBEB;
+    color: #B45309;
+    border: 1px solid #FEF3C7;
 }
 
 .pilar-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.18rem;
     color: var(--bg-dark-navy);
     font-weight: 800;
     margin-bottom: 8px;
+    line-height: 1.35;
 }
 
 .pilar-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #64748B;
     line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITOS Y BENEFICIOS VACACIONES ÚTILES
+   -------------------------------------------------------------------------- */
+.vacaciones-requisitos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.requisito-card-item {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.requisito-card-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-color: #CBD5E1;
+}
+
+.requisito-icon-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.requisito-icon-badge.puntualidad {
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid #FECACA;
+}
+
+.requisito-icon-badge.disciplina {
+    background: #EFF6FF;
+    color: #2563EB;
+    border: 1px solid #BFDBFE;
+}
+
+.requisito-icon-badge.valores {
+    background: #FFFBEB;
+    color: #D97706;
+    border: 1px solid #FDE68A;
+}
+
+.requisito-icon-badge.materiales {
+    background: #F0FDF4;
+    color: #16A34A;
+    border: 1px solid #BBF7D0;
+}
+
+.requisito-card-item h5 {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 3px;
+}
+
+.requisito-card-item p {
+    font-size: 0.82rem;
+    color: #64748B;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* BENEFICIOS VACACIONES */
+.vacaciones-beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.vacaciones-beneficio-card {
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    border: 1.5px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.vacaciones-beneficio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #DC2626, #EF4444);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vacaciones-beneficio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(220, 38, 38, 0.09);
+    border-color: #FECACA;
+}
+
+.vacaciones-beneficio-card:hover::before {
+    opacity: 1;
+}
+
+.beneficio-icon-wrap {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 12px;
+    border-radius: 14px;
+    background: #FEF2F2;
+    color: #DC2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    border: 1px solid #FECACA;
+    transition: transform 0.3s ease;
+}
+
+.vacaciones-beneficio-card:hover .beneficio-icon-wrap {
+    transform: scale(1.12);
+}
+
+.vacaciones-beneficio-card h5 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.vacaciones-beneficio-card p {
+    font-size: 0.82rem;
+    color: #64748B;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* --------------------------------------------------------------------------
