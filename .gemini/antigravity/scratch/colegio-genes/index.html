@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/styles.css?v=20260907_DESKTOP_SEDES_DOWNLOADED_V16">
+    <link rel="stylesheet" href="css/styles.css?v=20260908_VISUAL_CARDS_V18">
 </head>
 
 <body>
@@ -446,36 +446,52 @@
                     <div class="sistema-levels-grid">
                         <!-- CUADRO NIVEL PRIMARIA -->
                         <div class="level-select-card primaria" onclick="showSistemaSubSection('primaria-detail')">
-                            <div>
+                            <div class="level-card-media">
+                                <img src="assets/images/primaria_docente_clase.jpg" alt="Nivel Primaria Colegio Genes">
+                                <div class="level-card-media-overlay"></div>
                                 <span class="level-badge primaria-badge"><i class="fas fa-child"></i> 1.° a 6.° de Primaria</span>
-                                <div class="level-icon-wrapper">
-                                    <i class="fas fa-shapes"></i>
-                                </div>
+                            </div>
+                            <div class="level-card-body">
                                 <h3>Nivel Primaria</h3>
                                 <p>
                                     Formación integral, disciplina positiva, tutora monitora y docentes especialistas por curso para construir bases académicas e intelectuales sólidas desde los primeros años.
                                 </p>
+                                <div class="level-tags-list">
+                                    <span class="level-tag"><i class="fas fa-check"></i> Acompañamiento 1 a 1</span>
+                                    <span class="level-tag"><i class="fas fa-check"></i> Plana Especializada</span>
+                                    <span class="level-tag"><i class="fas fa-check"></i> Valores & Hábitos</span>
+                                </div>
                             </div>
-                            <button type="button" class="btn-level-action">
-                                Explorar Nivel Primaria <i class="fas fa-arrow-right"></i>
-                            </button>
+                            <div class="btn-level-action-wrap">
+                                <button type="button" class="btn-level-action">
+                                    Explorar Nivel Primaria <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <!-- CUADRO NIVEL SECUNDARIA -->
                         <div class="level-select-card secundaria" onclick="showSistemaSubSection('secundaria-detail')">
-                            <div>
+                            <div class="level-card-media">
+                                <img src="assets/images/secundaria_pizarra_resolucion.jpg" alt="Nivel Secundaria Colegio Genes">
+                                <div class="level-card-media-overlay"></div>
                                 <span class="level-badge"><i class="fas fa-graduation-cap"></i> 1.° a 5.° de Secundaria</span>
-                                <div class="level-icon-wrapper">
-                                    <i class="fas fa-user-graduate"></i>
-                                </div>
+                            </div>
+                            <div class="level-card-body">
                                 <h3>Nivel Secundaria</h3>
                                 <p>
                                     Sistema preuniversitario de alta exigencia, preparación intensiva, simulacros semanales tipo admisión a San Marcos/UNI/PUCP y desarrollo de alto rendimiento estudiantil.
                                 </p>
+                                <div class="level-tags-list">
+                                    <span class="level-tag"><i class="fas fa-check"></i> Exigencia Preuniversitaria</span>
+                                    <span class="level-tag"><i class="fas fa-check"></i> Simulacros Tipo Admisión</span>
+                                    <span class="level-tag"><i class="fas fa-check"></i> Debate y Oratoria</span>
+                                </div>
                             </div>
-                            <button type="button" class="btn-level-action">
-                                Explorar Nivel Secundaria <i class="fas fa-arrow-right"></i>
-                            </button>
+                            <div class="btn-level-action-wrap">
+                                <button type="button" class="btn-level-action">
+                                    Explorar Nivel Secundaria <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1014,22 +1030,34 @@
 
                     <!-- SUBSECCIÓN 1: 1° A 3° PRIMARIA -->
                     <div id="vacaciones-primaria-menor" class="vacaciones-panel active">
-                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (1.° a 3.° Primaria)</h3>
-                        
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
-                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        <div class="vacaciones-hero-banner">
+                            <div class="vacaciones-hero-img-wrap">
+                                <img src="assets/images/primaria_tutoria_personal.jpg" alt="Talleres Primaria Menor Genes">
+                            </div>
+                            <div class="vacaciones-hero-info">
+                                <div>
+                                    <span style="color: var(--crimson-red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">1.° a 3.° de Primaria</span>
+                                    <h3 style="color: var(--bg-dark-navy); font-size: 1.35rem; font-weight: 800; margin: 4px 0 6px;">Talleres Presenciales de Verano</h3>
+                                    <p style="color: #64748B; font-size: 0.88rem; margin: 0;">Refuerzo académico y desarrollo integral con atención personalizada.</p>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 20px; background: #FFFFFF; padding: 12px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.1rem; font-weight: 800;">05 Ene</strong></div>
+                                    <div style="width: 1px; height: 28px; background: #CBD5E1;"></div>
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800;">03 Feb</strong></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="vacaciones-talleres-grid">
-                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
-                                <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
-                                <p style="font-size: 0.9rem; color: #334155;">Matemática, Razonamiento Matemático, Comunicación y Taller de Lectura.</p>
+                        <div class="vacaciones-talleres-grid" style="margin-bottom: 25px;">
+                            <div class="vacaciones-taller-card academico">
+                                <span class="vacaciones-taller-badge rojo"><i class="fas fa-book-open"></i> Nivelación & Adelanto</span>
+                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px; font-weight: 800; font-size: 1.05rem;">Cursos Académicos</h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin: 0;">Matemática, Razonamiento Matemático, Comunicación y Taller de Lectura comprensiva.</p>
                             </div>
-                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
-                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px;">Talleres complementarios</h4>
-                                <p style="font-size: 0.9rem; color: #334155;">Oratoria, xilófono y danza-festejo.</p>
+                            <div class="vacaciones-taller-card complementario">
+                                <span class="vacaciones-taller-badge azul"><i class="fas fa-palette"></i> Talleres Artísticos</span>
+                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px; font-weight: 800; font-size: 1.05rem;">Talleres Complementarios</h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin: 0;">Oratoria y expresión corporal, xilófono y danza-festejo.</p>
                             </div>
                         </div>
 
@@ -1107,22 +1135,34 @@
 
                     <!-- SUBSECCIÓN 2: 4° A 6° PRIMARIA -->
                     <div id="vacaciones-primaria-mayor" class="vacaciones-panel">
-                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (4.° a 6.° Primaria)</h3>
-                        
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
-                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        <div class="vacaciones-hero-banner">
+                            <div class="vacaciones-hero-img-wrap">
+                                <img src="assets/images/primaria_docente_clase.jpg" alt="Talleres Primaria Mayor Genes">
+                            </div>
+                            <div class="vacaciones-hero-info">
+                                <div>
+                                    <span style="color: var(--crimson-red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">4.° a 6.° de Primaria</span>
+                                    <h3 style="color: var(--bg-dark-navy); font-size: 1.35rem; font-weight: 800; margin: 4px 0 6px;">Talleres Presenciales de Verano</h3>
+                                    <p style="color: #64748B; font-size: 0.88rem; margin: 0;">Fortalecimiento de bases analíticas y transición formativa a secundaria.</p>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 20px; background: #FFFFFF; padding: 12px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.1rem; font-weight: 800;">05 Ene</strong></div>
+                                    <div style="width: 1px; height: 28px; background: #CBD5E1;"></div>
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800;">03 Feb</strong></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="vacaciones-talleres-grid">
-                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
-                                <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
-                                <p style="font-size: 0.9rem; color: #334155;">Aritmética, Álgebra, Geometría, Raz. Matemático, Castellano, Taller de lectura.</p>
+                        <div class="vacaciones-talleres-grid" style="margin-bottom: 25px;">
+                            <div class="vacaciones-taller-card academico">
+                                <span class="vacaciones-taller-badge rojo"><i class="fas fa-square-root-alt"></i> Nivelación & Adelanto</span>
+                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px; font-weight: 800; font-size: 1.05rem;">Cursos Académicos</h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin: 0;">Aritmética, Álgebra, Geometría, Raz. Matemático, Castellano y Taller de lectura crítica.</p>
                             </div>
-                            <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0;">
-                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px;">Talleres complementarios</h4>
-                                <p style="font-size: 0.9rem; color: #334155;">Oratoria, cajón y danza-festejo.</p>
+                            <div class="vacaciones-taller-card complementario">
+                                <span class="vacaciones-taller-badge azul"><i class="fas fa-drum"></i> Talleres Artísticos</span>
+                                <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px; font-weight: 800; font-size: 1.05rem;">Talleres Complementarios</h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin: 0;">Oratoria y liderazgo, percusión / cajón peruano y danza-festejo.</p>
                             </div>
                         </div>
 
@@ -1200,17 +1240,28 @@
 
                     <!-- SUBSECCIÓN 3: 1° A 2° SECUNDARIA -->
                     <div id="vacaciones-sec-menor" class="vacaciones-panel">
-                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (1.° a 2.° Secundaria)</h3>
-                        
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
-                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        <div class="vacaciones-hero-banner">
+                            <div class="vacaciones-hero-img-wrap">
+                                <img src="assets/images/secundaria_oratoria_debate.jpg" alt="Talleres Secundaria Menor Genes">
+                            </div>
+                            <div class="vacaciones-hero-info">
+                                <div>
+                                    <span style="color: var(--crimson-red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">1.° a 2.° de Secundaria</span>
+                                    <h3 style="color: var(--bg-dark-navy); font-size: 1.35rem; font-weight: 800; margin: 4px 0 6px;">Talleres Presenciales de Verano</h3>
+                                    <p style="color: #64748B; font-size: 0.88rem; margin: 0;">Consolidación en ciencias, letras y razonamiento con metodología de alta exigencia.</p>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 20px; background: #FFFFFF; padding: 12px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.1rem; font-weight: 800;">05 Ene</strong></div>
+                                    <div style="width: 1px; height: 28px; background: #CBD5E1;"></div>
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800;">03 Feb</strong></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px;">
-                            <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
-                            <p style="font-size: 0.92rem; color: #334155;">Aritmética, Álgebra, Geometría, Trigonometría, Física, Química, Biología, Raz. Matemático, Raz. Verbal, Castellano.</p>
+                        <div class="vacaciones-taller-card academico" style="margin-bottom: 25px;">
+                            <span class="vacaciones-taller-badge rojo"><i class="fas fa-atom"></i> Nivelación, Adelanto & Repaso</span>
+                            <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px; font-weight: 800; font-size: 1.05rem;">Cursos Especializados</h4>
+                            <p style="font-size: 0.92rem; color: #475569; margin: 0;">Aritmética, Álgebra, Geometría, Trigonometría, Física, Química, Biología, Raz. Matemático, Raz. Verbal y Castellano.</p>
                         </div>
 
                         <div style="text-align: center; margin-bottom: 25px;">
@@ -1287,17 +1338,28 @@
 
                     <!-- SUBSECCIÓN 4: 3° A 5° SECUNDARIA -->
                     <div id="vacaciones-sec-mayor" class="vacaciones-panel">
-                        <h3 style="color: var(--bg-dark-navy); font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">Talleres Presenciales (3.° a 5.° Secundaria)</h3>
-                        
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; background: #F8FAFC; padding: 18px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px; text-align: center;">
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.2rem;">05 de enero</strong></div>
-                            <div style="width: 2px; height: 35px; background: #CBD5E1;"></div>
-                            <div><span style="color: #64748B; font-size: 0.8rem; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.2rem;">03 de febrero</strong></div>
+                        <div class="vacaciones-hero-banner">
+                            <div class="vacaciones-hero-img-wrap">
+                                <img src="assets/images/secundaria_pizarra_resolucion.jpg" alt="Talleres Secundaria Mayor Genes">
+                            </div>
+                            <div class="vacaciones-hero-info">
+                                <div>
+                                    <span style="color: var(--crimson-red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">3.° a 5.° de Secundaria</span>
+                                    <h3 style="color: var(--bg-dark-navy); font-size: 1.35rem; font-weight: 800; margin: 4px 0 6px;">Talleres Presenciales de Verano</h3>
+                                    <p style="color: #64748B; font-size: 0.88rem; margin: 0;">Enfoque riguroso preuniversitario y preparación para exámenes de admisión.</p>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 20px; background: #FFFFFF; padding: 12px 20px; border-radius: 12px; border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Inicio</span><br><strong style="color: var(--crimson-red); font-size: 1.1rem; font-weight: 800;">05 Ene</strong></div>
+                                    <div style="width: 1px; height: 28px; background: #CBD5E1;"></div>
+                                    <div style="text-align: center;"><span style="color: #64748B; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Fin</span><br><strong style="color: var(--bg-dark-navy); font-size: 1.1rem; font-weight: 800;">03 Feb</strong></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div style="background: #F8FAFC; padding: 20px; border-radius: 14px; border: 1px solid #E2E8F0; margin-bottom: 25px;">
-                            <h4 style="color: var(--crimson-red); margin-bottom: 6px;">Nivelación, adelanto y repaso</h4>
-                            <p style="font-size: 0.92rem; color: #334155;">Aritmética, Álgebra, Geometría, Trigonometría, Física, Química, Biología, Raz. Matemático, Raz. Verbal, Castellano.</p>
+                        <div class="vacaciones-taller-card academico" style="margin-bottom: 25px;">
+                            <span class="vacaciones-taller-badge rojo"><i class="fas fa-graduation-cap"></i> Nivelación, Adelanto & Repaso Pre</span>
+                            <h4 style="color: var(--bg-dark-navy); margin-bottom: 6px; font-weight: 800; font-size: 1.05rem;">Cursos Especializados</h4>
+                            <p style="font-size: 0.92rem; color: #475569; margin: 0;">Aritmética, Álgebra, Geometría, Trigonometría, Física, Química, Biología, Raz. Matemático, Raz. Verbal y Castellano.</p>
                         </div>
 
                         <div style="text-align: center; margin-bottom: 25px;">

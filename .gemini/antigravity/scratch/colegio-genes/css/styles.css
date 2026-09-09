@@ -3744,9 +3744,9 @@ section.active {
 .level-select-card {
     background: #FFFFFF !important;
     border-radius: 24px;
-    padding: 38px 32px;
+    padding: 0;
     border: 2px solid #E2E8F0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
@@ -3762,9 +3762,10 @@ section.active {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6px;
+    height: 5px;
     background: linear-gradient(90deg, #202682, #38BDF8);
     transition: height 0.3s ease;
+    z-index: 5;
 }
 
 .level-select-card.secundaria::before {
@@ -3772,13 +3773,58 @@ section.active {
 }
 
 .level-select-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(32, 38, 130, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 22px 48px rgba(32, 38, 130, 0.16);
     border-color: #CBD5E1;
 }
 
 .level-select-card:hover::before {
-    height: 10px;
+    height: 8px;
+}
+
+/* MEDIA HEADER CON IMAGEN REAL */
+.level-card-media {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #0F172A;
+}
+
+.level-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.level-select-card:hover .level-card-media img {
+    transform: scale(1.08);
+}
+
+.level-card-media-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.75) 100%);
+}
+
+.level-card-media .level-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 20px;
+    margin-bottom: 0;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* CUERPO DE LA TARJETA */
+.level-card-body {
+    padding: 24px 28px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .level-badge {
@@ -3791,56 +3837,60 @@ section.active {
     font-weight: 800;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    background: #FEF2F2;
+    background: rgba(254, 242, 242, 0.95);
     color: #B91C1C;
     border: 1px solid #FCA5A5;
-    margin-bottom: 20px;
     width: fit-content;
 }
 
 .level-badge.primaria-badge {
-    background: #EFF6FF;
+    background: rgba(239, 246, 255, 0.95);
     color: #1D4ED8;
     border-color: #BFDBFE;
 }
 
-.level-icon-wrapper {
-    width: 72px;
-    height: 72px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #F8FAFC, #EFF6FF);
-    border: 1.5px solid #DBEAFE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.2rem;
-    color: #202682;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.level-select-card.secundaria .level-icon-wrapper {
-    background: linear-gradient(135deg, #FEF2F2, #FEE2E2);
-    border-color: #FCA5A5;
-    color: #B91C1C;
-}
-
-.level-select-card:hover .level-icon-wrapper {
-    transform: scale(1.1) rotate(3deg);
-}
-
 .level-select-card h3 {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
     font-weight: 900;
     color: #0F172A;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
 }
 
 .level-select-card p {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     color: #64748B;
     line-height: 1.65;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
+}
+
+.level-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.level-tag {
+    background: #F1F5F9;
+    color: #334155;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #E2E8F0;
+}
+
+.level-tag i {
+    color: #16A34A;
+    font-size: 0.7rem;
+}
+
+.level-select-card .btn-level-action-wrap {
+    padding: 0 28px 28px;
 }
 
 .btn-level-action {
@@ -3852,23 +3902,123 @@ section.active {
     color: #FFFFFF !important;
     font-weight: 800;
     font-size: 0.95rem;
-    padding: 14px 28px;
+    padding: 15px 28px;
     border-radius: 14px;
     border: none;
     cursor: pointer;
     transition: all 0.25s ease;
-    box-shadow: 0 4px 14px rgba(32, 38, 130, 0.3);
+    box-shadow: 0 6px 18px rgba(32, 38, 130, 0.28);
     width: 100%;
 }
 
 .level-select-card.secundaria .btn-level-action {
     background: linear-gradient(135deg, #B91C1C, #991B1B);
-    box-shadow: 0 4px 14px rgba(185, 28, 28, 0.3);
+    box-shadow: 0 6px 18px rgba(185, 28, 28, 0.28);
 }
 
 .btn-level-action:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* VACACIONES HERO & TALLERES VISUALES */
+.vacaciones-hero-banner {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 22px;
+    align-items: center;
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.vacaciones-hero-img-wrap {
+    width: 100%;
+    height: 100%;
+    min-height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vacaciones-hero-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vacaciones-hero-info {
+    padding: 18px 24px 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.vacaciones-taller-card {
+    background: #FFFFFF;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1.5px solid #E2E8F0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vacaciones-taller-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(32, 38, 130, 0.08);
+    border-color: #CBD5E1;
+}
+
+.vacaciones-taller-card.academico::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #DC2626, #EF4444);
+}
+
+.vacaciones-taller-card.complementario::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #202682, #38BDF8);
+}
+
+.vacaciones-taller-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.vacaciones-taller-badge.rojo {
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid #FECACA;
+}
+
+.vacaciones-taller-badge.azul {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
 }
 
 .btn-volver-sistema {
