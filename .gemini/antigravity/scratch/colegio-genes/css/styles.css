@@ -187,6 +187,49 @@ li.mobile-drawer-header {
     box-shadow: 0 8px 20px rgba(220, 38, 38, 0.5) !important;
 }
 
+@media (min-width: 1025px) {
+    .nav-links {
+        gap: 6px;
+    }
+    .nav-links a:not(.btn-admision) {
+        padding: 6px 10px;
+        font-size: 0.83rem;
+    }
+    .nav-links a:not(.btn-admision) > i:not(.fa-angle-down) {
+        display: none !important;
+    }
+    .btn-admision,
+    .nav-links a.btn-admision {
+        padding: 9px 18px !important;
+        font-size: 0.84rem !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    nav {
+        padding: 8px 2%;
+    }
+    .logo-container {
+        padding: 4px 6px 4px 0;
+        margin-right: 4px;
+    }
+    .logo-img {
+        height: 52px;
+    }
+    .nav-links {
+        gap: 4px;
+    }
+    .nav-links a:not(.btn-admision) {
+        padding: 5px 7px;
+        font-size: 0.79rem;
+    }
+    .btn-admision,
+    .nav-links a.btn-admision {
+        padding: 8px 14px !important;
+        font-size: 0.79rem !important;
+    }
+}
+
 /* DROPDOWN MENU (DISEÑO BLANCO CUADRADO CON TEXTO NEGRO Y HOVER AZUL) */
 .dropdown-menu {
     position: absolute;
@@ -1330,11 +1373,6 @@ section.active {
     color: #FFFFFF;
     border-color: #202682;
     box-shadow: 0 4px 14px rgba(32, 38, 130, 0.3);
-}
-    font-size: 0.8rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .modal-ingresante-box {
@@ -3328,7 +3366,7 @@ section.active {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* Tab bars horizontal touch-scroll in mobile & tablet */
     .canales-primaria-tabs, 
     .canales-secundaria-tabs,
@@ -3367,6 +3405,22 @@ section.active {
         align-items: center;
         padding: 8px 16px;
         min-height: 68px;
+    }
+
+    #site-nav.nav-open,
+    nav.nav-open {
+        background: transparent !important;
+        border-bottom-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    #site-nav.nav-open .logo-container,
+    #site-nav.nav-open .mobile-menu-btn,
+    nav.nav-open .logo-container,
+    nav.nav-open .mobile-menu-btn {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
 
     .mobile-menu-btn {
@@ -3542,7 +3596,7 @@ section.active {
         transition: opacity 0.38s ease;
         background: rgba(0, 0, 0, 0.65) !important;
         backdrop-filter: blur(4px);
-        z-index: 998 !important;
+        z-index: 1000 !important;
     }
 
     /* Hero Slider Mobile Framing */
@@ -4297,3 +4351,140 @@ section.active {
     border-color: #FCA5A5;
     transform: translateX(-4px);
 }
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE OVERRIDES: VACACIONES, NIVELES, INGRESANTES Y WIDGET FLOTANTE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .sistema-levels-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Vacaciones Hero Banner: apilamiento vertical fluido */
+    .vacaciones-hero-banner {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .vacaciones-hero-img-wrap {
+        height: 200px !important;
+        min-height: 200px !important;
+        width: 100% !important;
+    }
+
+    .vacaciones-hero-info {
+        padding: 22px 20px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+    }
+
+    /* Grilla de requisitos en 1 sola columna para móvil para evitar compresión y desborde */
+    .vacaciones-requisitos-grid,
+    .vacaciones-beneficios-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .requisito-card-item {
+        padding: 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .vacaciones-talleres-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .level-select-card .level-card-body {
+        padding: 20px 18px 10px !important;
+    }
+
+    .level-select-card .btn-level-action-wrap {
+        padding: 0 18px 20px !important;
+    }
+
+    /* WhatsApp flotante: compacto, sin burbuja de texto horizontal invasiva */
+    .whatsapp-widget-wrapper {
+        right: 16px !important;
+        bottom: 16px !important;
+        gap: 0 !important;
+    }
+
+    .whatsapp-bubble-msg {
+        display: none !important;
+    }
+
+    .whatsapp-float {
+        width: 52px !important;
+        height: 52px !important;
+        font-size: 1.65rem !important;
+    }
+
+    /* Espaciado inferior de seguridad para evitar que el botón flotante tape CTAs o textos legales */
+    #contacto {
+        padding-bottom: 55px;
+    }
+
+    .contacto-form-panel {
+        padding-bottom: 40px !important;
+    }
+
+    .footer-inner {
+        padding-bottom: 55px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .ingresantes-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .ingresante-card {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vacaciones-hero-img-wrap {
+        height: 165px !important;
+        min-height: 165px !important;
+    }
+
+    .vacaciones-hero-info {
+        padding: 16px 14px !important;
+    }
+
+    .vacaciones-hero-info h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .vacaciones-taller-card {
+        padding: 16px !important;
+    }
+
+    .sedes-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .btn-volver-sistema {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .level-card-media {
+        height: 175px !important;
+    }
+
+    .level-select-card h3 {
+        font-size: 1.55rem !important;
+    }
+}
+
