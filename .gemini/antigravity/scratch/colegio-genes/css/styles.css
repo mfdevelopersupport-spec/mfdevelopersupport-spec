@@ -128,7 +128,8 @@ nav {
     flex-shrink: 0 !important;
 }
 
-li.mobile-drawer-header {
+li.mobile-drawer-header,
+.mobile-drawer-contact-strip {
     display: none !important;
 }
 
@@ -296,13 +297,12 @@ li.mobile-drawer-header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(7, 11, 24, 0.7);
-    backdrop-filter: blur(5px);
+    background: rgba(15, 23, 42, 0.55);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
-    z-index: 998;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
 }
 
 .mobile-nav-overlay.active {
@@ -3464,109 +3464,130 @@ section.active {
         max-width: 170px;
     }
 
-    /* DRAWER PRINCIPAL - FONDO BLANCO ELEGANTE */
+    /* DRAWER PRINCIPAL - FONDO BLANCO ELEGANTE, ULTRA NÍTIDO (SIN BORROSIDAD) */
     nav .nav-links {
         position: fixed;
         top: 0;
         left: -100%;
-        width: min(88vw, 310px);
+        width: min(88vw, 335px);
         height: 100dvh;
-        background: #FFFFFF;
+        background: #FFFFFF !important;
         flex-direction: column;
-        padding: 0;
+        padding: 0 0 16px 0;
         gap: 0;
         align-items: stretch;
-        transition: left 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 1001;
-        box-shadow: 8px 0 40px rgba(15, 23, 42, 0.25);
+        box-shadow: 12px 0 35px rgba(15, 23, 42, 0.18);
         border-right: 1px solid #E2E8F0;
+        /* Garantizar nitidez tipográfica cristalina absoluta (Anti-aliasing) */
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        text-rendering: optimizeLegibility !important;
+        transform: translateZ(0);
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 
     nav.nav-open .nav-links {
         left: 0;
     }
 
-    /* HEADER DEL DRAWER ya está en el HTML — ocultar en desktop */
+    /* HEADER DEL DRAWER: Blanco limpio con botón de cerrar */
     li.mobile-drawer-header {
         display: block !important;
+        margin-bottom: 6px;
+        padding: 0 !important;
+        border-bottom: 1px solid #E2E8F0;
     }
 
-    /* Primera li de nav items (no el header) recibe margen superior */
-    .nav-links li:first-child {
-        margin-top: 0;
+    li.mobile-drawer-header > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        height: 72px;
+        background: #FFFFFF;
     }
 
-    /* Segunda li hacia adelante (primer ítem real de nav) */
-    .nav-links li:nth-child(2) {
-        margin-top: 10px;
-    }
-
-    .nav-links li {
-        padding: 0 12px;
+    /* Items de navegación: espaciados con mayor altura vertical para llenar la pantalla armoniosamente */
+    .nav-links li:not(.mobile-drawer-header):not(.admision-li) {
+        padding: 5px 16px;
     }
 
     .nav-links a:not(.btn-admision) {
-        color: #1E293B !important;
+        color: #0F172A !important;
         border-bottom: none !important;
-        font-size: 0.94rem !important;
+        font-size: 0.98rem !important;
         font-weight: 700 !important;
-        padding: 12px 14px !important;
+        padding: 13px 18px !important;
+        min-height: 50px;
         display: flex !important;
         align-items: center;
-        gap: 12px;
+        gap: 15px;
         border-radius: 12px;
         transition: all 0.2s ease;
         letter-spacing: -0.2px;
+        background: transparent;
+        border: 1px solid transparent;
+        -webkit-font-smoothing: antialiased !important;
     }
 
     .nav-links a:not(.btn-admision) i {
-        color: #64748B;
-        font-size: 1rem;
-        transition: color 0.2s ease;
+        color: #202682 !important;
+        font-size: 1.15rem;
+        width: 24px;
+        text-align: center;
+        opacity: 0.85 !important;
+        transition: all 0.2s ease;
     }
 
     .nav-links a:not(.btn-admision):hover,
     .nav-links a:not(.btn-admision):active {
-        background: #F1F5F9 !important;
+        background: #F8FAFC !important;
         color: #B91C1C !important;
-        padding-left: 18px !important;
+        border-color: #E2E8F0 !important;
+        padding-left: 22px !important;
     }
 
     .nav-links a:not(.btn-admision):hover i {
         color: #B91C1C !important;
+        opacity: 1 !important;
     }
 
     .nav-links a.active:not(.btn-admision) {
         color: #B91C1C !important;
         background: #FEF2F2 !important;
-        border-left: 3.5px solid #DC2626 !important;
-        border-bottom: none !important;
+        border: 1.5px solid #FCA5A5 !important;
+        border-left: 4px solid #DC2626 !important;
         font-weight: 800 !important;
-        padding-left: 14px !important;
+        padding-left: 18px !important;
+        box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08) !important;
     }
 
     .nav-links a.active:not(.btn-admision) i {
         color: #DC2626 !important;
+        opacity: 1 !important;
     }
 
-    /* Separador decorativo entre secciones */
+    /* Separador sutil entre grupos de menú */
     .nav-links li.dropdown {
-        border-top: 1px solid #E2E8F0;
+        border-top: 1px solid #F1F5F9;
+        margin-top: 4px;
         padding-top: 6px;
-        margin-top: 6px;
     }
 
-    /* Mobile dropdown submenu */
+    /* Mobile dropdown submenu con fondo contrastado y nítido */
     .nav-links .dropdown-menu {
         position: static !important;
         background: #F8FAFC !important;
-        border: 1px solid #E2E8F0 !important;
+        border: 1.5px solid #E2E8F0 !important;
         border-radius: 12px !important;
         box-shadow: none !important;
         padding: 6px !important;
-        margin: 4px 0 8px 0 !important;
+        margin: 6px 0 10px 0 !important;
         display: none;
     }
 
@@ -3575,47 +3596,61 @@ section.active {
     }
 
     .nav-links .dropdown-menu a {
-        font-size: 0.88rem !important;
-        padding: 9px 12px !important;
-        color: #475569 !important;
+        font-size: 0.92rem !important;
+        padding: 11px 16px !important;
+        color: #334155 !important;
         border-radius: 8px !important;
         border-left: none !important;
+        min-height: 44px;
     }
 
     .nav-links .dropdown-menu a:hover {
         color: #B91C1C !important;
         background: #FFFFFF !important;
-        padding-left: 16px !important;
+        padding-left: 20px !important;
     }
 
-    /* Separador visual antes del botón de admisión */
-    .nav-links li:has(.btn-admision) {
+    /* Contenedor inferior: distribuye el botón de admisión y micro-datos de contacto para eliminar espacio muerto */
+    .nav-links li.admision-li {
         border-top: 1px solid #E2E8F0;
         margin-top: auto;
-        padding-top: 14px;
-        padding-bottom: 22px;
+        padding: 14px 16px 16px 16px !important;
+        background: #FAFAFA;
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    /* Mobile admision button */
+    .nav-links .mobile-drawer-contact-strip {
+        display: flex !important;
+    }
+
+    /* Mobile admision button de alto impacto y nitidez */
     .nav-links .btn-admision {
         margin: 0 !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 10px;
         padding: 13px 20px !important;
         border-radius: 12px !important;
-        font-size: 0.92rem !important;
+        font-size: 0.95rem !important;
         font-weight: 800 !important;
-        letter-spacing: 0.5px;
-        box-shadow: 0 4px 16px rgba(185, 28, 28, 0.35) !important;
+        letter-spacing: 0.6px;
+        background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%) !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 16px rgba(185, 28, 28, 0.4) !important;
+        animation: none !important;
+        border: none !important;
+        -webkit-font-smoothing: antialiased !important;
     }
 
-    /* Overlay: oscuro y opaco para cubrir todo el contenido */
+    /* Overlay: oscuro y nítido para enfocar el drawer sin desenfoque borroso */
     .mobile-nav-overlay {
-        transition: opacity 0.38s ease;
-        background: rgba(0, 0, 0, 0.65) !important;
-        backdrop-filter: blur(4px);
+        transition: opacity 0.3s ease;
+        background: rgba(15, 23, 42, 0.65) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
         z-index: 1000 !important;
     }
 
