@@ -297,12 +297,12 @@ li.mobile-drawer-header,
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(15, 23, 42, 0.55);
+    background: rgba(15, 23, 42, 0.6);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
+    z-index: 1500;
 }
 
 .mobile-nav-overlay.active {
@@ -3409,6 +3409,7 @@ section.active {
 
     #site-nav.nav-open,
     nav.nav-open {
+        z-index: 2000 !important;
         background: transparent !important;
         border-bottom-color: transparent !important;
         box-shadow: none !important;
@@ -3479,8 +3480,8 @@ section.active {
         transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         overflow-y: auto;
         overflow-x: hidden;
-        z-index: 1001;
-        box-shadow: 12px 0 35px rgba(15, 23, 42, 0.18);
+        z-index: 2005 !important;
+        box-shadow: 12px 0 35px rgba(15, 23, 42, 0.25);
         border-right: 1px solid #E2E8F0;
         /* Garantizar nitidez tipográfica cristalina absoluta (Anti-aliasing) */
         -webkit-font-smoothing: antialiased !important;
@@ -3651,7 +3652,7 @@ section.active {
         background: rgba(15, 23, 42, 0.65) !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
-        z-index: 1000 !important;
+        z-index: 1500 !important;
     }
 
     /* Hero Slider Mobile Framing */
