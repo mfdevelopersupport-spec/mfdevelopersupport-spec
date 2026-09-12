@@ -693,7 +693,6 @@ function renderVideosPrimaria(key) {
         const theme = getCourseTheme(curso.nombre);
         return `
             <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
-                <span class="video-badge-hd"><i class="fas fa-check-circle"></i> Oficial Genes</span>
                 <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
                     <i class="${curso.icono}"></i>
                 </div>
@@ -721,7 +720,6 @@ function renderVideosSecundaria(key) {
         const theme = getCourseTheme(curso.nombre);
         return `
             <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
-                <span class="video-badge-hd"><i class="fas fa-check-circle"></i> Oficial Genes</span>
                 <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
                     <i class="${curso.icono}"></i>
                 </div>
