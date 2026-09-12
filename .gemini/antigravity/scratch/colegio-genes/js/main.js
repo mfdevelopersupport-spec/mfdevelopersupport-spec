@@ -685,22 +685,38 @@ function getCourseTheme(nombre) {
     return { bg: 'rgba(185, 28, 28, 0.08)', border: 'rgba(185, 28, 28, 0.2)', color: '#B91C1C', topBorder: '#B91C1C' };
 }
 
+function getYoutubeThumbnail(link) {
+    if (!link) return 'assets/images/logo.png';
+    const match = link.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    if (match && match[1]) {
+        return `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg`;
+    }
+    return 'assets/images/logo.png';
+}
+
 function renderVideosPrimaria(key) {
     const bloque = videosPrimariaData[key] || videosPrimariaData['primaria1'];
     const grid = document.getElementById("videos-edu-grid");
     if (!grid) return;
     grid.innerHTML = bloque.cursos.map(curso => {
         const theme = getCourseTheme(curso.nombre);
+        const thumbUrl = getYoutubeThumbnail(curso.link);
         return `
             <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
-                <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
-                    <i class="${curso.icono}"></i>
+                <div class="video-thumbnail-container">
+                    <img src="${thumbUrl}" alt="Portada ${curso.nombre}" class="video-thumbnail-img" loading="lazy">
+                    <div class="video-play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="video-course-badge" style="background: ${theme.color};"><i class="${curso.icono}"></i> ${curso.nombre}</span>
                 </div>
-                <h4>${curso.nombre}</h4>
-                <p>Videoclases y ejercicios explicados del curso por docentes especialistas.</p>
-                <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
-                    <i class="fab fa-youtube"></i> Reproducir Clase
-                </a>
+                <div class="video-curso-body">
+                    <h4>${curso.nombre}</h4>
+                    <p>Videoclases y ejercicios explicados del curso por docentes especialistas.</p>
+                    <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
+                        <i class="fab fa-youtube"></i> Reproducir Clase
+                    </a>
+                </div>
             </article>
         `;
     }).join("");
@@ -718,16 +734,23 @@ function renderVideosSecundaria(key) {
     if (!grid) return;
     grid.innerHTML = bloque.cursos.map(curso => {
         const theme = getCourseTheme(curso.nombre);
+        const thumbUrl = getYoutubeThumbnail(curso.link);
         return `
             <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
-                <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
-                    <i class="${curso.icono}"></i>
+                <div class="video-thumbnail-container">
+                    <img src="${thumbUrl}" alt="Portada ${curso.nombre}" class="video-thumbnail-img" loading="lazy">
+                    <div class="video-play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="video-course-badge" style="background: ${theme.color};"><i class="${curso.icono}"></i> ${curso.nombre}</span>
                 </div>
-                <h4>${curso.nombre}</h4>
-                <p>Solucionarios, teoría preuniversitaria y compendios explicados en YouTube.</p>
-                <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
-                    <i class="fab fa-youtube"></i> Reproducir Clase
-                </a>
+                <div class="video-curso-body">
+                    <h4>${curso.nombre}</h4>
+                    <p>Solucionarios, teoría preuniversitaria y compendios explicados en YouTube.</p>
+                    <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
+                        <i class="fab fa-youtube"></i> Reproducir Clase
+                    </a>
+                </div>
             </article>
         `;
     }).join("");
