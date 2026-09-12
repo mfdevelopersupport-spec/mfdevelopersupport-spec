@@ -3465,130 +3465,161 @@ section.active {
         max-width: 170px;
     }
 
-    /* DRAWER PRINCIPAL - FONDO BLANCO ELEGANTE, ULTRA NÍTIDO (SIN BORROSIDAD) */
+    /* DRAWER PRINCIPAL - FONDO BLANCO ELEGANTE, ULTRA NÍTIDO (COINCIDENCIA 1:1 CON REFERENCIA) */
     nav .nav-links {
         position: fixed;
         top: 0;
         left: -100%;
-        width: min(88vw, 335px);
+        width: min(85vw, 330px);
         height: 100dvh;
         background: #FFFFFF !important;
         flex-direction: column;
-        padding: 0 0 16px 0;
+        padding: 0 0 20px 0;
         gap: 0;
         align-items: stretch;
         transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 2005 !important;
-        box-shadow: 12px 0 35px rgba(15, 23, 42, 0.25);
+        box-shadow: 12px 0 35px rgba(15, 23, 42, 0.22);
         border-right: 1px solid #E2E8F0;
-        /* Garantizar nitidez tipográfica cristalina absoluta (Anti-aliasing) */
         -webkit-font-smoothing: antialiased !important;
         -moz-osx-font-smoothing: grayscale !important;
         text-rendering: optimizeLegibility !important;
-        transform: translateZ(0);
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
     }
 
     nav.nav-open .nav-links {
         left: 0;
     }
 
-    /* HEADER DEL DRAWER: Blanco limpio con botón de cerrar */
+    /* HEADER DEL DRAWER: Blanco limpio con botón X redondeado en tarjeta gris */
     li.mobile-drawer-header {
         display: block !important;
-        margin-bottom: 6px;
         padding: 0 !important;
+        margin: 0 !important;
         border-bottom: 1px solid #E2E8F0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #FFFFFF;
     }
 
     li.mobile-drawer-header > div {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 14px 20px;
+        padding: 14px 18px;
         height: 72px;
         background: #FFFFFF;
     }
 
-    /* Items de navegación: espaciados con mayor altura vertical para llenar la pantalla armoniosamente */
+    .mobile-drawer-logo {
+        height: 44px;
+        width: auto;
+    }
+
+    .mobile-drawer-close-btn {
+        background: #F1F5F9 !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #0F172A !important;
+        font-size: 1.15rem;
+        transition: all 0.2s ease;
+    }
+
+    .mobile-drawer-close-btn:active {
+        background: #E2E8F0 !important;
+        transform: scale(0.95);
+    }
+
+    /* LISTA DE ELEMENTOS DE NAVEGACIÓN CON DIVISORES INFERIORES */
     .nav-links li:not(.mobile-drawer-header):not(.admision-li) {
-        padding: 5px 16px;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-bottom: 1px solid #F1F5F9;
+        width: 100%;
     }
 
     .nav-links a:not(.btn-admision) {
-        color: #0F172A !important;
-        border-bottom: none !important;
+        color: #1E293B !important;
         font-size: 0.98rem !important;
         font-weight: 700 !important;
-        padding: 13px 18px !important;
-        min-height: 50px;
+        padding: 15px 20px !important;
+        min-height: 52px;
         display: flex !important;
         align-items: center;
-        gap: 15px;
-        border-radius: 12px;
+        gap: 14px;
+        border-radius: 0 !important;
         transition: all 0.2s ease;
-        letter-spacing: -0.2px;
-        background: transparent;
-        border: 1px solid transparent;
+        background: #FFFFFF !important;
+        border: none !important;
+        border-bottom: 3px solid transparent !important;
         -webkit-font-smoothing: antialiased !important;
+        position: relative;
     }
 
-    .nav-links a:not(.btn-admision) i {
-        color: #202682 !important;
+    .nav-links a:not(.btn-admision) i:not(.drawer-chevron) {
+        color: #334155 !important;
         font-size: 1.15rem;
-        width: 24px;
+        width: 22px;
         text-align: center;
-        opacity: 0.85 !important;
+        opacity: 0.9 !important;
         transition: all 0.2s ease;
+    }
+
+    /* FLECHA DESPLEGABLE DERECHA */
+    .nav-links a .drawer-chevron {
+        margin-left: auto;
+        font-size: 0.82rem;
+        color: #475569;
+        transition: transform 0.25s ease;
+    }
+
+    .nav-links .dropdown.open .drawer-chevron {
+        transform: rotate(180deg);
+        color: #800000;
+    }
+
+    /* ESTADO ACTIVO SELECCIONADO (INICIO SEGÚN CAPTURA): ICONO ROJO, TEXTO ROJO Y LÍNEA INFERIOR ROJA ROBUSTA */
+    .nav-links a.active:not(.btn-admision) {
+        color: #800000 !important;
+        background: #FFFFFF !important;
+        border-bottom: 3px solid #800000 !important;
+        font-weight: 800 !important;
+        padding-left: 20px !important;
+        box-shadow: none !important;
+    }
+
+    .nav-links a.active:not(.btn-admision) i:not(.drawer-chevron) {
+        color: #800000 !important;
+        opacity: 1 !important;
     }
 
     .nav-links a:not(.btn-admision):hover,
     .nav-links a:not(.btn-admision):active {
+        color: #800000 !important;
         background: #F8FAFC !important;
-        color: #B91C1C !important;
-        border-color: #E2E8F0 !important;
-        padding-left: 22px !important;
     }
 
-    .nav-links a:not(.btn-admision):hover i {
-        color: #B91C1C !important;
-        opacity: 1 !important;
+    .nav-links a:not(.btn-admision):hover i:not(.drawer-chevron) {
+        color: #800000 !important;
     }
 
-    .nav-links a.active:not(.btn-admision) {
-        color: #B91C1C !important;
-        background: #FEF2F2 !important;
-        border: 1.5px solid #FCA5A5 !important;
-        border-left: 4px solid #DC2626 !important;
-        font-weight: 800 !important;
-        padding-left: 18px !important;
-        box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08) !important;
-    }
-
-    .nav-links a.active:not(.btn-admision) i {
-        color: #DC2626 !important;
-        opacity: 1 !important;
-    }
-
-    /* Separador sutil entre grupos de menú */
-    .nav-links li.dropdown {
-        border-top: 1px solid #F1F5F9;
-        margin-top: 4px;
-        padding-top: 6px;
-    }
-
-    /* Mobile dropdown submenu con fondo contrastado y nítido */
+    /* SUBMENÚ DESPLEGABLE DE VIDEOS */
     .nav-links .dropdown-menu {
         position: static !important;
         background: #F8FAFC !important;
-        border: 1.5px solid #E2E8F0 !important;
-        border-radius: 12px !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
         box-shadow: none !important;
-        padding: 6px !important;
-        margin: 6px 0 10px 0 !important;
+        padding: 4px !important;
+        margin: 8px 16px 12px 16px !important;
         display: none;
     }
 
@@ -3597,53 +3628,114 @@ section.active {
     }
 
     .nav-links .dropdown-menu a {
-        font-size: 0.92rem !important;
-        padding: 11px 16px !important;
+        font-size: 0.9rem !important;
+        padding: 10px 14px !important;
         color: #334155 !important;
-        border-radius: 8px !important;
-        border-left: none !important;
-        min-height: 44px;
+        border-radius: 6px !important;
+        min-height: 40px;
+        border-bottom: none !important;
     }
 
     .nav-links .dropdown-menu a:hover {
-        color: #B91C1C !important;
+        color: #800000 !important;
         background: #FFFFFF !important;
-        padding-left: 20px !important;
     }
 
-    /* Contenedor inferior: distribuye el botón de admisión y micro-datos de contacto para eliminar espacio muerto */
+    /* CONTENEDOR INFERIOR: BOTÓN ADMISIÓN TIPO PILL + TARJETA WHATSAPP */
     .nav-links li.admision-li {
-        border-top: 1px solid #E2E8F0;
-        margin-top: auto;
-        padding: 14px 16px 16px 16px !important;
-        background: #FAFAFA;
+        border-top: none !important;
+        margin-top: auto !important;
+        padding: 16px 18px 18px 18px !important;
+        background: #FFFFFF !important;
         display: flex !important;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
-    .nav-links .mobile-drawer-contact-strip {
-        display: flex !important;
-    }
-
-    /* Mobile admision button de alto impacto y nitidez */
+    /* BOTÓN ADMISIÓN 2026: TOTALMENTE REDONDEADO PILL */
     .nav-links .btn-admision {
         margin: 0 !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        padding: 13px 20px !important;
-        border-radius: 12px !important;
-        font-size: 0.95rem !important;
+        padding: 14px 20px !important;
+        border-radius: 9999px !important;
+        font-size: 0.98rem !important;
         font-weight: 800 !important;
-        letter-spacing: 0.6px;
-        background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%) !important;
+        letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #991B1B 0%, #800000 100%) !important;
         color: #FFFFFF !important;
-        box-shadow: 0 4px 16px rgba(185, 28, 28, 0.4) !important;
+        box-shadow: 0 4px 14px rgba(128, 0, 0, 0.35) !important;
         animation: none !important;
         border: none !important;
+        text-align: center;
+        width: 100%;
         -webkit-font-smoothing: antialiased !important;
+    }
+
+    .nav-links .btn-admision:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(128, 0, 0, 0.4) !important;
+    }
+
+    /* STRIP DE CONTACTO CON TARJETA BLANCA Y BOTÓN CHATEAR VERDE */
+    .nav-links .mobile-drawer-contact-strip {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .mobile-drawer-contact-strip .contact-info-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-drawer-contact-strip .whatsapp-icon {
+        color: #25D366;
+        font-size: 1.4rem;
+    }
+
+    .mobile-drawer-contact-strip .contact-text-box {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25;
+    }
+
+    .mobile-drawer-contact-strip .contact-label {
+        font-size: 0.75rem;
+        color: #64748B;
+        font-weight: 600;
+    }
+
+    .mobile-drawer-contact-strip .contact-number {
+        font-size: 0.9rem;
+        color: #0F172A;
+        font-weight: 800;
+    }
+
+    .mobile-drawer-contact-strip .btn-chatear-wa {
+        background: #25D366;
+        color: #FFFFFF;
+        padding: 8px 14px;
+        border-radius: 10px;
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+        transition: all 0.2s ease;
+    }
+
+    .mobile-drawer-contact-strip .btn-chatear-wa:active {
+        transform: scale(0.95);
     }
 
     /* Overlay: oscuro y nítido para enfocar el drawer sin desenfoque borroso */
