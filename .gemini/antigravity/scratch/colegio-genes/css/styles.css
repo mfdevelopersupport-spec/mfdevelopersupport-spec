@@ -4740,41 +4740,168 @@ p.text-mobile-only, div.text-mobile-only {
         border-radius: 10px !important;
     }
 
-    /* Vacaciones Hero Banner: apilamiento vertical fluido */
-    .vacaciones-hero-banner {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-    }
-
-    .vacaciones-hero-img-wrap {
-        height: 200px !important;
-        min-height: 200px !important;
-        width: 100% !important;
-    }
-
-    .vacaciones-hero-info {
-        padding: 22px 20px !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 16px !important;
-    }
-
-    /* Grilla de requisitos en 1 sola columna para móvil para evitar compresión y desborde */
-    .vacaciones-requisitos-grid,
-    .vacaciones-beneficios-grid {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
-    }
-
-    .requisito-card-item {
-        padding: 16px !important;
+    /* Vacaciones Pestañas: cuadrícula 2x2 en móvil para que los 4 grados sean visibles y táctiles */
+    #vacaciones .canales-primaria-tabs {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        overflow-x: visible !important;
+        padding: 0 0 10px !important;
+        margin-bottom: 20px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
+    #vacaciones .canal-primaria-tab {
+        width: 100% !important;
+        text-align: center !important;
+        white-space: normal !important;
+        padding: 10px 6px !important;
+        font-size: 0.82rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        border-radius: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Vacaciones Hero Banner: apilamiento vertical fluido */
+    .vacaciones-hero-banner {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        margin-bottom: 20px !important;
+    }
+
+    .vacaciones-hero-img-wrap {
+        height: 190px !important;
+        min-height: 190px !important;
+        width: 100% !important;
+    }
+
+    .vacaciones-hero-info {
+        padding: 18px 16px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 14px !important;
+    }
+
+    .vacaciones-hero-info > div:last-child {
+        width: 100% !important;
+        justify-content: space-around !important;
+        padding: 10px 14px !important;
+        box-sizing: border-box !important;
+        background: #FFFFFF !important;
+    }
+
+    /* Grilla de requisitos y beneficios en 1 sola columna para móvil */
+    .vacaciones-requisitos-grid,
+    .vacaciones-beneficios-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .requisito-card-item,
+    .vacaciones-beneficio-card {
+        padding: 14px 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        border-radius: 14px !important;
+    }
+
     .vacaciones-talleres-grid {
         grid-template-columns: 1fr !important;
-        gap: 16px !important;
+        gap: 14px !important;
+    }
+
+    /* Vacaciones Horarios interactivos con ampliación al tocar */
+    .horario-img-box {
+        cursor: pointer !important;
+        position: relative !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .horario-img-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0,0,0,0.12) !important;
+    }
+
+    .horario-zoom-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #FEF2F2;
+        color: #DC2626;
+        border: 1px solid #FCA5A5;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-top: 6px;
+        margin-bottom: 22px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 6px rgba(220, 38, 38, 0.08);
+    }
+
+    .horario-zoom-badge:hover {
+        background: #DC2626;
+        color: #FFFFFF;
+        border-color: #DC2626;
+    }
+
+    /* Ingresantes Pestañas: Envoltura fluida centrada sin cortes */
+    .ingresantes-tabs {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        overflow-x: visible !important;
+        padding: 4px 0 14px !important;
+        margin: 16px 0 20px !important;
+        width: 100% !important;
+    }
+
+    .ingresante-tab {
+        padding: 8px 14px !important;
+        font-size: 0.82rem !important;
+        border-radius: 10px !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* Ingresantes Highlights Bar: Apilamiento vertical sin compresión */
+    .ingresantes-highlights-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 18px 16px !important;
+        gap: 14px !important;
+        margin: 16px 0 22px !important;
+        border-radius: 16px !important;
+    }
+
+    .ingresante-stat-item {
+        gap: 12px !important;
+    }
+
+    .stat-icon-glow {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.15rem !important;
+    }
+
+    .ingresante-stat-item strong {
+        font-size: 0.94rem !important;
+    }
+
+    .ingresante-stat-item span {
+        font-size: 0.82rem !important;
+    }
+
+    .ingresante-stat-divider {
+        display: none !important;
     }
 
     .level-select-card .level-card-body {
