@@ -1619,51 +1619,93 @@ section.active {
 
 @media (max-width: 768px) {
     .lightbox-header-bar {
-        padding: 10px 14px;
-        gap: 8px;
+        padding: 8px 12px !important;
+        gap: 8px !important;
+        min-height: 52px !important;
     }
 
     .lightbox-badge {
-        display: none;
+        display: none !important;
+    }
+
+    .lightbox-title-wrap {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
     }
 
     #ingresante-modal-title {
-        font-size: 0.88rem;
-        max-width: 140px;
+        font-size: 0.84rem !important;
+        max-width: 170px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
     .lightbox-toolbar {
-        gap: 5px;
+        gap: 4px !important;
+        flex-shrink: 0 !important;
     }
 
     .lightbox-btn {
-        padding: 6px 9px;
-        font-size: 0.76rem;
+        padding: 6px 8px !important;
+        font-size: 0.76rem !important;
+        border-radius: 8px !important;
     }
 
     .lightbox-btn .btn-text {
-        display: none;
+        display: none !important;
     }
 
     .lightbox-zoom-level {
-        padding: 4px 6px;
-        font-size: 0.75rem;
-        min-width: 34px;
+        padding: 4px 6px !important;
+        font-size: 0.74rem !important;
+        min-width: 32px !important;
     }
 
     .lightbox-close-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.95rem;
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 0.95rem !important;
+        margin-left: 2px !important;
+    }
+
+    .lightbox-stage {
+        padding-top: 58px !important;
+        padding-bottom: 12px !important;
     }
 
     #ingresante-modal-img {
-        max-width: 94vw;
-        max-height: 74vh;
+        max-width: 96vw !important;
+        max-height: calc(100dvh - 74px) !important;
+        border-radius: 8px !important;
     }
 
     .lightbox-footer-hint {
-        display: none;
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #ingresante-modal-title {
+        max-width: 125px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .lightbox-btn {
+        padding: 5px 6px !important;
+    }
+
+    .lightbox-btn i {
+        font-size: 0.75rem !important;
+    }
+
+    .lightbox-close-btn {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    #btn-open-original-img {
+        display: none !important;
     }
 }
 
@@ -5022,11 +5064,20 @@ p.text-mobile-only, div.text-mobile-only {
         background: #FFFFFF !important;
     }
 
-    /* Grilla de requisitos y beneficios en 1 sola columna para móvil */
-    .vacaciones-requisitos-grid,
+    /* Cuadrículas en tablet (hasta 768px): diseño ordenado y balanceado de 2 columnas */
+    .vacaciones-requisitos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+
     .vacaciones-beneficios-grid {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    .vacaciones-talleres-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
     }
 
     .requisito-card-item {
@@ -5042,11 +5093,6 @@ p.text-mobile-only, div.text-mobile-only {
         box-sizing: border-box !important;
         border-radius: 16px !important;
         overflow: hidden !important;
-    }
-
-    .vacaciones-talleres-grid {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
     }
 
     /* Vacaciones Horarios interactivos con ampliación al tocar */
@@ -5185,6 +5231,57 @@ p.text-mobile-only, div.text-mobile-only {
     .ingresante-card {
         width: 100% !important;
         box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Cuadrículas en móvil: 1 columna vertical impecable */
+    .vacaciones-requisitos-grid,
+    .vacaciones-beneficios-grid,
+    .vacaciones-talleres-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .vacaciones-panel {
+        padding: 20px 14px !important;
+        border-radius: 16px !important;
+    }
+
+    .beneficio-img-wrap {
+        height: 150px !important;
+    }
+
+    .beneficio-body {
+        padding: 15px 16px 18px !important;
+    }
+
+    .beneficio-body h5 {
+        font-size: 1.05rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .beneficio-body p {
+        font-size: 0.86rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .horario-zoom-badge {
+        font-size: 0.78rem !important;
+        padding: 7px 14px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    #vacaciones .canales-primaria-tabs {
+        gap: 6px !important;
+        margin-bottom: 16px !important;
+    }
+
+    #vacaciones .canal-primaria-tab {
+        font-size: 0.8rem !important;
+        padding: 10px 4px !important;
     }
 }
 
