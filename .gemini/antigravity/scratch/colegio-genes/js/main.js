@@ -1080,7 +1080,17 @@ document.addEventListener('DOMContentLoaded', () => {
 /* --------------------------------------------------------------------------
    SECCIÓN INGRESANTES & LIGHTBOX MODAL DE AFICHES CON ZOOM Y TAMAÑO REAL
    -------------------------------------------------------------------------- */
-let isModalImgZoomed = false;
+/* --------------------------------------------------------------------------
+   SECCIÓN INGRESANTES & LIGHTBOX MODAL FULLSCREEN INTERACTIVO DE ALTA RESOLUCIÓN
+   -------------------------------------------------------------------------- */
+let lightboxScale = 1.0;
+let lightboxTranslateX = 0;
+let lightboxTranslateY = 0;
+let isLightboxDragging = false;
+let lightboxDragStartX = 0;
+let lightboxDragStartY = 0;
+let lightboxInitialTranslateX = 0;
+let lightboxInitialTranslateY = 0;
 
 function filterIngresantes(uniKey, button) {
     document.querySelectorAll('.ingresantes-tabs .ingresante-tab').forEach(btn => btn.classList.remove('active'));
@@ -1097,45 +1107,172 @@ function filterIngresantes(uniKey, button) {
     });
 }
 
+function updateLightboxTransform() {
+    const wrapper = document.getElementById('lightbox-img-wrapper');
+    const indicator = document.getElementById('lightbox-zoom-indicator');
+    if (wrapper) {
+        wrapper.style.transform = `translate(${lightboxTranslateX}px, ${lightboxTranslateY}px) scale(${lightboxScale})`;
+    }
+    if (indicator) {
+        indicator.textContent = `${Math.round(lightboxScale * 100)}%`;
+    }
+}
+
+function resetLightboxTransform() {
+    lightboxScale = 1.0;
+    lightboxTranslateX = 0;
+    lightboxTranslateY = 0;
+    updateLightboxTransform();
+}
+
 function openIngresanteModal(imgSrc, uniTitle) {
     const modal = document.getElementById('ingresante-modal');
     const modalImg = document.getElementById('ingresante-modal-img');
     const modalTitle = document.getElementById('ingresante-modal-title');
     const btnOriginal = document.getElementById('btn-open-original-img');
-    const zoomText = document.getElementById('zoom-toggle-text');
 
     if (modal && modalImg) {
         modalImg.src = imgSrc;
-        modalImg.classList.remove('zoomed-100');
-        isModalImgZoomed = false;
-        if (zoomText) zoomText.textContent = "Ampliar al 100%";
+        resetLightboxTransform();
+
         if (btnOriginal) btnOriginal.href = imgSrc;
-        if (modalTitle && uniTitle) modalTitle.textContent = 'Publicación Oficial: ' + uniTitle;
+        if (modalTitle && uniTitle) {
+            modalTitle.textContent = uniTitle.startsWith('Horarios') || uniTitle.startsWith('Publicación') ? uniTitle : `Publicación Oficial: ${uniTitle}`;
+        }
+
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // Escuchar atajos de teclado
+        window.addEventListener('keydown', handleLightboxKeydown);
+        setupLightboxDrag();
     }
 }
 
-function toggleZoomModalImg() {
-    const modalImg = document.getElementById('ingresante-modal-img');
-    const zoomText = document.getElementById('zoom-toggle-text');
-    if (!modalImg) return;
-
-    isModalImgZoomed = !isModalImgZoomed;
-    if (isModalImgZoomed) {
-        modalImg.classList.add('zoomed-100');
-        if (zoomText) zoomText.textContent = "Ajustar a pantalla";
-    } else {
-        modalImg.classList.remove('zoomed-100');
-        if (zoomText) zoomText.textContent = "Ampliar al 100%";
-    }
-}
-
-function closeIngresanteModal(event) {
-    if (event && event.target && !event.target.classList.contains('modal-backdrop') && !event.target.classList.contains('modal-close-btn')) {
-        return;
-    }
+function closeIngresanteModal() {
     const modal = document.getElementById('ingresante-modal');
-    if (modal) modal.classList.remove('active');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    window.removeEventListener('keydown', handleLightboxKeydown);
+}
+
+function handleLightboxBackdropClick(event) {
+    if (event.target.id === 'ingresante-modal' || event.target.id === 'lightbox-stage') {
+        closeIngresanteModal();
+    }
+}
+
+function zoomLightbox(delta) {
+    const newScale = Math.min(Math.max(0.5, lightboxScale + delta), 3.5);
+    lightboxScale = Math.round(newScale * 100) / 100;
+    
+    // Si vuelve a 100% o menos, recentrar
+    if (lightboxScale <= 1.0) {
+        lightboxTranslateX = 0;
+        lightboxTranslateY = 0;
+    }
+    updateLightboxTransform();
+}
+
+function toggleLightboxFit() {
+    if (lightboxScale >= 1.4) {
+        resetLightboxTransform();
+    } else {
+        lightboxScale = 1.6;
+        updateLightboxTransform();
+    }
+}
+
+function handleLightboxWheel(e) {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 0.15 : -0.15;
+    zoomLightbox(delta);
+}
+
+function handleLightboxKeydown(e) {
+    if (e.key === 'Escape') {
+        closeIngresanteModal();
+    } else if (e.key === '+' || e.key === '=') {
+        zoomLightbox(0.2);
+    } else if (e.key === '-' || e.key === '_') {
+        zoomLightbox(-0.2);
+    } else if (e.key === '0') {
+        resetLightboxTransform();
+    }
+}
+
+function setupLightboxDrag() {
+    const stage = document.getElementById('lightbox-stage');
+    const img = document.getElementById('ingresante-modal-img');
+    if (!stage || stage.dataset.dragInitialized === 'true') return;
+
+    stage.dataset.dragInitialized = 'true';
+
+    // Rueda del mouse sobre el stage
+    stage.addEventListener('wheel', handleLightboxWheel, { passive: false });
+
+    // Drag con mouse
+    stage.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return; // Solo clic primario
+        isLightboxDragging = true;
+        lightboxDragStartX = e.clientX;
+        lightboxDragStartY = e.clientY;
+        lightboxInitialTranslateX = lightboxTranslateX;
+        lightboxInitialTranslateY = lightboxTranslateY;
+        stage.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isLightboxDragging) return;
+        const dx = e.clientX - lightboxDragStartX;
+        const dy = e.clientY - lightboxDragStartY;
+        lightboxTranslateX = lightboxInitialTranslateX + dx;
+        lightboxTranslateY = lightboxInitialTranslateY + dy;
+        updateLightboxTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (isLightboxDragging) {
+            isLightboxDragging = false;
+            if (stage) stage.classList.remove('is-dragging');
+        }
+    });
+
+    // Soporte táctil en móviles
+    let touchStartX = 0;
+    let touchStartY = 0;
+    stage.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+            isLightboxDragging = true;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            lightboxInitialTranslateX = lightboxTranslateX;
+            lightboxInitialTranslateY = lightboxTranslateY;
+        }
+    }, { passive: true });
+
+    stage.addEventListener('touchmove', (e) => {
+        if (!isLightboxDragging || e.touches.length !== 1) return;
+        const dx = e.touches[0].clientX - touchStartX;
+        const dy = e.touches[0].clientY - touchStartY;
+        lightboxTranslateX = lightboxInitialTranslateX + dx;
+        lightboxTranslateY = lightboxInitialTranslateY + dy;
+        updateLightboxTransform();
+    }, { passive: true });
+
+    stage.addEventListener('touchend', () => {
+        isLightboxDragging = false;
+    });
+
+    // Doble clic para alternar zoom
+    if (img) {
+        img.addEventListener('dblclick', (e) => {
+            e.stopPropagation();
+            toggleLightboxFit();
+        });
+    }
 }
 
 /* Inicialización al cargar la página */
