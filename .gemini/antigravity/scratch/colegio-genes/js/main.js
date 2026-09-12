@@ -693,13 +693,14 @@ function renderVideosPrimaria(key) {
         const theme = getCourseTheme(curso.nombre);
         return `
             <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
+                <span class="video-badge-hd"><i class="fas fa-check-circle"></i> Oficial Genes</span>
                 <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
                     <i class="${curso.icono}"></i>
                 </div>
                 <h4>${curso.nombre}</h4>
-                <p>Accede al contenido oficial del curso en YouTube.</p>
+                <p>Videoclases y ejercicios explicados del curso por docentes especialistas.</p>
                 <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
-                    <i class="fab fa-youtube"></i> Ver video
+                    <i class="fab fa-youtube"></i> Reproducir Clase
                 </a>
             </article>
         `;
@@ -720,13 +721,14 @@ function renderVideosSecundaria(key) {
         const theme = getCourseTheme(curso.nombre);
         return `
             <article class="video-curso-card" style="border-top: 4px solid ${theme.topBorder};">
+                <span class="video-badge-hd"><i class="fas fa-check-circle"></i> Oficial Genes</span>
                 <div class="video-curso-icon-box" style="background: ${theme.bg}; border-color: ${theme.border}; color: ${theme.color};">
                     <i class="${curso.icono}"></i>
                 </div>
                 <h4>${curso.nombre}</h4>
-                <p>Accede al contenido oficial del curso en YouTube.</p>
+                <p>Solucionarios, teoría preuniversitaria y compendios explicados en YouTube.</p>
                 <a href="${curso.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-video-yt">
-                    <i class="fab fa-youtube"></i> Ver video
+                    <i class="fab fa-youtube"></i> Reproducir Clase
                 </a>
             </article>
         `;

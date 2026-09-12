@@ -1473,8 +1473,32 @@ section.active {
 }
 
 /* --------------------------------------------------------------------------
-   VIDEOS EDUCATIVOS TARJETAS E ICONOS CON PALETA DE COLORES HARMONIOSA
+   VIDEOS EDUCATIVOS ENCABEZADO & TARJETAS CON MÁS VIDA
    -------------------------------------------------------------------------- */
+.videos-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(185, 28, 28, 0.08);
+    color: #B91C1C;
+    border: 1px solid rgba(185, 28, 28, 0.2);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.videos-subhead {
+    color: #64748B;
+    max-width: 680px;
+    margin: 6px auto 0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
 .videos-edu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1484,7 +1508,7 @@ section.active {
 
 .video-curso-card {
     background: #FFFFFF;
-    padding: 26px 20px;
+    padding: 26px 20px 22px;
     border-radius: 18px;
     border: 1px solid #E2E8F0;
     text-align: center;
@@ -1494,6 +1518,23 @@ section.active {
     flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
+}
+
+.video-badge-hd {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    color: #10B981;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .video-curso-card:hover {
@@ -1511,7 +1552,7 @@ section.active {
     align-items: center;
     justify-content: center;
     font-size: 1.85rem;
-    margin-bottom: 14px;
+    margin: 10px 0 14px 0;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -1522,7 +1563,7 @@ section.active {
 
 .video-curso-card h4 {
     color: var(--bg-dark-navy);
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     font-weight: 800;
     margin-bottom: 6px;
     line-height: 1.35;
@@ -1550,6 +1591,8 @@ section.active {
     box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
     transition: all 0.25s ease;
     margin-top: auto;
+    width: 100%;
+    justify-content: center;
 }
 
 .btn-ver-video-yt:hover {
@@ -3550,8 +3593,8 @@ section.active {
         color: #1E293B !important;
         font-size: 0.98rem !important;
         font-weight: 700 !important;
-        padding: 15px 20px !important;
-        min-height: 52px;
+        padding: 14px 20px !important;
+        min-height: 48px;
         display: flex !important;
         align-items: center;
         gap: 14px;
@@ -3559,9 +3602,10 @@ section.active {
         transition: all 0.2s ease;
         background: #FFFFFF !important;
         border: none !important;
-        border-bottom: 3px solid transparent !important;
+        border-bottom: none !important;
         -webkit-font-smoothing: antialiased !important;
         position: relative;
+        box-sizing: border-box;
     }
 
     .nav-links a:not(.btn-admision) i:not(.drawer-chevron) {
@@ -3586,13 +3630,14 @@ section.active {
         color: #800000;
     }
 
-    /* ESTADO ACTIVO SELECCIONADO (INICIO SEGÚN CAPTURA): ICONO ROJO, TEXTO ROJO Y LÍNEA INFERIOR ROJA ROBUSTA */
+    /* ESTADO ACTIVO SELECCIONADO: TEXTO E ICONO EN ROJO VINO DESTACADO SIN DESPLAZAMIENTO VERTICAL (ESPACIADO PAR) */
     .nav-links a.active:not(.btn-admision) {
         color: #800000 !important;
         background: #FFFFFF !important;
-        border-bottom: 3px solid #800000 !important;
+        border: none !important;
+        border-bottom: none !important;
         font-weight: 800 !important;
-        padding-left: 20px !important;
+        padding: 14px 20px !important;
         box-shadow: none !important;
     }
 
