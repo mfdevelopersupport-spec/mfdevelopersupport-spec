@@ -3418,6 +3418,20 @@ section.active {
     margin: 0;
 }
 
+/* Utilidades de síntesis de texto responsive */
+.text-desktop-only {
+    display: inline;
+}
+.text-mobile-only {
+    display: none;
+}
+p.text-desktop-only, div.text-desktop-only {
+    display: block;
+}
+p.text-mobile-only, div.text-mobile-only {
+    display: none;
+}
+
 /* --------------------------------------------------------------------------
    RESPONSIVE DESIGN OVERRIDES
    -------------------------------------------------------------------------- */
@@ -4610,6 +4624,122 @@ section.active {
 }
 
 @media (max-width: 768px) {
+    /* Activación de síntesis de texto en versión móvil */
+    .text-desktop-only {
+        display: none !important;
+    }
+    .text-mobile-only {
+        display: inline !important;
+    }
+    p.text-desktop-only, div.text-desktop-only {
+        display: none !important;
+    }
+    p.text-mobile-only, div.text-mobile-only {
+        display: block !important;
+    }
+
+    /* Sistema de Trabajo: Pilares y Highlights en 1 columna limpia */
+    .pilares-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .pilar-card {
+        padding: 22px 20px !important;
+        border-radius: 16px !important;
+    }
+
+    .pilar-card h3 {
+        font-size: 1.15rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .pilar-card p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .sistema-highlights-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        margin-top: 20px !important;
+    }
+
+    .sistema-highlight-card {
+        padding: 20px 18px !important;
+        border-radius: 16px !important;
+    }
+
+    .sistema-highlight-card i {
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .sistema-highlight-card h4 {
+        font-size: 1.05rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .sistema-highlight-card p {
+        font-size: 0.88rem !important;
+        line-height: 1.45 !important;
+    }
+
+    .compendios-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        margin-top: 20px !important;
+    }
+
+    .compendio-card-item {
+        padding: 14px 10px !important;
+        border-radius: 14px !important;
+    }
+
+    .compendio-card-item h4 {
+        font-size: 0.95rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .compendio-card-item span {
+        font-size: 0.76rem !important;
+        padding: 4px 8px !important;
+    }
+
+    .sistema-info-split {
+        margin-top: 24px !important;
+        gap: 18px !important;
+    }
+
+    .sistema-info-content h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .sistema-info-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .sistema-feature-list {
+        gap: 8px !important;
+    }
+
+    .sistema-feature-list li {
+        font-size: 0.88rem !important;
+        line-height: 1.4 !important;
+        padding-left: 28px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .btn-volver-sistema {
+        padding: 10px 16px !important;
+        font-size: 0.88rem !important;
+        margin-bottom: 16px !important;
+        border-radius: 10px !important;
+    }
+
     /* Vacaciones Hero Banner: apilamiento vertical fluido */
     .vacaciones-hero-banner {
         grid-template-columns: 1fr !important;
