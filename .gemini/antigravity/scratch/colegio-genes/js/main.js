@@ -708,7 +708,7 @@ function renderVideosPrimaria(key) {
                     <div class="video-play-overlay">
                         <i class="fab fa-youtube"></i>
                     </div>
-                    <span class="video-course-badge" style="background: ${theme.color};"><i class="${curso.icono}"></i> ${curso.nombre}</span>
+                    <span class="video-course-badge" style="background: ${theme.color};"><i class="${curso.icono}"></i></span>
                 </div>
                 <div class="video-curso-body">
                     <h4>${curso.nombre}</h4>
@@ -742,7 +742,7 @@ function renderVideosSecundaria(key) {
                     <div class="video-play-overlay">
                         <i class="fab fa-youtube"></i>
                     </div>
-                    <span class="video-course-badge" style="background: ${theme.color};"><i class="${curso.icono}"></i> ${curso.nombre}</span>
+                    <span class="video-course-badge" style="background: ${theme.color};"><i class="${curso.icono}"></i></span>
                 </div>
                 <div class="video-curso-body">
                     <h4>${curso.nombre}</h4>

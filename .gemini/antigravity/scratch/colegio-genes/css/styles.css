@@ -3712,6 +3712,14 @@ p.text-mobile-only, div.text-mobile-only {
         grid-template-columns: 1fr;
     }
 
+    .contacto-form-panel {
+        order: 1;
+    }
+
+    .contacto-info-panel {
+        order: 2;
+    }
+
     .contacto-info-panel,
     .contacto-form-panel {
         padding: 36px 28px;
