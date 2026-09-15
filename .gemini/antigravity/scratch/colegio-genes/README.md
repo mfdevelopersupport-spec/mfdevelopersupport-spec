@@ -2,6 +2,9 @@
 
 Plataforma web institucional y landing page adaptativa para el **Colegio Genes**, diseñada con estándares modernos de UX/UI para destacar la excelencia académica, el sistema preuniversitario, sedes en Lima Metropolitana, compendios académicos bimestrales, talleres de vacaciones útiles e historias de éxito de alumnos ingresantes.
 
+🌐 **Sitio Web en Vivo (Vercel)**: [https://colegio-genes.vercel.app](https://colegio-genes.vercel.app)  
+🚀 **Dashboard en Vercel**: [https://vercel.com/sturnz/colegio-genes](https://vercel.com/sturnz/colegio-genes)
+
 ---
 
 ## 🚀 Características Principales
@@ -47,6 +50,17 @@ colegio-genes/
 ├── index.html                      # Landing page principal
 └── README.md                       # Documentación del proyecto
 ```
+
+---
+
+## ⚡ Despliegue en Vercel (Producción Activa)
+
+El proyecto se encuentra desplegado y sincronizado con Vercel:
+- **URL de Producción**: [https://colegio-genes.vercel.app](https://colegio-genes.vercel.app)
+- **Comando de despliegue directo**:
+  ```bash
+  npx vercel --prod
+  ```
 
 ---
 
