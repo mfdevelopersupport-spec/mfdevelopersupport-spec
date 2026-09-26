@@ -2191,16 +2191,17 @@ section.active {
 }
 
 .pilar-card h3 {
-    font-size: 1.18rem;
-    color: var(--bg-dark-navy);
+    font-size: 1.25rem;
+    color: var(--bg-dark-navy, #0F172A);
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
     line-height: 1.35;
 }
 
 .pilar-card p {
-    font-size: 0.88rem;
-    color: #64748B;
+    font-size: 0.9rem;
+    color: #475569;
     line-height: 1.6;
     margin: 0;
 }
