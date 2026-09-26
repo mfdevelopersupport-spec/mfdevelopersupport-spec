@@ -142,9 +142,11 @@ function renderSingleTestimonioCard(cardElement, data) {
                 <img src="${data.avatar}" alt="${data.nombre}">
                 <span class="testimonio-verify-check"><i class="fas fa-check"></i></span>
             </div>
-            <h4>${data.nombre}</h4>
-            <div class="testimonio-carrera-badge">${data.carrera}</div>
-            <span class="testimonio-uni-tag">${data.universidad}</span>
+            <div class="testimonio-profile-info">
+                <h4>${data.nombre}</h4>
+                <div class="testimonio-carrera-badge">${data.carrera}</div>
+                <span class="testimonio-uni-tag">${data.universidad}</span>
+            </div>
         </div>
 
         <div class="testimonio-right-body">
